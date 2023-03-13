@@ -4,21 +4,28 @@
     padding: 30px;
     background-color: rgb(224, 224, 224);
     background-image: url(../../assets/cross.svg);
-    background-size: 35px;
+    background-size: 34px;
     background-position: center;
     box-shadow: 0 10px 10px -10px black;
+    transition: 0.3s;
+}
+
+.searchContainer:hover {
+    background-size: 37px;
 }
 
 .searchInput {
     width: 50%;
     height: 35px;
     padding: 0 10px;
+    font-size: 1.3rem;
     border: 2px solid rgb(211, 115, 255);
     border-radius: 15px 0 0 15px;
 }
 
 .searchButton {
     width: 20%;
+    font-size: 1.3rem;
     background-color: rgb(211, 115, 255);
     border: none;
     border-radius: 0 15px 15px 0;

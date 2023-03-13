@@ -3,9 +3,9 @@ import { Routes, Route } from 'react-router-dom';
 import './App.css';
 
 import { Layout } from 'components/layout/Layout';
-import { Main } from 'pages/main/Main';
-import { About } from 'pages/about/About';
-import { NotFoundPage } from 'pages/nopage/NotFound';
+import { Main } from 'pages/Main';
+import { About } from 'pages/About';
+import { NotFoundPage } from 'pages/NotFound';
 
 function App() {
   return (

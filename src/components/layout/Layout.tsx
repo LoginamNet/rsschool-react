@@ -1,13 +1,13 @@
 import React from 'react';
-import { Link, Outlet } from 'react-router-dom';
+import { NavLink, Outlet } from 'react-router-dom';
 import './Layout.css';
 
 export function Layout() {
   return (
     <>
       <header>
-        <Link to="/">Home</Link>
-        <Link to="/about">About us</Link>
+        <NavLink to="/">Home</NavLink>
+        <NavLink to="/about">About us</NavLink>
       </header>
 
       <main>
