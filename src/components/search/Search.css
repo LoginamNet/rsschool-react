@@ -1,0 +1,26 @@
+.searchContainer {
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+    background-color: rgb(224, 224, 224);
+    background-image: url(../../assets/cross.svg);
+    background-size: 35px;
+    background-position: center;
+    box-shadow: 0 10px 10px -10px black;
+}
+
+.searchInput {
+    width: 50%;
+    height: 35px;
+    padding: 0 10px;
+    border: 2px solid rgb(211, 115, 255);
+    border-radius: 15px 0 0 15px;
+}
+
+.searchButton {
+    width: 20%;
+    background-color: rgb(211, 115, 255);
+    border: none;
+    border-radius: 0 15px 15px 0;
+    cursor: pointer;
+}
