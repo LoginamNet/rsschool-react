@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, Outlet } from 'react-router-dom';
+import './Layout.css';
 
 export function Layout() {
   return (
@@ -10,7 +11,9 @@ export function Layout() {
       </header>
 
       <main>
-        <Outlet />
+        <div className="mainContainer">
+          <Outlet />
+        </div>
       </main>
 
       <footer>2023</footer>
