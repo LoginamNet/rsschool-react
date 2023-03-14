@@ -4,8 +4,7 @@ import App from './App';
 import ReactDOM from 'react-dom';
 import { About } from 'pages/About';
 import { NotFoundPage } from 'pages/NotFound';
-import { BrowserRouter as Router} from 'react-router-dom';
-
+import { BrowserRouter as Router } from 'react-router-dom';
 
 test('should render root without crashing', () => {
   waitFor(() => {
@@ -14,7 +13,7 @@ test('should render root without crashing', () => {
     document.body.appendChild(div);
     require('./index');
     expect(ReactDOM.render).toHaveBeenCalledWith(<App />, div);
-  })
+  });
 });
 
 test('should render app without crashing', () => {
@@ -35,7 +34,6 @@ test('should render about page', () => {
 });
 
 test('should render 404 page', () => {
-  
   render(
     <Router>
       <NotFoundPage />
