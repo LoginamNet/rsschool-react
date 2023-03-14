@@ -1,0 +1,27 @@
+.cardContainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 200px;
+    width: 20%;
+}
+
+.cardImage {
+    height: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.cardDescription {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.cardRating {
+    position: absolute;
+    top: 5px;
+    left: 10px;
+}
