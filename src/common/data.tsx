@@ -1,7 +1,7 @@
 export const cardsData = [
   {
     id: 61,
-    title: 'Leather Straps Wristwatch',
+    title: 'Leather Straps',
     description: 'Style: Sport, Clasp: Buckles, Water Resistance Depth: 3Bar',
     price: 120,
     discountPercentage: 7.14,
@@ -13,7 +13,7 @@ export const cardsData = [
   },
   {
     id: 62,
-    title: 'Waterproof Leather Brand Watch',
+    title: 'Waterproof Leather',
     description:
       'Watch Crown With Environmental IPS Bronze Electroplating; Display system of 12 hours',
     price: 46,
@@ -26,7 +26,7 @@ export const cardsData = [
   },
   {
     id: 63,
-    title: 'Royal Blue Premium Watch',
+    title: 'Royal Blue',
     description: 'Men Silver Chain Royal Blue Premium Watch Latest Analog Watch',
     price: 50,
     discountPercentage: 2.56,
@@ -38,7 +38,7 @@ export const cardsData = [
   },
   {
     id: 64,
-    title: 'Leather Strap Skeleton Watch',
+    title: 'Skeleton Watch',
     description: 'Leather Strap Skeleton Watch for Men - Stylish and Latest Design',
     price: 46,
     discountPercentage: 10.2,
@@ -50,7 +50,7 @@ export const cardsData = [
   },
   {
     id: 65,
-    title: 'Stainless Steel Wrist Watch',
+    title: 'Stainless Steel',
     description:
       "Stylish Watch For Man (Luxury) Classy Men's Stainless Steel Wrist Watch - Box Packed",
     price: 47,
@@ -63,7 +63,7 @@ export const cardsData = [
   },
   {
     id: 66,
-    title: 'Steel Analog Couple Watches',
+    title: 'Analog Couple',
     description: 'Elegant design, Stylish ,Unique & Trendy,Comfortable wear',
     price: 35,
     discountPercentage: 3.23,
@@ -75,7 +75,7 @@ export const cardsData = [
   },
   {
     id: 67,
-    title: 'Fashion Magnetic Wrist Watch',
+    title: 'Fashion Magnetic',
     description:
       "Buy this awesome  The product is originally manufactured by the company and it's a top selling product with a very reasonable",
     price: 60,
@@ -88,7 +88,7 @@ export const cardsData = [
   },
   {
     id: 68,
-    title: 'Stylish Luxury Digital Watch',
+    title: 'Stylish Luxury',
     description:
       'Stylish Luxury Digital Watch For Girls / Women - Led Smart Ladies Watches For Girls',
     price: 57,
@@ -101,7 +101,7 @@ export const cardsData = [
   },
   {
     id: 69,
-    title: 'Golden Watch Pearls Bracelet Watch',
+    title: 'Pearls Bracelet',
     description:
       'Product details of Golden Watch Pearls Bracelet Watch For Girls - Golden Chain Ladies Bracelate Watch for Women',
     price: 47,
@@ -114,7 +114,7 @@ export const cardsData = [
   },
   {
     id: 70,
-    title: 'Stainless Steel Women',
+    title: 'Steel Women',
     description:
       'Fashion Skmei 1830 Shell Dial Stainless Steel Women Wrist Watch Lady Bracelet Watch Quartz Watches Ladies',
     price: 35,

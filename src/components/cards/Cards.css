@@ -1,0 +1,57 @@
+.cardsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 30px 10px;
+}
+
+.cardContainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-height: 270px;
+    width: 18%;
+}
+
+.cardImage {
+    min-height: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 5px 5px 0 0 rgb(211, 115, 255);
+}
+
+.cardDefinition {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.cardName {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.cardBrand {
+    font-size: 0.9rem;
+    color: gray;
+}
+
+.cardDescription {
+    -webkit-line-clamp: 3;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.cardRating {
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    padding: 5px;
+    font-weight: bold;
+    background-color: orange;
+    border-radius: 10px;
+}

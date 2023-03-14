@@ -1,6 +1,7 @@
 import React from 'react';
 import { Card } from './Card';
 import { cardsData } from 'common/data';
+import './Cards.css';
 
 export function Cards() {
   const cards = cardsData.map((item, key) => (

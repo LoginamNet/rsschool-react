@@ -1,5 +1,4 @@
 import React from 'react';
-import './Card.css';
 
 type ComponentProps = {
   brand: string;
@@ -26,7 +25,7 @@ export class Card extends React.Component<ComponentProps> {
           className="cardImage"
           style={{ backgroundImage: `url(${this.props.thumbnail})` }}
         ></div>
-        <div className="cardDescription">
+        <div className="cardDefinition">
           <span className="cardName">{this.props.title}</span>
           <span className="cardBrand">{this.props.brand}</span>
           <span className="cardDescription">{this.props.description}</span>
