@@ -1,5 +1,5 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import { Layout } from 'components/layout/Layout';
 import { Main } from 'pages/Main';
@@ -8,15 +8,17 @@ import { NotFoundPage } from 'pages/NotFound';
 
 function App() {
   return (
-    <>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Main />}></Route>
-          <Route path="about" element={<About />}></Route>
-          <Route path="*" element={<NotFoundPage />}></Route>
-        </Route>
-      </Routes>
-    </>
+    <Router>
+      <>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Main />}></Route>
+            <Route path="about" element={<About />}></Route>
+            <Route path="*" element={<NotFoundPage />}></Route>
+          </Route>
+        </Routes>
+      </>
+    </Router>
   );
 }
 
