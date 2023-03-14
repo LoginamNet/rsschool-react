@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink, Outlet } from 'react-router-dom';
+import '../../common/constants.css';
 import './Layout.css';
 
 export function Layout() {

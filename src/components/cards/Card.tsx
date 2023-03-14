@@ -31,6 +31,7 @@ export class Card extends React.Component<ComponentProps> {
           <span className="cardDescription">{this.props.description}</span>
         </div>
         <span className="cardRating">{this.props.rating}</span>
+        <button className="cardButton">Order now</button>
       </div>
     );
   }
