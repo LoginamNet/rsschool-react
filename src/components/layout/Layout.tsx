@@ -1,15 +1,15 @@
 import React from 'react';
-import { NavLink, Outlet } from 'react-router-dom';
 import '../../common/constants.css';
 import './Layout.css';
+
+import { Header } from './Header';
+import { Outlet } from 'react-router-dom';
+import { Footer } from './Footer';
 
 export function Layout() {
   return (
     <>
-      <header>
-        <NavLink to="/">Home</NavLink>
-        <NavLink to="/about">About us</NavLink>
-      </header>
+      <Header />
 
       <main>
         <div className="mainContainer">
@@ -17,7 +17,7 @@ export function Layout() {
         </div>
       </main>
 
-      <footer>2023</footer>
+      <Footer />
     </>
   );
 }

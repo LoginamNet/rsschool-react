@@ -2,10 +2,14 @@ import React, { ChangeEvent } from 'react';
 import './Search.css';
 
 type ComponentProps = {
+  children?: React.ReactNode;
+};
+
+type ComponentState = {
   input: string;
 };
 
-export class Search extends React.Component<object, ComponentProps> {
+export class Search extends React.Component<ComponentProps, ComponentState> {
   constructor(props: ComponentProps) {
     super(props);
     this.state = { input: localStorage.getItem('search') || '' };
