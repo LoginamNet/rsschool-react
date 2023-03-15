@@ -1,5 +1,5 @@
 import React from 'react';
 
 export function Footer() {
-  return <footer>2023</footer>;
+  return <footer role="footer">2023</footer>;
 }

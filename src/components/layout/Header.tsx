@@ -21,7 +21,7 @@ export class Header extends React.Component<ComponentProps, ComponentState> {
 
   render(): React.ReactNode {
     return (
-      <header>
+      <header role="header">
         <div className="headerContainer">
           <span className="headerTitle" role="headerTitle">
             {this.state.title === '/' ? 'HOME' : this.state.title === '/about' ? 'ABOUT US' : '404'}

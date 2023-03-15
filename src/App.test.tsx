@@ -29,10 +29,13 @@ describe('App elements tests', function () {
   test('should render app without crashing', () => {
     render(<App />);
 
-    const homeLink = screen.getByText(/Home/);
-    const aboutLink = screen.getByText(/About us/);
-    expect(homeLink).toBeInTheDocument();
-    expect(aboutLink).toBeInTheDocument();
+    const header = screen.getByRole('header');
+    const main = screen.getByRole('main');
+    const footer = screen.getByRole('footer');
+
+    expect(header).toBeInTheDocument();
+    expect(main).toBeInTheDocument();
+    expect(footer).toBeInTheDocument();
   });
 
   test('should update search input value', () => {
