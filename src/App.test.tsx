@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, screen, waitFor } from '@testing-library/react';
+import { fireEvent, render, screen, waitFor } from '@testing-library/react';
 import App from './App';
 import ReactDOM from 'react-dom';
 import { About } from 'pages/About';
@@ -9,6 +9,8 @@ import { Card } from 'components/cards/Card';
 
 import { cardsData } from 'common/data';
 import { Cards } from 'components/cards/Cards';
+import { Header } from 'components/layout/Header';
+import userEvent from '@testing-library/user-event';
 
 test('should render root without crashing', () => {
   waitFor(() => {
@@ -71,4 +73,13 @@ test('should render Cards', () => {
 
   const cards = screen.getAllByRole('card');
   expect(cards).toHaveLength(cardsData.length);
+});
+
+test('should update Header title', () => {
+  render(
+    <App />
+  );
+
+  fireEvent.click(screen.getAllByRole('link')[1])
+  expect(screen.getByRole('headerTitle')).toHaveTextContent('ABOUT US');
 });
