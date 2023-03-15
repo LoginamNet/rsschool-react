@@ -41,7 +41,9 @@ export class Header extends React.Component<ComponentProps, ComponentState> {
     return (
       <header>
         <div className="headerContainer">
-          <span className="headerTitle">{this.setHeaderTitle()}</span>
+          <span className="headerTitle" role="headerTitle">
+            {this.setHeaderTitle()}
+          </span>
           <nav className="headerMenu">
             <li className="headerMenuItem" onClick={this.updateTitle}>
               <NavLink to="/">Home</NavLink>

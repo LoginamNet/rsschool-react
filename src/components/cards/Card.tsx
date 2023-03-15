@@ -20,7 +20,7 @@ export class Card extends React.Component<ComponentProps> {
 
   render(): React.ReactNode {
     return (
-      <div className="cardContainer">
+      <div className="cardContainer" role="card">
         <div
           className="cardImage"
           style={{ backgroundImage: `url(${this.props.thumbnail})` }}
