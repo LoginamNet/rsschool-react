@@ -19,30 +19,12 @@ export class Header extends React.Component<ComponentProps, ComponentState> {
     this.setState({ title: location.pathname });
   };
 
-  setHeaderTitle = () => {
-    let title: string;
-
-    switch (true) {
-      case this.state.title === '/':
-        title = 'HOME';
-        break;
-      case this.state.title === '/about':
-        title = 'ABOUT US';
-        break;
-      default:
-        title = '404';
-        break;
-    }
-
-    return title;
-  };
-
   render(): React.ReactNode {
     return (
       <header>
         <div className="headerContainer">
           <span className="headerTitle" role="headerTitle">
-            {this.setHeaderTitle()}
+            {this.state.title === '/' ? 'HOME' : this.state.title === '/about' ? 'ABOUT US' : '404'}
           </span>
           <nav className="headerMenu">
             <li className="headerMenuItem" onClick={this.updateTitle}>

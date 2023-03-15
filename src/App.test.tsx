@@ -1,16 +1,17 @@
 import React from 'react';
-import { fireEvent, render, screen, waitFor } from '@testing-library/react';
+import { fireEvent, render, screen, waitFor, cleanup } from '@testing-library/react';
 import App from './App';
 import ReactDOM from 'react-dom';
 import { About } from 'pages/About';
 import { NotFoundPage } from 'pages/NotFound';
 import { BrowserRouter } from 'react-router-dom';
 import { Card } from 'components/cards/Card';
-
 import { cardsData } from 'common/data';
 import { Cards } from 'components/cards/Cards';
-import { Header } from 'components/layout/Header';
+import { Search } from 'components/search/Search';
 import userEvent from '@testing-library/user-event';
+
+beforeEach(cleanup);
 
 test('should render root without crashing', () => {
   waitFor(() => {
@@ -75,11 +76,17 @@ test('should render Cards', () => {
   expect(cards).toHaveLength(cardsData.length);
 });
 
-test('should update Header title', () => {
-  render(
-    <App />
-  );
+test('should update search input value', () => {
+  render(<App />);
 
-  fireEvent.click(screen.getAllByRole('link')[1])
+  const input = screen.getByRole('textbox') as HTMLInputElement;
+  userEvent.type(input, '23');
+  expect(input.value).toBe('23');
+});
+
+test('should update Header title', () => {
+  render(<App />);
+
+  fireEvent.click(screen.getAllByRole('link')[1]);
   expect(screen.getByRole('headerTitle')).toHaveTextContent('ABOUT US');
 });
