@@ -26,6 +26,7 @@ export class Search extends React.Component<ComponentProps, ComponentState> {
 
   handleInputEvent = (event: ChangeEvent<HTMLInputElement>) => {
     this.setState({ input: event.target.value });
+    localStorage.setItem('search', event.target.value);
   };
 
   render(): React.ReactNode {
