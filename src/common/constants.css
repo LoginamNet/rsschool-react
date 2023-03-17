@@ -1,0 +1,10 @@
+:root {
+    --header-color: rgb(39, 26, 6);
+    --main-text-color: rgb(0, 0, 0);
+    --alter-text-color: rgb(255, 255, 255);
+    --secondary-text-color: rgb(128, 128, 128);
+    --main-element-color: rgb(211, 115, 255);
+    --alter-element-color: rgb(149, 29, 204);
+    --active-element-color: rgb(255, 166, 0);
+    --background-element-color: rgb(224, 224, 224);
+}

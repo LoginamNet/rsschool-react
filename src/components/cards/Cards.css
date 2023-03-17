@@ -1,0 +1,78 @@
+.cardsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px 20px;
+    padding: 30px 10px;
+}
+
+.cardContainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-height: 300px;
+    width: 18%;
+}
+
+.cardImage {
+    min-height: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 5px 5px 0 0 var(--main-element-color);
+}
+
+.cardContainer:hover .cardImage{
+    background-size: 120%;
+}
+
+.cardDefinition {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.cardName {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.cardBrand {
+    font-size: 0.9rem;
+    color: var(--secondary-text-color);
+}
+
+.cardDescription {
+    -webkit-line-clamp: 2;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.cardRating {
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    padding: 5px;
+    font-weight: bold;
+    background-color: var(--active-element-color);
+    border-radius: 10px;
+}
+
+.cardButton {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    color: white;
+    background-color: var(--alter-element-color);
+    border: none;
+    transition: 0.3s;
+}
+
+.cardButton:hover {
+    color: var(--main-text-color);
+    background-color: var(--main-element-color);
+}
