@@ -1,5 +1,107 @@
 .form {
     display: flex;
+    box-shadow: 0 10px 10px -10px var(--main-text-color);
+}
+
+.formImage {
+    width: 30%;
+    background-color: var(--background-element-color);
+    background-image: url(../../assets/cross.svg);
+    background-size: 34px;
+    background-position: center;
+    transition: 0.3s;
+}
+
+.form:hover .formImage {
+    background-size: 37px;
+}
+
+.formProps {
+    display: flex;
     flex-direction: column;
     gap: 10px;
+    width: 70%;
+    padding: 15px 30px;
+    background-color: var(--background-element-color);
+}
+
+.formContainer,
+.checkSelectContainer,
+.fileContainer,
+.radioContainer,
+.radioTextAreaContainer
+.textareaContainer,
+.nameLabel,
+.dateLabel,
+.checkLabel,
+.selectLabel
+.fileLabel {
+    display: flex;
+}
+
+
+.checkSelectContainer,
+.radioContainer,
+.textareaContainer,
+.nameLabel,
+.dateLabel,
+.fileContainer {
+    flex-direction: column;
+}
+
+.formContainer {
+    justify-content: space-between;
+    gap: 20px;
+    margin: 0;
+    padding: 5px 15px;
+    background-color: var(--alter-text-color);
+    border-radius: 15px;
+    box-shadow: 5px 5px 3px 0 var(--secondary-text-color);
+}
+
+.nameLabel,
+.dateLabel,
+.fileLabel,
+.checkSelectContainer,
+.radioContainer,
+.textareaContainer {
+    width: 50%
+}
+
+.textarea {
+    padding: 10px;
+    border: 2px solid var(--alter-element-color);
+    border-radius: 5px;
+}
+
+.formTitle {
+    color: var(--alter-element-color);
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.formHeader {
+    padding: 10px 0;
+    color: var(--header-color);
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.formInvalidText {
+    color: var(--error-color);
+    font-size: 0.8rem;
+}
+
+.formSubmit {
+    padding: 10px;
+    font-size: 1.3rem;
+    background-color: var(--main-element-color);
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.formSubmit:hover {
+    color: var(--alter-text-color);
+    background-color: var(--alter-element-color);
 }

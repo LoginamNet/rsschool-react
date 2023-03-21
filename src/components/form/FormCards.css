@@ -1,0 +1,56 @@
+.formCardsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px 5px;
+    padding: 30px 10px;
+}
+
+.formCardContainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 270px;
+    width: 17%;
+    border: 2px solid var(--secondary-text-color);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.formCardImage {
+    min-height: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 9px 8px 0 0;
+}
+
+.formCardDateHand {
+    padding: 3px 5px;
+    color: var(--alter-text-color);
+    background-color: var(--secondary-text-color);
+    text-align: center;
+}
+
+.formCardDefinition {
+    display: flex;
+    flex-direction: column;
+    padding: 5px 10px;
+}
+
+.formCardDescription {
+    -webkit-line-clamp: 2;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    word-wrap: break-word;
+    overflow: hidden;
+}
+
+.formCardName {
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    padding: 5px;
+    background-color: var(--main-element-color);
+    border-radius: 10px;
+}

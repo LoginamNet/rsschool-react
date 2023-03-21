@@ -34,7 +34,13 @@ export class Form extends React.Component<ComponentProps, FormState> {
     return (
       <div className="page formPage">
         <CardForm updateCards={this.updateCards} />
-        <div>{this.state.cards.length > 0 && <FormCards cards={this.state.cards} />}</div>
+        <div>
+          {this.state.cards.length > 0 ? (
+            <FormCards cards={this.state.cards} />
+          ) : (
+            <h3 style={{ textAlign: 'center' }}>NO CARDS FOR NOW!</h3>
+          )}
+        </div>
       </div>
     );
   }

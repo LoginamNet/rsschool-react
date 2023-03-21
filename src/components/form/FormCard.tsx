@@ -9,15 +9,17 @@ export class SingleFormCard extends React.Component<ComponentProps> {
 
   render(): React.ReactNode {
     return (
-      <div className="cardContainer" role="card">
-        <div className="cardImage">{this.props.file}</div>
-        <div className="cardDefinition">
-          <span className="cardName">{this.props.name}</span>
-          <span className="cardDate">{this.props.date}</span>
-          <span className="cardChecked">{this.props.checked}</span>
-          <span className="cardDescription">{this.props.text}</span>
+      <div className="formCardContainer" role="formcard">
+        <div className="formCardImage" style={{ backgroundImage: `url(${this.props.file})` }}></div>
+        <span className="formCardDateHand">
+          {this.props.date} / {this.props.radio.toUpperCase() + ' HAND'}
+        </span>
+        <div className="formCardDefinition">
+          <li className="formCardWater">{this.props.checked ? 'Waterproof' : 'Not waterproof'}</li>
+          <li className="formCardMaterial">{this.props.selected}</li>
+          <span className="formCardDescription">{this.props.text}</span>
         </div>
-        <span className="cardRating">{this.props.radio}</span>
+        <span className="formCardName">{this.props.name}</span>
       </div>
     );
   }

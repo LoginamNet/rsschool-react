@@ -1,5 +1,6 @@
 import React from 'react';
 import { SingleFormCard } from './FormCard';
+import './FormCards.css';
 
 import { FormState } from 'pages/Form';
 
@@ -17,5 +18,5 @@ export function FormCards(props: FormState) {
     />
   ));
 
-  return <div className="cardsContainer">{cards}</div>;
+  return <div className="formCardsContainer">{cards}</div>;
 }
