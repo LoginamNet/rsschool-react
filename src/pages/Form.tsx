@@ -1,5 +1,5 @@
 import { CardForm } from 'components/form/Form';
-import { SingleFormCard } from 'components/form/FormCard';
+import { FormCards } from 'components/form/FormCards';
 import React from 'react';
 
 export type FormCard = {
@@ -34,19 +34,7 @@ export class Form extends React.Component<ComponentProps, FormState> {
     return (
       <div className="page formPage">
         <CardForm updateCards={this.updateCards} />
-        <div>
-          {this.state.cards.length > 0 && (
-            <SingleFormCard
-              name={this.state.cards[0].name}
-              date={this.state.cards[0].date}
-              checked={this.state.cards[0].checked}
-              radio={this.state.cards[0].radio}
-              text={this.state.cards[0].text}
-              selected={this.state.cards[0].selected}
-              file={this.state.cards[0].file}
-            />
-          )}
-        </div>
+        <div>{this.state.cards.length > 0 && <FormCards cards={this.state.cards} />}</div>
       </div>
     );
   }
