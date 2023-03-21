@@ -1,8 +1,10 @@
 import React, { ChangeEvent } from 'react';
 import './Form.css';
 
+import { FormCard } from 'pages/Form';
+
 type ComponentProps = {
-  children?: React.ReactNode;
+  updateCards: (card: FormCard) => void;
 };
 
 type ComponentState = {
@@ -40,21 +42,19 @@ export class CardForm extends React.Component<ComponentProps, ComponentState> {
 
   handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    console.log(
-      `
-      Name: ${this.nameInput.current?.value}
-      Date: ${this.dateInput.current?.value}
-      Is Checked: ${this.checkInput.current?.checked}
-      Selected: ${this.state.selectedValue}
-      Radio: ${this.state.radioValue}
-      Text: ${this.state.textAreaValue}
-      Selected file ${
+    const card = {
+      name: this.nameInput.current?.value as string,
+      date: this.dateInput.current?.value as string,
+      checked: this.checkInput.current?.checked as boolean,
+      selected: this.state.selectedValue,
+      radio: this.state.radioValue,
+      text: this.state.textAreaValue,
+      file:
         this.fileInput.current !== null &&
         this.fileInput.current.files !== null &&
-        this.fileInput.current.files[0].name
-      }
-      `
-    );
+        (this.fileInput.current.files[0].name as string),
+    };
+    this.props.updateCards(card);
     (event.target as HTMLFormElement).reset();
     this.clearForm();
   };
