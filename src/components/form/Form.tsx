@@ -1,4 +1,4 @@
-import React, { ChangeEvent } from 'react';
+import React from 'react';
 import './Form.css';
 
 import { FormCard } from 'pages/Form';
@@ -8,9 +8,6 @@ type ComponentProps = {
 };
 
 type ComponentState = {
-  selectedValue: string;
-  textAreaValue: string;
-  radioValue: string;
   isFileValid: boolean;
   isNameValid: boolean;
   isDateValid: boolean;
@@ -21,15 +18,16 @@ type ComponentState = {
 export class CardForm extends React.Component<ComponentProps, ComponentState> {
   nameInput: React.RefObject<HTMLInputElement> = React.createRef();
   dateInput: React.RefObject<HTMLInputElement> = React.createRef();
+  selectInput: React.RefObject<HTMLSelectElement> = React.createRef();
   checkInput: React.RefObject<HTMLInputElement> = React.createRef();
+  radioInputLeft: React.RefObject<HTMLInputElement> = React.createRef();
+  radioInputRight: React.RefObject<HTMLInputElement> = React.createRef();
+  textareaInput: React.RefObject<HTMLTextAreaElement> = React.createRef();
   fileInput: React.RefObject<HTMLInputElement> = React.createRef();
 
   constructor(props: ComponentProps) {
     super(props);
     this.state = {
-      selectedValue: 'steel',
-      textAreaValue: '',
-      radioValue: 'left',
       isFileValid: true,
       isNameValid: true,
       isDateValid: true,
@@ -38,18 +36,6 @@ export class CardForm extends React.Component<ComponentProps, ComponentState> {
     };
   }
 
-  handleSelect = (event: ChangeEvent<HTMLSelectElement>) => {
-    this.setState({ selectedValue: event.target.value });
-  };
-
-  handleRadio = (event: ChangeEvent<HTMLInputElement>) => {
-    this.setState({ radioValue: event.target.value });
-  };
-
-  handleTextArea = (event: ChangeEvent<HTMLTextAreaElement>) => {
-    this.setState({ textAreaValue: event.target.value });
-  };
-
   handleFileValidation = async () => {
     this.fileInput.current?.files?.length === 0
       ? this.setState({ isFileValid: false })
@@ -57,7 +43,8 @@ export class CardForm extends React.Component<ComponentProps, ComponentState> {
   };
 
   handleNameValidation = async () => {
-    this.nameInput.current?.value === ''
+    this.nameInput.current?.value === '' ||
+    this.nameInput.current?.value[0] !== this.nameInput.current?.value[0].toUpperCase()
       ? this.setState({ isNameValid: false })
       : this.setState({ isNameValid: true });
   };
@@ -69,7 +56,7 @@ export class CardForm extends React.Component<ComponentProps, ComponentState> {
   };
 
   handleTextAreaValidation = async () => {
-    this.state.textAreaValue === ''
+    this.textareaInput.current?.value === ''
       ? this.setState({ isTextAreaValid: false })
       : this.setState({ isTextAreaValid: true });
   };
@@ -92,8 +79,23 @@ export class CardForm extends React.Component<ComponentProps, ComponentState> {
     }
   };
 
-  clearForm = () => {
-    this.setState({ selectedValue: 'steel', textAreaValue: '', radioValue: 'left' });
+  addNewCard = () => {
+    const card = {
+      name: this.nameInput.current?.value as string,
+      date: this.dateInput.current?.value as string,
+      checked: this.checkInput.current?.checked as boolean,
+      selected: this.selectInput.current?.value as string,
+      radio: this.radioInputLeft.current?.checked
+        ? (this.radioInputLeft.current?.value as string)
+        : (this.radioInputRight.current?.value as string),
+      text: this.textareaInput.current?.value as string,
+      file:
+        this.fileInput.current !== null &&
+        this.fileInput.current.files !== null &&
+        URL.createObjectURL(this.fileInput.current.files[0]),
+    };
+
+    this.props.updateCards(card);
   };
 
   handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
@@ -101,22 +103,8 @@ export class CardForm extends React.Component<ComponentProps, ComponentState> {
     await this.handleFormValidation();
 
     if (this.state.isFormVadid) {
-      const card = {
-        name: this.nameInput.current?.value as string,
-        date: this.dateInput.current?.value as string,
-        checked: this.checkInput.current?.checked as boolean,
-        selected: this.state.selectedValue,
-        radio: this.state.radioValue,
-        text: this.state.textAreaValue,
-        file:
-          this.fileInput.current !== null &&
-          this.fileInput.current.files !== null &&
-          URL.createObjectURL(this.fileInput.current.files[0]),
-      };
-
-      this.props.updateCards(card);
+      this.addNewCard();
       (event.target as HTMLFormElement).reset();
-      this.clearForm();
     }
   };
 
@@ -130,6 +118,7 @@ export class CardForm extends React.Component<ComponentProps, ComponentState> {
             <label className="nameLabel">
               <span className="formHeader">Enter your name:</span>
               <input
+                className="nameInput"
                 type="text"
                 placeholder="Print your awesome name there!"
                 ref={this.nameInput}
@@ -138,12 +127,12 @@ export class CardForm extends React.Component<ComponentProps, ComponentState> {
                 className="formInvalidText"
                 style={{ opacity: !this.state.isNameValid ? '1' : '0' }}
               >
-                *Please, enter your name above!
+                *Please, enter your name above! (Сapital letter first - Alex)
               </span>
             </label>
             <label className="dateLabel">
               <span className="formHeader">Сhoose your date of birth:</span>
-              <input type="date" ref={this.dateInput} />
+              <input className="dateInput" type="date" ref={this.dateInput} />
               <span
                 className="formInvalidText"
                 style={{ opacity: !this.state.isDateValid ? '1' : '0' }}
@@ -152,16 +141,16 @@ export class CardForm extends React.Component<ComponentProps, ComponentState> {
               </span>
             </label>
           </div>
-          <div className="formContainer">
+          <div className="formContainer checkSelectRadioContainer">
             <div className="checkSelectContainer">
               <span className="formHeader">Features:</span>
               <label className="checkLabel">
                 Water protection:
-                <input type="checkbox" ref={this.checkInput} />
+                <input className="checkInput" type="checkbox" ref={this.checkInput} />
               </label>
               <label className="selectLabel">
                 Material:
-                <select value={this.state.selectedValue} onChange={this.handleSelect}>
+                <select className="selectInput" ref={this.selectInput}>
                   <option value="steel">Steel</option>
                   <option value="plastic">Plastic</option>
                   <option value="gold">Gold</option>
@@ -177,19 +166,13 @@ export class CardForm extends React.Component<ComponentProps, ComponentState> {
                   type="radio"
                   name="radio"
                   value="left"
-                  onChange={this.handleRadio}
-                  checked={this.state.radioValue === `left`}
+                  ref={this.radioInputLeft}
+                  defaultChecked
                 />
               </label>
               <label className="radioLabel">
                 Right hand:
-                <input
-                  type="radio"
-                  name="radio"
-                  value="right"
-                  onChange={this.handleRadio}
-                  checked={this.state.radioValue === `right`}
-                />
+                <input type="radio" name="radio" value="right" ref={this.radioInputRight} />
               </label>
             </div>
           </div>
@@ -197,7 +180,7 @@ export class CardForm extends React.Component<ComponentProps, ComponentState> {
             <label className="fileLabel">
               <div className="fileContainer">
                 <span className="formHeader">Photo:</span>
-                <input type="file" accept="image/*" ref={this.fileInput} />
+                <input className="fileInput" type="file" accept="image/*" ref={this.fileInput} />
                 <span
                   className="formInvalidText"
                   style={{ opacity: !this.state.isFileValid ? '1' : '0' }}
@@ -210,9 +193,8 @@ export class CardForm extends React.Component<ComponentProps, ComponentState> {
               <span className="formHeader">About yourself</span>
               <textarea
                 className="textarea"
-                value={this.state.textAreaValue}
                 placeholder="Describe yourself! The more strange details, the more interesting the watch!"
-                onChange={this.handleTextArea}
+                ref={this.textareaInput}
               />
               <span
                 className="formInvalidText"

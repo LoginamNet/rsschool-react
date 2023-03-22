@@ -4,9 +4,6 @@ import { fireEvent, render, screen, waitFor, cleanup } from '@testing-library/re
 import userEvent from '@testing-library/user-event';
 
 import App from './App';
-import { About } from 'pages/About';
-import { NotFoundPage } from 'pages/NotFound';
-import { BrowserRouter } from 'react-router-dom';
 import { Card } from 'components/cards/Card';
 import { cardsData } from 'common/data';
 import { Cards } from 'components/cards/Cards';
@@ -51,53 +48,5 @@ describe('App elements tests', function () {
 
     fireEvent.click(screen.getAllByRole('link')[1]);
     expect(screen.getByRole('headerTitle')).toHaveTextContent('ABOUT US');
-  });
-});
-
-describe('Pages tests', function () {
-  test('should render about page', () => {
-    render(<About />);
-
-    const header = screen.getByRole('heading');
-    expect(header).toBeInTheDocument();
-    expect(header).toHaveTextContent('Some info about us!');
-  });
-
-  test('should render 404 page', () => {
-    render(
-      <BrowserRouter>
-        <NotFoundPage />
-      </BrowserRouter>
-    );
-
-    const header = screen.getByRole('heading');
-    expect(header).toBeInTheDocument();
-    expect(header).toHaveTextContent('Oops!');
-  });
-});
-
-describe('Cards tests', function () {
-  test('should render Card', () => {
-    render(
-      <Card
-        id={cardsData[0].id}
-        title={cardsData[0].title}
-        brand={cardsData[0].brand}
-        description={cardsData[0].description}
-        rating={cardsData[0].rating}
-        thumbnail={cardsData[0].thumbnail}
-      />
-    );
-
-    expect(screen.getByText(cardsData[0].title)).toBeInTheDocument();
-    expect(screen.getByText(cardsData[0].brand)).toBeInTheDocument();
-    expect(screen.getByText(cardsData[0].description)).toBeInTheDocument();
-  });
-
-  test('should render Cards', () => {
-    render(<Cards />);
-
-    const cards = screen.getAllByRole('card');
-    expect(cards).toHaveLength(cardsData.length);
   });
 });

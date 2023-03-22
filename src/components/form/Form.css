@@ -68,8 +68,25 @@
     width: 50%
 }
 
+.checkSelectRadioContainer {
+    padding-bottom: 20px;
+}
+
+.nameInput,
+.dateInput,
 .textarea {
     padding: 10px;
+    border: 2px solid var(--alter-element-color);
+    border-radius: 5px;
+}
+
+.checkInput {
+    margin-left: 20px;
+}
+
+.selectInput {
+    width: 50%;
+    margin-left: 20px;
     border: 2px solid var(--alter-element-color);
     border-radius: 5px;
 }
