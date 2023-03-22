@@ -3,6 +3,7 @@ import { render, screen, cleanup } from '@testing-library/react';
 import { About } from 'pages/About';
 import { NotFoundPage } from 'pages/NotFound';
 import { BrowserRouter } from 'react-router-dom';
+import { Form } from 'pages/Form';
 
 afterEach(cleanup);
 
@@ -25,5 +26,16 @@ describe('Pages tests', function () {
     const header = screen.getByRole('heading');
     expect(header).toBeInTheDocument();
     expect(header).toHaveTextContent('Oops!');
+  });
+
+  test('should render form page', () => {
+    render(
+      <BrowserRouter>
+        <Form />
+      </BrowserRouter>
+    );
+
+    const header = screen.getByRole('form');
+    expect(header).toBeInTheDocument();
   });
 });

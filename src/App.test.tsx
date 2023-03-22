@@ -4,9 +4,6 @@ import { fireEvent, render, screen, waitFor, cleanup } from '@testing-library/re
 import userEvent from '@testing-library/user-event';
 
 import App from './App';
-import { Card } from 'components/cards/Card';
-import { cardsData } from 'common/data';
-import { Cards } from 'components/cards/Cards';
 
 afterEach(cleanup);
 

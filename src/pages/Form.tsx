@@ -33,7 +33,10 @@ export class Form extends React.Component<ComponentProps, FormState> {
   render() {
     return (
       <div className="page formPage">
-        <CardForm updateCards={this.updateCards} />
+        <div className="form">
+          <div className="formImage"></div>
+          <CardForm updateCards={this.updateCards} />
+        </div>
         <div>
           {this.state.cards.length > 0 ? (
             <FormCards cards={this.state.cards} />
