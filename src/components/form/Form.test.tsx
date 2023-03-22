@@ -56,10 +56,8 @@ describe('Form tests', function () {
 
     const input = screen.getByRole('nameinput') as HTMLInputElement;
     userEvent.type(input, '23');
-    // await act(async () => fireEvent.submit(screen.getByRole('form')));
 
     expect(input.value).toBe('23');
-    // await act(async () => expect(input.value).toBe('23'));
     await act(async () => fireEvent.submit(screen.getByRole('form')));
   });
 

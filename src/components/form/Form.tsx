@@ -2,6 +2,8 @@ import React from 'react';
 import './Form.css';
 
 import { FormCard } from 'pages/Form';
+import { NameInput } from './inputs/NameInput';
+import { DateInput } from './inputs/DateInput';
 
 type ComponentProps = {
   updateCards: (card: FormCard) => void;
@@ -113,32 +115,8 @@ export class CardForm extends React.Component<ComponentProps, ComponentState> {
       <form className="formProps" onSubmit={this.handleSubmit} role="form">
         <span className="formTitle">Let`s pick up the watch!</span>
         <div className="formContainer nameDateContainer">
-          <label className="nameLabel">
-            <span className="formHeader">Enter your name:</span>
-            <input
-              className="nameInput"
-              type="text"
-              placeholder="Print your awesome name there!"
-              ref={this.nameInput}
-              role="nameinput"
-            />
-            <span
-              className="formInvalidText"
-              style={{ opacity: !this.state.isNameValid ? '1' : '0' }}
-            >
-              *Please, enter your name above! (Сapital letter first - Alex)
-            </span>
-          </label>
-          <label className="dateLabel">
-            <span className="formHeader">Сhoose your date of birth:</span>
-            <input className="dateInput" type="date" ref={this.dateInput} role="dateinput" />
-            <span
-              className="formInvalidText"
-              style={{ opacity: !this.state.isDateValid ? '1' : '0' }}
-            >
-              *Everybody has a birthday!
-            </span>
-          </label>
+          <NameInput input={this.nameInput} isValid={this.state.isNameValid} />
+          <DateInput input={this.dateInput} isValid={this.state.isDateValid} />
         </div>
         <div className="formContainer checkSelectRadioContainer">
           <div className="checkSelectContainer">
