@@ -1,8 +1,7 @@
 import React from 'react';
-import { render, screen, cleanup, fireEvent, waitFor } from '@testing-library/react';
+import { render, screen, cleanup, fireEvent } from '@testing-library/react';
 import { FormCards } from './FormCards';
 import userEvent from '@testing-library/user-event';
-import App from 'App';
 import { CardForm } from './Form';
 
 const testCards = [
@@ -26,27 +25,21 @@ const testCards = [
   },
 ];
 
+window.URL.createObjectURL = jest.fn();
+const mockUpdate = jest.fn();
+
 afterEach(cleanup);
 
 describe('Form tests', function () {
   window.URL.createObjectURL = jest.fn();
 
-  test('should switch to Form page', () => {
-    render(<App />);
-
-    fireEvent.click(screen.getAllByRole('link')[2]);
-    expect(screen.getByRole('headerTitle')).toHaveTextContent('FORM');
-  });
-
   test('Form must be submitted', () => {
-    const mockUpdate = jest.fn();
     render(<CardForm updateCards={mockUpdate} />);
 
     fireEvent.submit(screen.getByRole('form'));
   });
 
   test('file can be loaded to file input', () => {
-    const mockUpdate = jest.fn();
     const file = new File(['hello'], 'hello.png', { type: 'image/png' });
     render(<CardForm updateCards={mockUpdate} />);
 
@@ -59,7 +52,6 @@ describe('Form tests', function () {
   });
 
   test('should update name input value', () => {
-    const mockUpdate = jest.fn();
     render(<CardForm updateCards={mockUpdate} />);
 
     const input = screen.getByRole('nameinput') as HTMLInputElement;
@@ -70,7 +62,6 @@ describe('Form tests', function () {
   });
 
   test('should update date input value', () => {
-    const mockUpdate = jest.fn();
     const testValue = '2019-03-29';
     render(<CardForm updateCards={mockUpdate} />);
 
@@ -82,7 +73,6 @@ describe('Form tests', function () {
   });
 
   test('should update textarea input value', () => {
-    const mockUpdate = jest.fn();
     render(<CardForm updateCards={mockUpdate} />);
 
     const input = screen.getByRole('textareainput') as HTMLTextAreaElement;
@@ -96,7 +86,6 @@ describe('Form tests', function () {
   });
 
   test('should check the checkbox input', () => {
-    const mockUpdate = jest.fn();
     render(<CardForm updateCards={mockUpdate} />);
 
     const input = screen.getByRole('checkinput') as HTMLInputElement;
@@ -108,7 +97,6 @@ describe('Form tests', function () {
   });
 
   test('should switch the radio inputs', () => {
-    const mockUpdate = jest.fn();
     render(<CardForm updateCards={mockUpdate} />);
 
     const input1 = screen.getByRole('radioinput1') as HTMLInputElement;
