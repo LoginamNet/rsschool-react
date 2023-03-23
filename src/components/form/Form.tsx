@@ -4,6 +4,11 @@ import './Form.css';
 import { FormCard } from 'pages/Form';
 import { NameInput } from './inputs/NameInput';
 import { DateInput } from './inputs/DateInput';
+import { CheckInput } from './inputs/CheckInput';
+import { SelectInput } from './inputs/SelectInput';
+import { RadioInput } from './inputs/RadioInput';
+import { TextareaInput } from './inputs/TextareaInput';
+import { FileInput } from './inputs/FileInput';
 
 type ComponentProps = {
   updateCards: (card: FormCard) => void;
@@ -121,84 +126,14 @@ export class CardForm extends React.Component<ComponentProps, ComponentState> {
         <div className="formContainer checkSelectRadioContainer">
           <div className="checkSelectContainer">
             <span className="formHeader">Features:</span>
-            <label className="checkLabel">
-              Water protection:
-              <input
-                className="checkInput"
-                type="checkbox"
-                ref={this.checkInput}
-                role="checkinput"
-              />
-            </label>
-            <label className="selectLabel">
-              Material:
-              <select className="selectInput" ref={this.selectInput}>
-                <option value="steel">Steel</option>
-                <option value="plastic">Plastic</option>
-                <option value="gold">Gold</option>
-                <option value="carbon">Carbon</option>
-              </select>
-            </label>
+            <CheckInput input={this.checkInput} />
+            <SelectInput input={this.selectInput} />
           </div>
-          <div className="radioContainer">
-            <span className="formHeader">Choose your main hand:</span>
-            <label className="radioLabel">
-              Left hand:
-              <input
-                type="radio"
-                name="radio"
-                value="left"
-                ref={this.radioInputLeft}
-                role="radioinput1"
-                defaultChecked
-              />
-            </label>
-            <label className="radioLabel">
-              Right hand:
-              <input
-                type="radio"
-                name="radio"
-                value="right"
-                ref={this.radioInputRight}
-                role="radioinput2"
-              />
-            </label>
-          </div>
+          <RadioInput input1={this.radioInputLeft} input2={this.radioInputRight} />
         </div>
         <div className="formContainer radioTextAreaContainer">
-          <label className="fileLabel">
-            <div className="fileContainer">
-              <span className="formHeader">Photo:</span>
-              <input
-                className="fileInput"
-                type="file"
-                accept="image/*"
-                ref={this.fileInput}
-                role="fileinput"
-              />
-              <span
-                className="formInvalidText"
-                style={{ opacity: !this.state.isFileValid ? '1' : '0' }}
-              >
-                *Just a photo, nothint to afraid there!
-              </span>
-            </div>
-          </label>
-          <div className="textareaContainer">
-            <span className="formHeader">About yourself</span>
-            <textarea
-              className="textarea"
-              placeholder="Describe yourself! The more strange details, the more interesting the watch!"
-              ref={this.textareaInput}
-              role="textareainput"
-            />
-            <span
-              className="formInvalidText"
-              style={{ opacity: !this.state.isTextAreaValid ? '1' : '0' }}
-            >
-              *You are interresting! Tell us your story!
-            </span>
-          </div>
+          <FileInput input={this.fileInput} isValid={this.state.isFileValid} />
+          <TextareaInput input={this.textareaInput} isValid={this.state.isTextAreaValid} />
         </div>
         <input className="formSubmit" type="submit" value="IT`S ABOUT TIME!" role="formsubmit" />
       </form>
