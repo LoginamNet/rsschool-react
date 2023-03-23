@@ -55,9 +55,9 @@ describe('Form tests', function () {
     render(<CardForm updateCards={mockUpdate} />);
 
     const input = screen.getByRole('nameinput') as HTMLInputElement;
-    userEvent.type(input, '23');
+    userEvent.type(input, 'Name');
 
-    expect(input.value).toBe('23');
+    expect(input.value).toBe('Name');
     await act(async () => fireEvent.submit(screen.getByRole('form')));
   });
 
@@ -103,6 +103,26 @@ describe('Form tests', function () {
 
     expect(input1).not.toBeChecked();
     expect(input2).toBeChecked();
+  });
+
+  test('form can be submited after all required data placed', async () => {
+    const file = new File(['hello'], 'hello.png', { type: 'image/png' });
+    const testValue = '2019-03-29';
+    render(<CardForm updateCards={mockUpdate} />);
+
+    const inputFile = screen.getByRole('fileinput') as HTMLInputElement;
+    userEvent.upload(inputFile, file);
+
+    const inputName = screen.getByRole('nameinput') as HTMLInputElement;
+    userEvent.type(inputName, 'Name');
+
+    const inputDate = screen.getByRole('dateinput') as HTMLInputElement;
+    fireEvent.change(inputDate, { target: { value: testValue } });
+
+    const inputText = screen.getByRole('textareainput') as HTMLTextAreaElement;
+    userEvent.type(inputText, '23');
+
+    await act(async () => fireEvent.submit(screen.getByRole('form')));
   });
 });
 

@@ -1,6 +1,8 @@
+import React from 'react';
+
 import { CardForm } from 'components/form/Form';
 import { FormCards } from 'components/form/FormCards';
-import React from 'react';
+import { FormModal } from 'components/modal/FormModal';
 
 export type FormCard = {
   name: string;
@@ -12,8 +14,9 @@ export type FormCard = {
   file: string | false;
 };
 
-export type FormState = {
+type FormState = {
   cards: FormCard[];
+  isModalOpen: boolean;
 };
 
 type ComponentProps = {
@@ -23,11 +26,15 @@ type ComponentProps = {
 export class Form extends React.Component<ComponentProps, FormState> {
   constructor(props: ComponentProps) {
     super(props);
-    this.state = { cards: [] };
+    this.state = { cards: [], isModalOpen: false };
   }
 
   updateCards = (card: FormCard) => {
-    this.setState({ cards: [...this.state.cards, card] });
+    this.setState({ cards: [...this.state.cards, card], isModalOpen: true });
+  };
+
+  closeFormModal = () => {
+    this.setState({ isModalOpen: false });
   };
 
   render() {
@@ -36,6 +43,7 @@ export class Form extends React.Component<ComponentProps, FormState> {
         <div className="form">
           <div className="formImage"></div>
           <CardForm updateCards={this.updateCards} />
+          <FormModal closeModal={this.closeFormModal} isOpen={this.state.isModalOpen} />
         </div>
         <div>
           {this.state.cards.length > 0 ? (

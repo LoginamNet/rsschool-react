@@ -2,9 +2,13 @@ import React from 'react';
 import { SingleFormCard } from './FormCard';
 import './FormCards.css';
 
-import { FormState } from 'pages/Form';
+import { FormCard } from 'pages/Form';
 
-export function FormCards(props: FormState) {
+type ComponentProps = {
+  cards: FormCard[];
+};
+
+export function FormCards(props: ComponentProps) {
   const cards = props.cards.map((item, key) => (
     <SingleFormCard
       key={key}
