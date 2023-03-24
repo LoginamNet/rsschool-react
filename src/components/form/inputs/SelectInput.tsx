@@ -14,10 +14,10 @@ export class SelectInput extends React.Component<ComponentProps> {
       <label className="selectLabel">
         Material:
         <select className="selectInput" ref={this.props.input}>
-          <option value="steel">Steel</option>
-          <option value="plastic">Plastic</option>
-          <option value="gold">Gold</option>
-          <option value="carbon">Carbon</option>
+          <option value="Steel">Steel</option>
+          <option value="Plastic">Plastic</option>
+          <option value="Gold">Gold</option>
+          <option value="Carbon">Carbon</option>
         </select>
       </label>
     );
