@@ -1,6 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
-export function About() {
+type ComponentProps = {
+  setHeaderTitle: React.Dispatch<React.SetStateAction<string>>;
+};
+
+export function About(props: ComponentProps) {
+  useEffect(() => {
+    props.setHeaderTitle('ABOUT US');
+  });
+
   return (
     <div className="page aboutPage">
       <h2>Some info about us!</h2>

@@ -5,11 +5,13 @@ import { NotFoundPage } from 'pages/NotFound';
 import { BrowserRouter } from 'react-router-dom';
 import { Form } from 'pages/Form';
 
+const setHeaderTitle = jest.fn();
+
 afterEach(cleanup);
 
 describe('Pages tests', function () {
   test('should render about page', () => {
-    render(<About />);
+    render(<About setHeaderTitle={setHeaderTitle} />);
 
     const header = screen.getByRole('heading');
     expect(header).toBeInTheDocument();
@@ -19,7 +21,7 @@ describe('Pages tests', function () {
   test('should render 404 page', () => {
     render(
       <BrowserRouter>
-        <NotFoundPage />
+        <NotFoundPage setHeaderTitle={setHeaderTitle} />
       </BrowserRouter>
     );
 
@@ -31,7 +33,7 @@ describe('Pages tests', function () {
   test('should render form page', () => {
     render(
       <BrowserRouter>
-        <Form />
+        <Form setHeaderTitle={setHeaderTitle} />
       </BrowserRouter>
     );
 

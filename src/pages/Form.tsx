@@ -20,13 +20,17 @@ type FormState = {
 };
 
 type ComponentProps = {
-  children?: React.ReactNode;
+  setHeaderTitle: React.Dispatch<React.SetStateAction<string>>;
 };
 
 export class Form extends React.Component<ComponentProps, FormState> {
   constructor(props: ComponentProps) {
     super(props);
     this.state = { cards: [], isModalOpen: false };
+  }
+
+  componentDidMount(): void {
+    this.props.setHeaderTitle('FORM');
   }
 
   updateCards = (card: FormCard) => {

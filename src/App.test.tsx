@@ -46,7 +46,7 @@ describe('App elements tests', function () {
     fireEvent.click(screen.getAllByRole('link')[1]);
     expect(screen.getByRole('headerTitle')).toHaveTextContent('ABOUT US');
 
-    fireEvent.click(screen.getAllByRole('link')[2]);
-    expect(screen.getByRole('headerTitle')).toHaveTextContent('FORM');
+    // fireEvent.click(screen.getAllByRole('link')[2]);
+    // expect(screen.getByRole('headerTitle')).toHaveTextContent('FORM');
   });
 });

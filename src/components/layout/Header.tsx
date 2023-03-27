@@ -1,35 +1,21 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-export function Header() {
-  const [title, setTitle] = useState(location.pathname);
+type ComponentProps = {
+  headerTitle: string;
+};
 
-  const handleTitleUpdate = () => {
-    return title === '/'
-      ? 'HOME'
-      : title === '/about'
-      ? 'ABOUT US'
-      : title === '/form'
-      ? 'FORM'
-      : '404';
-  };
-
+export function Header(props: ComponentProps) {
   return (
     <header role="header">
       <div className="headerContainer">
         <span className="headerTitle" role="headerTitle">
-          {handleTitleUpdate()}
+          {props.headerTitle}
         </span>
         <nav className="headerMenu">
-          <li className="headerMenuItem" onClick={() => setTitle(location.pathname)}>
-            <NavLink to="/">Home</NavLink>
-          </li>
-          <li className="headerMenuItem" onClick={() => setTitle(location.pathname)}>
-            <NavLink to="/about">About us</NavLink>
-          </li>
-          <li className="headerMenuItem" onClick={() => setTitle(location.pathname)}>
-            <NavLink to="/form">Form</NavLink>
-          </li>
+          <NavLink to="/">Home</NavLink>
+          <NavLink to="/about">About us</NavLink>
+          <NavLink to="/form">Form</NavLink>
         </nav>
       </div>
     </header>
