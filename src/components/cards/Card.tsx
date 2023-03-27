@@ -13,26 +13,17 @@ type ComponentProps = {
   title: string;
 };
 
-export class Card extends React.Component<ComponentProps> {
-  constructor(props: ComponentProps) {
-    super(props);
-  }
-
-  render(): React.ReactNode {
-    return (
-      <div className="cardContainer" role="card">
-        <div
-          className="cardImage"
-          style={{ backgroundImage: `url(${this.props.thumbnail})` }}
-        ></div>
-        <div className="cardDefinition">
-          <span className="cardName">{this.props.title}</span>
-          <span className="cardBrand">{this.props.brand}</span>
-          <span className="cardDescription">{this.props.description}</span>
-        </div>
-        <span className="cardRating">{this.props.rating}</span>
-        <button className="cardButton">Order now</button>
+export function Card(props: ComponentProps) {
+  return (
+    <div className="cardContainer" role="card">
+      <div className="cardImage" style={{ backgroundImage: `url(${props.thumbnail})` }}></div>
+      <div className="cardDefinition">
+        <span className="cardName">{props.title}</span>
+        <span className="cardBrand">{props.brand}</span>
+        <span className="cardDescription">{props.description}</span>
       </div>
-    );
-  }
+      <span className="cardRating">{props.rating}</span>
+      <button className="cardButton">Order now</button>
+    </div>
+  );
 }
