@@ -11,7 +11,8 @@ import { TextareaInput } from './inputs/TextareaInput';
 import { FileInput } from './inputs/FileInput';
 
 type ComponentProps = {
-  updateCards: (card: FormCard) => void;
+  setCards: React.Dispatch<React.SetStateAction<FormCard[]>>;
+  setModal: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
 type ComponentState = {
@@ -102,7 +103,8 @@ export class CardForm extends React.Component<ComponentProps, ComponentState> {
         URL.createObjectURL(this.fileInput.current.files[0]),
     };
 
-    this.props.updateCards(card);
+    this.props.setCards((cards) => [...cards, card]);
+    this.props.setModal(true);
   };
 
   handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
