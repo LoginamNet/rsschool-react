@@ -115,7 +115,7 @@ describe('Form tests', function () {
     userEvent.upload(inputFile, file);
 
     const inputName = screen.getByRole('nameinput') as HTMLInputElement;
-    userEvent.type(inputName, 'Name');
+    userEvent.type(inputName, 'test');
 
     const inputDate = screen.getByRole('dateinput') as HTMLInputElement;
     fireEvent.change(inputDate, { target: { value: testValue } });
@@ -124,6 +124,8 @@ describe('Form tests', function () {
     userEvent.type(inputText, '23');
 
     await act(async () => fireEvent.submit(screen.getByRole('form')));
+
+    expect(screen.getByText('*Сapital letter first - Alex')).toBeInTheDocument();
   });
 });
 
