@@ -15,10 +15,10 @@ export function DateInput(props: ComponentProps) {
       <input
         className="dateInput"
         type="date"
-        {...props.register('date', { required: true })}
+        {...props.register('date', { required: '*Everybody has a birthday!' })}
         role="dateinput"
       />
-      {props.errors.date && <span className="formInvalidText">*Everybody has a birthday!</span>}
+      {props.errors.date && <span className="formInvalidText">{props.errors.date.message}</span>}
     </label>
   );
 }

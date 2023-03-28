@@ -15,12 +15,10 @@ export function TextareaInput(props: ComponentProps) {
       <textarea
         className="textarea"
         placeholder="Describe yourself! The more strange details, the more interesting the watch!"
-        {...props.register('text', { required: true })}
+        {...props.register('text', { required: '*You are interresting! Tell us your story!' })}
         role="textareainput"
       />
-      {props.errors.text && (
-        <span className="formInvalidText">*You are interresting! Tell us your story!</span>
-      )}
+      {props.errors.text && <span className="formInvalidText">{props.errors.text.message}</span>}
     </div>
   );
 }

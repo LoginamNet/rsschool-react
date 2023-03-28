@@ -17,12 +17,10 @@ export function FileInput(props: ComponentProps) {
           className="fileInput"
           type="file"
           accept="image/*"
-          {...props.register('file', { required: true })}
+          {...props.register('file', { required: '*Just a photo, nothing to afraid there!' })}
           role="fileinput"
         />
-        {props.errors.file && (
-          <span className="formInvalidText">*Just a photo, nothing to afraid there!</span>
-        )}
+        {props.errors.file && <span className="formInvalidText">{props.errors.file.message}</span>}
       </div>
     </label>
   );
