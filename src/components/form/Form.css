@@ -69,8 +69,19 @@
     width: 50%
 }
 
-.checkSelectRadioContainer {
+.nameLabel,
+.dateLabel,
+.fileLabel,
+.checkSelectRadioContainer,
+.textareaContainer {
     padding-bottom: 20px;
+}
+
+.nameLabel,
+.dateLabel,
+.fileLabel,
+.textareaContainer {
+    position: relative;
 }
 
 .nameInput,
@@ -106,6 +117,8 @@
 }
 
 .formInvalidText {
+    position: absolute;
+    bottom: 0;
     color: var(--error-color);
     font-size: 0.8rem;
 }
