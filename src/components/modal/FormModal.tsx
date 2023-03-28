@@ -2,7 +2,7 @@ import React from 'react';
 import './FormModal.css';
 
 type ComponentProps = {
-  setModal: React.Dispatch<React.SetStateAction<boolean>>;
+  closeModal: () => void;
   isModalOpen: boolean;
 };
 
@@ -12,7 +12,7 @@ export function FormModal(props: ComponentProps) {
       <div className={`formModal ${props.isModalOpen && 'formModalOpen'}`}>
         <h2 className="modalHeader">Submited!</h2>
         <span className="modalText">Thanks for your data! It will help us to do some things!</span>
-        <button className="modalButton" onClick={() => props.setModal(false)} role="formmodalclose">
+        <button className="modalButton" onClick={() => props.closeModal()} role="formmodalclose">
           Close & add more
         </button>
       </div>

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { SubmitHandler } from 'react-hook-form';
 
 import { CardForm } from 'components/form/Form';
 import { FormCards } from 'components/form/FormCards';
@@ -14,6 +15,16 @@ export type FormCard = {
   file: string | false;
 };
 
+export type FormInputs = {
+  name: string;
+  date: string;
+  check: boolean;
+  select: string;
+  radio: string;
+  file: FileList;
+  text: string;
+};
+
 type ComponentProps = {
   setHeaderTitle: React.Dispatch<React.SetStateAction<string>>;
 };
@@ -26,12 +37,31 @@ export function Form(props: ComponentProps) {
     props.setHeaderTitle('FORM');
   });
 
+  const onSubmit: SubmitHandler<FormInputs> = (data) => {
+    const card = {
+      name: data.name,
+      date: data.date,
+      checked: data.check,
+      selected: data.select,
+      radio: data.radio,
+      text: data.text,
+      file: URL.createObjectURL(data.file[0]),
+    };
+
+    setCards((cards) => [...cards, card]);
+    setModal(true);
+  };
+
+  const closeModal = () => {
+    setModal(false);
+  };
+
   return (
     <div className="page formPage">
       <div className="form">
         <div className="formImage"></div>
-        <CardForm setCards={setCards} setModal={setModal} />
-        <FormModal setModal={setModal} isModalOpen={isModalOpen} />
+        <CardForm onSubmit={onSubmit} />
+        <FormModal closeModal={closeModal} isModalOpen={isModalOpen} />
       </div>
       <div>
         {cards.length > 0 ? (
