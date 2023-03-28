@@ -1,14 +1,22 @@
 import React from 'react';
+import { UseFormRegister } from 'react-hook-form';
+
+import { FormInputs } from '../Form';
 
 type ComponentProps = {
-  input: React.RefObject<HTMLInputElement>;
+  register: UseFormRegister<FormInputs>;
 };
 
 export function CheckInput(props: ComponentProps) {
   return (
     <label className="checkLabel">
       Water protection:
-      <input className="checkInput" type="checkbox" ref={props.input} role="checkinput" />
+      <input
+        className="checkInput"
+        type="checkbox"
+        {...props.register('check')}
+        role="checkinput"
+      />
     </label>
   );
 }

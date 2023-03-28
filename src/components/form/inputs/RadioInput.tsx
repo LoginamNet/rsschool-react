@@ -1,8 +1,10 @@
 import React from 'react';
+import { UseFormRegister } from 'react-hook-form';
+
+import { FormInputs } from '../Form';
 
 type ComponentProps = {
-  input1: React.RefObject<HTMLInputElement>;
-  input2: React.RefObject<HTMLInputElement>;
+  register: UseFormRegister<FormInputs>;
 };
 
 export function RadioInput(props: ComponentProps) {
@@ -13,16 +15,15 @@ export function RadioInput(props: ComponentProps) {
         Left hand:
         <input
           type="radio"
-          name="radio"
           value="left"
-          ref={props.input1}
+          {...props.register('radio')}
           role="radioinput1"
           defaultChecked
         />
       </label>
       <label className="radioLabel">
         Right hand:
-        <input type="radio" name="radio" value="right" ref={props.input2} role="radioinput2" />
+        <input type="radio" value="right" {...props.register('radio')} role="radioinput2" />
       </label>
     </div>
   );

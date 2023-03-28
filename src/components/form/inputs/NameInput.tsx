@@ -1,8 +1,11 @@
 import React from 'react';
+import { FieldErrors, UseFormRegister } from 'react-hook-form';
+
+import { FormInputs } from '../Form';
 
 type ComponentProps = {
-  input: React.RefObject<HTMLInputElement>;
-  isValid: boolean;
+  register: UseFormRegister<FormInputs>;
+  errors: FieldErrors<FormInputs>;
 };
 
 export function NameInput(props: ComponentProps) {
@@ -13,12 +16,17 @@ export function NameInput(props: ComponentProps) {
         className="nameInput"
         type="text"
         placeholder="Print your awesome name there!"
-        ref={props.input}
+        {...props.register('name', {
+          required: true,
+          validate: (value) => value[0] === value[0].toUpperCase(),
+        })}
         role="nameinput"
       />
-      <span className="formInvalidText" style={{ opacity: !props.isValid ? '1' : '0' }}>
-        *Please, enter your name above! (Сapital letter first - Alex)
-      </span>
+      {props.errors.name && (
+        <span className="formInvalidText">
+          *Please, enter your name above! (Сapital letter first - Alex)
+        </span>
+      )}
     </label>
   );
 }

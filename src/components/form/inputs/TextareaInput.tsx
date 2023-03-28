@@ -1,8 +1,11 @@
 import React from 'react';
+import { FieldErrors, UseFormRegister } from 'react-hook-form';
+
+import { FormInputs } from '../Form';
 
 type ComponentProps = {
-  input: React.RefObject<HTMLTextAreaElement>;
-  isValid: boolean;
+  register: UseFormRegister<FormInputs>;
+  errors: FieldErrors<FormInputs>;
 };
 
 export function TextareaInput(props: ComponentProps) {
@@ -12,12 +15,12 @@ export function TextareaInput(props: ComponentProps) {
       <textarea
         className="textarea"
         placeholder="Describe yourself! The more strange details, the more interesting the watch!"
-        ref={props.input}
+        {...props.register('text', { required: true })}
         role="textareainput"
       />
-      <span className="formInvalidText" style={{ opacity: !props.isValid ? '1' : '0' }}>
-        *You are interresting! Tell us your story!
-      </span>
+      {props.errors.text && (
+        <span className="formInvalidText">*You are interresting! Tell us your story!</span>
+      )}
     </div>
   );
 }

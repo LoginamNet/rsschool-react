@@ -1,8 +1,11 @@
 import React from 'react';
+import { FieldErrors, UseFormRegister } from 'react-hook-form';
+
+import { FormInputs } from '../Form';
 
 type ComponentProps = {
-  input: React.RefObject<HTMLInputElement>;
-  isValid: boolean;
+  register: UseFormRegister<FormInputs>;
+  errors: FieldErrors<FormInputs>;
 };
 
 export function FileInput(props: ComponentProps) {
@@ -14,12 +17,12 @@ export function FileInput(props: ComponentProps) {
           className="fileInput"
           type="file"
           accept="image/*"
-          ref={props.input}
+          {...props.register('file', { required: true })}
           role="fileinput"
         />
-        <span className="formInvalidText" style={{ opacity: !props.isValid ? '1' : '0' }}>
-          *Just a photo, nothint to afraid there!
-        </span>
+        {props.errors.file && (
+          <span className="formInvalidText">*Just a photo, nothing to afraid there!</span>
+        )}
       </div>
     </label>
   );
