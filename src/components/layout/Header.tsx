@@ -24,7 +24,13 @@ export class Header extends React.Component<ComponentProps, ComponentState> {
       <header role="header">
         <div className="headerContainer">
           <span className="headerTitle" role="headerTitle">
-            {this.state.title === '/' ? 'HOME' : this.state.title === '/about' ? 'ABOUT US' : '404'}
+            {this.state.title === '/'
+              ? 'HOME'
+              : this.state.title === '/about'
+              ? 'ABOUT US'
+              : this.state.title === '/form'
+              ? 'FORM'
+              : '404'}
           </span>
           <nav className="headerMenu">
             <li className="headerMenuItem" onClick={this.updateTitle}>
@@ -32,6 +38,9 @@ export class Header extends React.Component<ComponentProps, ComponentState> {
             </li>
             <li className="headerMenuItem" onClick={this.updateTitle}>
               <NavLink to="/about">About us</NavLink>
+            </li>
+            <li className="headerMenuItem" onClick={this.updateTitle}>
+              <NavLink to="/form">Form</NavLink>
             </li>
           </nav>
         </div>

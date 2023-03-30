@@ -7,4 +7,6 @@
     --alter-element-color: rgb(149, 29, 204);
     --active-element-color: rgb(255, 166, 0);
     --background-element-color: rgb(224, 224, 224);
+    --error-color: rgb(255, 0, 0);
+    --modal-container-color: rgba(0, 0, 0, 0.479);
 }
