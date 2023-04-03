@@ -1,30 +1,29 @@
+import { FormInputs } from 'pages/Form';
 import React from 'react';
+import { FieldErrors, UseFormRegister } from 'react-hook-form';
 
 type ComponentProps = {
-  input: React.RefObject<HTMLInputElement>;
-  isValid: boolean;
+  register: UseFormRegister<FormInputs>;
+  errors: FieldErrors<FormInputs>;
 };
 
-export class NameInput extends React.Component<ComponentProps> {
-  constructor(props: ComponentProps) {
-    super(props);
-  }
-
-  render(): React.ReactNode {
-    return (
-      <label className="nameLabel">
-        <span className="formHeader">Enter your name:</span>
-        <input
-          className="nameInput"
-          type="text"
-          placeholder="Print your awesome name there!"
-          ref={this.props.input}
-          role="nameinput"
-        />
-        <span className="formInvalidText" style={{ opacity: !this.props.isValid ? '1' : '0' }}>
-          *Please, enter your name above! (Сapital letter first - Alex)
-        </span>
-      </label>
-    );
-  }
+export function NameInput(props: ComponentProps) {
+  return (
+    <label className="nameLabel">
+      <span className="formHeader">Enter your name:</span>
+      <input
+        className="nameInput"
+        type="text"
+        placeholder="Print your awesome name there!"
+        {...props.register('name', {
+          required: '*Please, enter your name above!',
+          validate: (value) => {
+            return value[0] === value[0].toUpperCase() || '*Сapital letter first - Alex';
+          },
+        })}
+        role="nameinput"
+      />
+      {props.errors.name && <span className="formInvalidText">{props.errors.name.message}</span>}
+    </label>
+  );
 }

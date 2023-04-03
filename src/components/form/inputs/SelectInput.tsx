@@ -1,25 +1,22 @@
 import React from 'react';
+import { UseFormRegister } from 'react-hook-form';
+
+import { FormInputs } from 'pages/Form';
 
 type ComponentProps = {
-  input: React.RefObject<HTMLSelectElement>;
+  register: UseFormRegister<FormInputs>;
 };
 
-export class SelectInput extends React.Component<ComponentProps> {
-  constructor(props: ComponentProps) {
-    super(props);
-  }
-
-  render(): React.ReactNode {
-    return (
-      <label className="selectLabel">
-        Material:
-        <select className="selectInput" ref={this.props.input}>
-          <option value="Steel">Steel</option>
-          <option value="Plastic">Plastic</option>
-          <option value="Gold">Gold</option>
-          <option value="Carbon">Carbon</option>
-        </select>
-      </label>
-    );
-  }
+export function SelectInput(props: ComponentProps) {
+  return (
+    <label className="selectLabel">
+      Material:
+      <select className="selectInput" {...props.register('select')}>
+        <option value="Steel">Steel</option>
+        <option value="Plastic">Plastic</option>
+        <option value="Gold">Gold</option>
+        <option value="Carbon">Carbon</option>
+      </select>
+    </label>
+  );
 }

@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { SubmitHandler } from 'react-hook-form';
 
 import { CardForm } from 'components/form/Form';
 import { FormCards } from 'components/form/FormCards';
@@ -14,45 +15,61 @@ export type FormCard = {
   file: string | false;
 };
 
-type FormState = {
-  cards: FormCard[];
-  isModalOpen: boolean;
+export type FormInputs = {
+  name: string;
+  date: string;
+  check: boolean;
+  select: string;
+  radio: string;
+  file: FileList;
+  text: string;
 };
 
 type ComponentProps = {
-  children?: React.ReactNode;
+  setHeaderTitle: React.Dispatch<React.SetStateAction<string>>;
 };
 
-export class Form extends React.Component<ComponentProps, FormState> {
-  constructor(props: ComponentProps) {
-    super(props);
-    this.state = { cards: [], isModalOpen: false };
-  }
+export function Form(props: ComponentProps) {
+  const [cards, setCards] = useState<FormCard[]>([]);
+  const [isModalOpen, setModal] = useState(false);
 
-  updateCards = (card: FormCard) => {
-    this.setState({ cards: [...this.state.cards, card], isModalOpen: true });
+  useEffect(() => {
+    props.setHeaderTitle('FORM');
+  });
+
+  const onSubmit: SubmitHandler<FormInputs> = (data) => {
+    const card = {
+      name: data.name,
+      date: data.date,
+      checked: data.check,
+      selected: data.select,
+      radio: data.radio,
+      text: data.text,
+      file: URL.createObjectURL(data.file[0]),
+    };
+
+    setCards((cards) => [...cards, card]);
+    setModal(true);
   };
 
-  closeFormModal = () => {
-    this.setState({ isModalOpen: false });
+  const closeModal = () => {
+    setModal(false);
   };
 
-  render() {
-    return (
-      <div className="page formPage">
-        <div className="form">
-          <div className="formImage"></div>
-          <CardForm updateCards={this.updateCards} />
-          <FormModal closeModal={this.closeFormModal} isOpen={this.state.isModalOpen} />
-        </div>
-        <div>
-          {this.state.cards.length > 0 ? (
-            <FormCards cards={this.state.cards} />
-          ) : (
-            <h3 style={{ textAlign: 'center' }}>NO CARDS FOR NOW!</h3>
-          )}
-        </div>
+  return (
+    <div className="page formPage">
+      <div className="form">
+        <div className="formImage"></div>
+        <CardForm onSubmit={onSubmit} />
+        <FormModal closeModal={closeModal} isModalOpen={isModalOpen} />
       </div>
-    );
-  }
+      <div>
+        {cards.length > 0 ? (
+          <FormCards cards={cards} />
+        ) : (
+          <h3 style={{ textAlign: 'center' }}>NO CARDS FOR NOW!</h3>
+        )}
+      </div>
+    </div>
+  );
 }

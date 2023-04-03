@@ -1,46 +1,32 @@
-import React, { ChangeEvent } from 'react';
+import React, { ChangeEvent, useEffect, useState } from 'react';
 import './Search.css';
 
-type ComponentProps = {
-  children?: React.ReactNode;
-};
+export function Search() {
+  const [input, setInput] = useState('');
 
-type ComponentState = {
-  input: string;
-};
-
-export class Search extends React.Component<ComponentProps, ComponentState> {
-  constructor(props: ComponentProps) {
-    super(props);
-    this.state = { input: localStorage.getItem('search') || '' };
-  }
-
-  componentDidMount() {
-    const storagedInput = localStorage.getItem('search');
-    if (storagedInput) this.setState({ input: storagedInput });
-  }
-
-  componentWillUnmount() {
-    localStorage.setItem('search', this.state.input);
-  }
-
-  handleInputEvent = (event: ChangeEvent<HTMLInputElement>) => {
-    this.setState({ input: event.target.value });
+  const handleInputEvent = (event: ChangeEvent<HTMLInputElement>) => {
+    setInput(event.target.value);
     localStorage.setItem('search', event.target.value);
   };
 
-  render(): React.ReactNode {
-    return (
-      <div className="searchContainer">
-        <input
-          className="searchInput"
-          type="text"
-          placeholder="Print something!"
-          defaultValue={this.state.input}
-          onInput={this.handleInputEvent}
-        />
-        <button className="searchButton">FIND!</button>
-      </div>
-    );
-  }
+  useEffect(() => {
+    setInput(localStorage.getItem('search') || '');
+
+    return () => {
+      localStorage.setItem('search', localStorage.getItem('search') || '');
+    };
+  }, []);
+
+  return (
+    <div className="searchContainer">
+      <input
+        className="searchInput"
+        type="text"
+        placeholder="Print something!"
+        defaultValue={input}
+        onInput={handleInputEvent}
+      />
+      <button className="searchButton">FIND!</button>
+    </div>
+  );
 }

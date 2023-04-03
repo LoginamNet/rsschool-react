@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, screen, cleanup, fireEvent, act } from '@testing-library/react';
+import { render, screen, cleanup, fireEvent, act, waitFor } from '@testing-library/react';
 import { FormCards } from './FormCards';
 import userEvent from '@testing-library/user-event';
 import { CardForm } from './Form';
@@ -26,22 +26,21 @@ const testCards = [
 ];
 
 window.URL.createObjectURL = jest.fn();
-const mockUpdate = jest.fn();
-
+const mockOnSubmit = jest.fn();
 afterEach(cleanup);
 
 describe('Form tests', function () {
   window.URL.createObjectURL = jest.fn();
 
   test('Form must be submitted', async () => {
-    render(<CardForm updateCards={mockUpdate} />);
+    render(<CardForm onSubmit={mockOnSubmit} />);
 
     await act(async () => fireEvent.submit(screen.getByRole('form')));
   });
 
   test('file can be loaded to file input', async () => {
     const file = new File(['hello'], 'hello.png', { type: 'image/png' });
-    render(<CardForm updateCards={mockUpdate} />);
+    render(<CardForm onSubmit={mockOnSubmit} />);
 
     const input = screen.getByRole('fileinput') as HTMLInputElement;
     userEvent.upload(input, file);
@@ -52,7 +51,7 @@ describe('Form tests', function () {
   });
 
   test('should update name input value', async () => {
-    render(<CardForm updateCards={mockUpdate} />);
+    render(<CardForm onSubmit={mockOnSubmit} />);
 
     const input = screen.getByRole('nameinput') as HTMLInputElement;
     userEvent.type(input, 'Name');
@@ -63,7 +62,7 @@ describe('Form tests', function () {
 
   test('should update date input value', async () => {
     const testValue = '2019-03-29';
-    render(<CardForm updateCards={mockUpdate} />);
+    render(<CardForm onSubmit={mockOnSubmit} />);
 
     const input = screen.getByRole('dateinput') as HTMLInputElement;
     fireEvent.change(input, { target: { value: testValue } });
@@ -73,7 +72,7 @@ describe('Form tests', function () {
   });
 
   test('should update textarea input value', async () => {
-    render(<CardForm updateCards={mockUpdate} />);
+    render(<CardForm onSubmit={mockOnSubmit} />);
 
     const input = screen.getByRole('textareainput') as HTMLTextAreaElement;
     userEvent.type(input, '23');
@@ -83,7 +82,7 @@ describe('Form tests', function () {
   });
 
   test('should check the checkbox input', () => {
-    render(<CardForm updateCards={mockUpdate} />);
+    render(<CardForm onSubmit={mockOnSubmit} />);
 
     const input = screen.getByRole('checkinput') as HTMLInputElement;
     expect(input).toBeInTheDocument();
@@ -94,7 +93,7 @@ describe('Form tests', function () {
   });
 
   test('should switch the radio inputs', () => {
-    render(<CardForm updateCards={mockUpdate} />);
+    render(<CardForm onSubmit={mockOnSubmit} />);
 
     const input1 = screen.getByRole('radioinput1') as HTMLInputElement;
     const input2 = screen.getByRole('radioinput2') as HTMLInputElement;
@@ -105,16 +104,16 @@ describe('Form tests', function () {
     expect(input2).toBeChecked();
   });
 
-  test('form can be submited after all required data placed', async () => {
+  test('test posibilyty to submit after data set and name input first letter validation', async () => {
     const file = new File(['hello'], 'hello.png', { type: 'image/png' });
     const testValue = '2019-03-29';
-    render(<CardForm updateCards={mockUpdate} />);
+    render(<CardForm onSubmit={mockOnSubmit} />);
 
     const inputFile = screen.getByRole('fileinput') as HTMLInputElement;
     userEvent.upload(inputFile, file);
 
     const inputName = screen.getByRole('nameinput') as HTMLInputElement;
-    userEvent.type(inputName, 'Name');
+    userEvent.type(inputName, 'test');
 
     const inputDate = screen.getByRole('dateinput') as HTMLInputElement;
     fireEvent.change(inputDate, { target: { value: testValue } });
@@ -123,6 +122,8 @@ describe('Form tests', function () {
     userEvent.type(inputText, '23');
 
     await act(async () => fireEvent.submit(screen.getByRole('form')));
+
+    expect(screen.getByText('*Сapital letter first - Alex')).toBeInTheDocument();
   });
 });
 

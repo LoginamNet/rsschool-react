@@ -1,20 +1,22 @@
 import React from 'react';
+import { UseFormRegister } from 'react-hook-form';
+
+import { FormInputs } from 'pages/Form';
 
 type ComponentProps = {
-  input: React.RefObject<HTMLInputElement>;
+  register: UseFormRegister<FormInputs>;
 };
 
-export class CheckInput extends React.Component<ComponentProps> {
-  constructor(props: ComponentProps) {
-    super(props);
-  }
-
-  render(): React.ReactNode {
-    return (
-      <label className="checkLabel">
-        Water protection:
-        <input className="checkInput" type="checkbox" ref={this.props.input} role="checkinput" />
-      </label>
-    );
-  }
+export function CheckInput(props: ComponentProps) {
+  return (
+    <label className="checkLabel">
+      Water protection:
+      <input
+        className="checkInput"
+        type="checkbox"
+        {...props.register('check')}
+        role="checkinput"
+      />
+    </label>
+  );
 }

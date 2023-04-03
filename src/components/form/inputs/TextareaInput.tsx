@@ -1,29 +1,24 @@
 import React from 'react';
+import { FieldErrors, UseFormRegister } from 'react-hook-form';
+
+import { FormInputs } from 'pages/Form';
 
 type ComponentProps = {
-  input: React.RefObject<HTMLTextAreaElement>;
-  isValid: boolean;
+  register: UseFormRegister<FormInputs>;
+  errors: FieldErrors<FormInputs>;
 };
 
-export class TextareaInput extends React.Component<ComponentProps> {
-  constructor(props: ComponentProps) {
-    super(props);
-  }
-
-  render(): React.ReactNode {
-    return (
-      <div className="textareaContainer">
-        <span className="formHeader">About yourself</span>
-        <textarea
-          className="textarea"
-          placeholder="Describe yourself! The more strange details, the more interesting the watch!"
-          ref={this.props.input}
-          role="textareainput"
-        />
-        <span className="formInvalidText" style={{ opacity: !this.props.isValid ? '1' : '0' }}>
-          *You are interresting! Tell us your story!
-        </span>
-      </div>
-    );
-  }
+export function TextareaInput(props: ComponentProps) {
+  return (
+    <div className="textareaContainer">
+      <span className="formHeader">About yourself</span>
+      <textarea
+        className="textarea"
+        placeholder="Describe yourself! The more strange details, the more interesting the watch!"
+        {...props.register('text', { required: '*You are interresting! Tell us your story!' })}
+        role="textareainput"
+      />
+      {props.errors.text && <span className="formInvalidText">{props.errors.text.message}</span>}
+    </div>
+  );
 }

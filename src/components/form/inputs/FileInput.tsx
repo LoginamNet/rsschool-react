@@ -1,32 +1,27 @@
 import React from 'react';
+import { FieldErrors, UseFormRegister } from 'react-hook-form';
+
+import { FormInputs } from 'pages/Form';
 
 type ComponentProps = {
-  input: React.RefObject<HTMLInputElement>;
-  isValid: boolean;
+  register: UseFormRegister<FormInputs>;
+  errors: FieldErrors<FormInputs>;
 };
 
-export class FileInput extends React.Component<ComponentProps> {
-  constructor(props: ComponentProps) {
-    super(props);
-  }
-
-  render(): React.ReactNode {
-    return (
-      <label className="fileLabel">
-        <div className="fileContainer">
-          <span className="formHeader">Photo:</span>
-          <input
-            className="fileInput"
-            type="file"
-            accept="image/*"
-            ref={this.props.input}
-            role="fileinput"
-          />
-          <span className="formInvalidText" style={{ opacity: !this.props.isValid ? '1' : '0' }}>
-            *Just a photo, nothint to afraid there!
-          </span>
-        </div>
-      </label>
-    );
-  }
+export function FileInput(props: ComponentProps) {
+  return (
+    <label className="fileLabel">
+      <div className="fileContainer">
+        <span className="formHeader">Photo:</span>
+        <input
+          className="fileInput"
+          type="file"
+          accept="image/*"
+          {...props.register('file', { required: '*Just a photo, nothing to afraid there!' })}
+          role="fileinput"
+        />
+        {props.errors.file && <span className="formInvalidText">{props.errors.file.message}</span>}
+      </div>
+    </label>
+  );
 }

@@ -47,11 +47,9 @@ header a {
 
 .headerMenu {
     display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 30px;
-}
-
-.headerMenuItem {
-    list-style: none;
 }
 
 /*----------------------- main ------------------------------ */
