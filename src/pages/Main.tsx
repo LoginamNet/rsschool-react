@@ -2,8 +2,9 @@ import React, { useCallback, useEffect, useState } from 'react';
 import { Search } from 'components/search/Search';
 import { Cards } from 'components/cards/Cards';
 import { ACCESS_KEY } from 'common/keys';
+import { MainModal } from 'components/modal/MainModal';
 
-export type Photo = {
+export type MainCard = {
   id: string;
   alt_description: string;
   description: string;
@@ -31,18 +32,23 @@ type ComponentProps = {
 };
 
 export function Main(props: ComponentProps) {
-  const [search, setSearch] = useState('');
-  const [images, setImages] = useState([] as Photo[]);
+  const [search, setSearch] = useState(localStorage.getItem('search') || '');
+  const [images, setImages] = useState([] as MainCard[]);
+  const [mainModal, setModal] = useState({ isOpen: false, cardId: '' });
 
   const fetchData = useCallback(async () => {
     const data = await fetch(
-      `https://api.unsplash.com/search/photos?page=1&query=${search}&client_id=${ACCESS_KEY}`
+      `https://api.unsplash.com/search/photos?page=1&per_page=15&query=${search}&client_id=${ACCESS_KEY}`
     );
     const json = await data.json();
     const result = json.results;
     console.log(result);
     setImages(result);
   }, [search]);
+
+  const closeModal = () => {
+    setModal({ isOpen: false, cardId: '' });
+  };
 
   useEffect(() => {
     props.setHeaderTitle('HOME');
@@ -55,7 +61,12 @@ export function Main(props: ComponentProps) {
   return (
     <div className="page mainPage">
       <Search setSearch={setSearch} />
-      <Cards images={images} />
+      <Cards images={images} setModal={setModal} />
+      <MainModal
+        closeModal={closeModal}
+        isModalOpen={mainModal.isOpen}
+        card={images.filter((item) => item.id === mainModal.cardId)[0]}
+      />
     </div>
   );
 }

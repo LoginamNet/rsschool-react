@@ -15,7 +15,6 @@ export function Search(props: ComponentProps) {
 
   useEffect(() => {
     setInput(localStorage.getItem('search') || '');
-    props.setSearch(input);
 
     return () => {
       localStorage.setItem('search', localStorage.getItem('search') || '');

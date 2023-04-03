@@ -2,23 +2,26 @@ import React from 'react';
 import { Card } from './Card';
 import './Cards.css';
 
-import { Photo } from 'pages/Main';
+import { MainCard } from 'pages/Main';
 
 type ComponentProps = {
-  images: Photo[];
+  images: MainCard[];
+  setModal: React.Dispatch<
+    React.SetStateAction<{
+      isOpen: boolean;
+      cardId: string;
+    }>
+  >;
 };
 
 export function Cards(props: ComponentProps) {
   const cards = props.images.map((item, key) => (
     <Card
       key={key}
-      // id={item.id}
-      // title={item.title}
-      // brand={item.brand}
-      // description={item.description}
-      // rating={item.rating}
+      id={item.id}
       thumbnail={item.urls.thumb}
       likes={item.likes}
+      setModal={props.setModal}
     />
   ));
 
