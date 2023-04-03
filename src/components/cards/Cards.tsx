@@ -5,23 +5,18 @@ import './Cards.css';
 import { MainCard } from 'pages/Main';
 
 type ComponentProps = {
-  images: MainCard[];
-  setModal: React.Dispatch<
-    React.SetStateAction<{
-      isOpen: boolean;
-      cardId: string;
-    }>
-  >;
+  cards: MainCard[];
+  openModal: () => void;
+  getCurrentModalCard: (card: MainCard) => void;
 };
 
 export function Cards(props: ComponentProps) {
-  const cards = props.images.map((item, key) => (
+  const cards = props.cards.map((card, key) => (
     <Card
       key={key}
-      id={item.id}
-      thumbnail={item.urls.thumb}
-      likes={item.likes}
-      setModal={props.setModal}
+      card={card}
+      openModal={props.openModal}
+      getCurrentModalCard={props.getCurrentModalCard}
     />
   ));
 

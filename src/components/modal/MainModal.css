@@ -20,6 +20,7 @@
 }
 
 .mainModal {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -37,12 +38,15 @@
     scale: 1;
 }
 
-.modalHeader {
+.mainModalHeader {
     color: var(--alter-element-color);
 }
 
-.modalButton {
-    padding: 10px 20px;
+.mainModalButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 10px 15px;
     color: var(--alter-text-color);
     font-size: 1.1rem;
     background-color: var(--main-element-color);
@@ -50,7 +54,7 @@
     border-radius: 15px;
 }
 
-.modalButton:hover {
+.mainModalButton:hover {
     background-color: var(--alter-element-color);
     cursor: pointer;
 }

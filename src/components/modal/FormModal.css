@@ -38,20 +38,21 @@
     scale: 1;
 }
 
-.modalHeader {
+.formModalHeader {
     color: var(--alter-element-color);
 }
 
-.modalButton {
+.formModalButton {
     padding: 10px 20px;
     color: var(--alter-text-color);
     font-size: 1.1rem;
     background-color: var(--main-element-color);
     border: none;
     border-radius: 15px;
+    pointer-events: all;
 }
 
-.modalButton:hover {
+.formModalButton:hover {
     background-color: var(--alter-element-color);
     cursor: pointer;
 }

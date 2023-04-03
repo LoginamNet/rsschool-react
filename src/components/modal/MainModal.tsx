@@ -6,7 +6,7 @@ import { MainCard } from 'pages/Main';
 type ComponentProps = {
   closeModal: () => void;
   isModalOpen: boolean;
-  card: MainCard;
+  modalCard: MainCard;
 };
 
 export function MainModal(props: ComponentProps) {
@@ -19,8 +19,12 @@ export function MainModal(props: ComponentProps) {
       }}
     >
       <div className={`mainModal ${props.isModalOpen && 'mainModalOpen'}`}>
-        <h2 className="modalHeader">{props.card && props.card.likes}</h2>
-        <button className="modalButton" onClick={() => props.closeModal()} role="mainmodalclose">
+        <h2 className="mainModalHeader">{props.modalCard && props.modalCard.likes}</h2>
+        <button
+          className="mainModalButton"
+          onClick={() => props.closeModal()}
+          role="mainmodalclose"
+        >
           X
         </button>
       </div>

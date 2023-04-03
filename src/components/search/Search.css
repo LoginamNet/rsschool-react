@@ -37,3 +37,9 @@
     color: var(--alter-text-color);
     background-color: var(--alter-element-color);
 }
+
+.noCardsText {
+    display: flex;
+    justify-content: center;
+    padding: 30px 10px;
+}

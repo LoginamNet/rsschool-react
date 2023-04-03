@@ -33,8 +33,9 @@ type ComponentProps = {
 
 export function Main(props: ComponentProps) {
   const [search, setSearch] = useState(localStorage.getItem('search') || '');
-  const [images, setImages] = useState([] as MainCard[]);
-  const [mainModal, setModal] = useState({ isOpen: false, cardId: '' });
+  const [cards, setCards] = useState([] as MainCard[]);
+  const [isModalOpen, setModal] = useState(false);
+  const [modalCard, setModalCard] = useState({} as MainCard);
 
   const fetchData = useCallback(async () => {
     const data = await fetch(
@@ -43,11 +44,19 @@ export function Main(props: ComponentProps) {
     const json = await data.json();
     const result = json.results;
     console.log(result);
-    setImages(result);
+    setCards(result);
   }, [search]);
 
+  const openModal = () => {
+    setModal(true);
+  };
+
   const closeModal = () => {
-    setModal({ isOpen: false, cardId: '' });
+    setModal(false);
+  };
+
+  const getCurrenModalCard = (card: MainCard) => {
+    setModalCard(card);
   };
 
   useEffect(() => {
@@ -61,12 +70,16 @@ export function Main(props: ComponentProps) {
   return (
     <div className="page mainPage">
       <Search setSearch={setSearch} />
-      <Cards images={images} setModal={setModal} />
-      <MainModal
-        closeModal={closeModal}
-        isModalOpen={mainModal.isOpen}
-        card={images.filter((item) => item.id === mainModal.cardId)[0]}
-      />
+      {cards.length ? (
+        <Cards cards={cards} openModal={openModal} getCurrentModalCard={getCurrenModalCard} />
+      ) : (
+        <span className="noCardsText">
+          Please, add some text if search area and press Find button or Enter to display pictures.
+          For example, «cat» or «plane».
+        </span>
+      )}
+      <Cards cards={cards} openModal={openModal} getCurrentModalCard={getCurrenModalCard} />
+      <MainModal closeModal={closeModal} isModalOpen={isModalOpen} modalCard={modalCard} />
     </div>
   );
 }
