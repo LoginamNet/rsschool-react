@@ -34,6 +34,7 @@ type ComponentProps = {
 
 export function Main(props: ComponentProps) {
   const [search, setSearch] = useState(localStorage.getItem('search') || '');
+  const [isPending, setIsPending] = useState(false);
   const [cards, setCards] = useState<MainCard[]>([]);
   const [isModalOpen, setModal] = useState(false);
   const [modalCard, setModalCard] = useState<MainCard>(
@@ -41,12 +42,17 @@ export function Main(props: ComponentProps) {
   );
 
   const fetchData = useCallback(async () => {
+    setIsPending(true);
+
     const data = await fetch(
       `https://api.unsplash.com/search/photos?page=1&per_page=15&query=${search}&client_id=${ACCESS_KEY}`
     );
     const json = await data.json();
     const result = json.results;
     setCards(result);
+
+    const timer = setTimeout(() => setIsPending(false), 1000);
+    () => clearTimeout(timer);
   }, [search]);
 
   const openModal = () => {
@@ -73,12 +79,15 @@ export function Main(props: ComponentProps) {
   return (
     <div className="page mainPage">
       <Search setSearch={setSearch} />
-      {cards.length ? (
+      {isPending ? (
+        <h2>LOADING...</h2>
+      ) : cards.length ? (
         <Cards cards={cards} openModal={openModal} getCurrentModalCard={getCurrenModalCard} />
       ) : (
         <span className="noCardsText">
-          Please, add some text if search area and press Find button or Enter to display pictures.
-          For example, «cat» or «plane».
+          Empty search or no results on your request! Please, add some text or try other keywords in
+          search area and press Find button or Enter to display pictures. For example, «cat» or
+          «plane».
         </span>
       )}
       <MainModal closeModal={closeModal} isModalOpen={isModalOpen} modalCard={modalCard} />

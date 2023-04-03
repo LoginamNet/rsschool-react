@@ -13,6 +13,10 @@ export function Search(props: ComponentProps) {
     localStorage.setItem('search', event.target.value);
   };
 
+  const handleEnterPress = (event: React.KeyboardEvent<HTMLInputElement>) => {
+    event.key === 'Enter' && props.setSearch(input);
+  };
+
   useEffect(() => {
     setInput(localStorage.getItem('search') || '');
 
@@ -29,6 +33,7 @@ export function Search(props: ComponentProps) {
         placeholder="Print something!"
         defaultValue={input}
         onInput={handleInputEvent}
+        onKeyDown={handleEnterPress}
       />
       <button className="searchButton" onClick={() => props.setSearch(input)}>
         FIND!
