@@ -11,6 +11,10 @@ export function Search() {
 
   useEffect(() => {
     setInput(localStorage.getItem('search') || '');
+
+    return () => {
+      localStorage.setItem('search', localStorage.getItem('search') || '');
+    };
   }, []);
 
   return (
