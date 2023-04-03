@@ -26,8 +26,9 @@
     justify-content: center;
     align-items: center;
     gap: 10px;
-    width: 70%;
-    height: 80%;
+    width: fit-content;
+    height: fit-content;
+    padding: 20px;
     background-color: var(--alter-text-color);
     box-shadow: 5px 5px 0 0 var(--active-element-color);
     scale: 0.9;
@@ -38,8 +39,38 @@
     scale: 1;
 }
 
+.mainModalData {
+    display: flex;
+    gap: 20px;
+}
+
+.mainModalImage {
+    aspect-ratio: 1/1;
+    width: 300px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.mainModalInfo {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+
 .mainModalHeader {
     color: var(--alter-element-color);
+    margin-bottom: 0;
+}
+
+.mainModalLocation {
+    color: var(--modal-container-color);
+    font-size: 0.9rem;
+    padding-bottom: 20px;
+}
+
+.mainModalLink {
+    padding-top: 20px;
 }
 
 .mainModalButton {

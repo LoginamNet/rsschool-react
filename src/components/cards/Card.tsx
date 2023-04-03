@@ -12,7 +12,7 @@ export function Card(props: ComponentProps) {
   return (
     <div className="cardContainer" role="card">
       <div className="cardImage" style={{ backgroundImage: `url(${props.card.urls.thumb})` }}></div>
-      <span className="cardRating">{props.card.likes}</span>
+      <span className="cardRating">💜{props.card.likes}</span>
       <div
         className="cardMessageContainer"
         onClick={() => {

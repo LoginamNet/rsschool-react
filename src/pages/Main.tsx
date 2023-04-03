@@ -24,6 +24,7 @@ export type MainCard = {
   user: {
     username: string;
     name: string;
+    location: string;
   };
 };
 
@@ -33,9 +34,11 @@ type ComponentProps = {
 
 export function Main(props: ComponentProps) {
   const [search, setSearch] = useState(localStorage.getItem('search') || '');
-  const [cards, setCards] = useState([] as MainCard[]);
+  const [cards, setCards] = useState<MainCard[]>([]);
   const [isModalOpen, setModal] = useState(false);
-  const [modalCard, setModalCard] = useState({} as MainCard);
+  const [modalCard, setModalCard] = useState<MainCard>(
+    JSON.parse(localStorage.getItem('modalCard')!) || {}
+  );
 
   const fetchData = useCallback(async () => {
     const data = await fetch(
@@ -43,7 +46,6 @@ export function Main(props: ComponentProps) {
     );
     const json = await data.json();
     const result = json.results;
-    console.log(result);
     setCards(result);
   }, [search]);
 
@@ -56,6 +58,7 @@ export function Main(props: ComponentProps) {
   };
 
   const getCurrenModalCard = (card: MainCard) => {
+    localStorage.setItem('modalCard', JSON.stringify(card));
     setModalCard(card);
   };
 
@@ -78,7 +81,6 @@ export function Main(props: ComponentProps) {
           For example, «cat» or «plane».
         </span>
       )}
-      <Cards cards={cards} openModal={openModal} getCurrentModalCard={getCurrenModalCard} />
       <MainModal closeModal={closeModal} isModalOpen={isModalOpen} modalCard={modalCard} />
     </div>
   );
