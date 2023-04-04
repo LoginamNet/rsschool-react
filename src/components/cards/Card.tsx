@@ -19,6 +19,7 @@ export function Card(props: ComponentProps) {
           props.getCurrentModalCard(props.card);
           props.openModal();
         }}
+        role="mainopenmodal"
       >
         <span className="cardMessage">Click for info</span>
       </div>

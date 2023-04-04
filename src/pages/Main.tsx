@@ -8,7 +8,7 @@ import { Loading } from 'components/loading/Loading';
 export type MainCard = {
   id: string;
   alt_description: string;
-  description: string;
+  description: string | null;
   width: number;
   height: number;
   urls: {
@@ -25,7 +25,7 @@ export type MainCard = {
   user: {
     username: string;
     name: string;
-    location: string;
+    location: string | null;
   };
 };
 
@@ -35,11 +35,11 @@ type ComponentProps = {
 
 export function Main(props: ComponentProps) {
   const [search, setSearch] = useState(localStorage.getItem('search') || '');
-  const [isPending, setIsPending] = useState(false);
+  const [isPending, setIsPending] = useState(true);
   const [cards, setCards] = useState<MainCard[]>([]);
   const [isModalOpen, setModal] = useState(false);
   const [modalCard, setModalCard] = useState<MainCard>(
-    JSON.parse(localStorage.getItem('modalCard')!) || {}
+    JSON.parse(localStorage.getItem('modalCard')!) || null
   );
 
   const fetchData = useCallback(async () => {
@@ -52,6 +52,7 @@ export function Main(props: ComponentProps) {
     const result = json.results;
     setCards(result);
 
+    console.log(result);
     const timer = setTimeout(() => setIsPending(false), 1000);
     () => clearTimeout(timer);
   }, [search]);
