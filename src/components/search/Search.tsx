@@ -35,7 +35,7 @@ export function Search(props: ComponentProps) {
         onInput={handleInputEvent}
         onKeyDown={handleEnterPress}
       />
-      <button className="searchButton" onClick={() => props.setSearch(input)}>
+      <button className="searchButton" onClick={() => props.setSearch(input)} role="searchbutton">
         FIND!
       </button>
     </div>
