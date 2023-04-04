@@ -45,14 +45,17 @@ export function Main(props: ComponentProps) {
   const fetchData = useCallback(async () => {
     setIsPending(true);
 
-    const data = await fetch(
-      `https://api.unsplash.com/search/photos?page=1&per_page=15&query=${search}&client_id=${ACCESS_KEY}`
-    );
-    const json = await data.json();
-    const result = json.results;
-    setCards(result);
+    try {
+      const data = await fetch(
+        `https://api.unsplash.com/search/photos?page=1&per_page=15&query=${search}&client_id=${ACCESS_KEY}`
+      );
+      const json = await data.json();
+      const result = json.results;
+      setCards(result);
+    } catch (err) {
+      console.error(err);
+    }
 
-    console.log(result);
     const timer = setTimeout(() => setIsPending(false), 1000);
     () => clearTimeout(timer);
   }, [search]);

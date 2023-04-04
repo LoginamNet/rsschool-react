@@ -1,7 +1,8 @@
 import React from 'react';
-import { render, screen, cleanup, fireEvent, act, waitFor } from '@testing-library/react';
-import { FormCards } from './FormCards';
+import { render, screen, cleanup, fireEvent, act } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+
+import { FormCards } from './FormCards';
 import { CardForm } from './Form';
 
 const testCards = [
