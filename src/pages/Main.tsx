@@ -3,6 +3,7 @@ import { Search } from 'components/search/Search';
 import { Cards } from 'components/cards/Cards';
 import { ACCESS_KEY } from 'common/keys';
 import { MainModal } from 'components/modal/MainModal';
+import { Loading } from 'components/loading/Loading';
 
 export type MainCard = {
   id: string;
@@ -80,7 +81,7 @@ export function Main(props: ComponentProps) {
     <div className="page mainPage">
       <Search setSearch={setSearch} />
       {isPending ? (
-        <h2>LOADING...</h2>
+        <Loading />
       ) : cards.length ? (
         <Cards cards={cards} openModal={openModal} getCurrentModalCard={getCurrenModalCard} />
       ) : (
