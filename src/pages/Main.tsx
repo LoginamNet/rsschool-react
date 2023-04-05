@@ -37,6 +37,7 @@ type ComponentProps = {
 export function Main(props: ComponentProps) {
   const [search, setSearch] = useState(localStorage.getItem('search') || '');
   const [isPending, setIsPending] = useState(true);
+  const [errorMessage, setErrorMessage] = useState('');
   const [cards, setCards] = useState<MainCard[]>([]);
   const [isModalOpen, setModal] = useState(false);
   const [modalCard, setModalCard] = useState<MainCard>(
@@ -53,8 +54,16 @@ export function Main(props: ComponentProps) {
       const json = await data.json();
       const result = json.results;
 
+      setErrorMessage(
+        `Empty search or no results on your request! Please, add some text or try other keywords
+      in search area and press Find button or Enter to display pictures. For example, «cat» or
+      «plane»`
+      );
       setCards(result);
     } catch (err) {
+      setErrorMessage(
+        `An error occurred while uploading data! Please check the console or try searching again`
+      );
       console.error(err);
     }
 
@@ -91,10 +100,9 @@ export function Main(props: ComponentProps) {
       ) : cards.length ? (
         <Cards cards={cards} openModal={openModal} getCurrentModalCard={getCurrenModalCard} />
       ) : (
-        <span className="noCardsText">
-          Empty search or no results on your request! Please, add some text or try other keywords in
-          search area and press Find button or Enter to display pictures. For example, «cat» or
-          «plane».
+        <span className="noCardsContainer">
+          <h2 className="noCardsHeader">Hmm, something`s wrong..</h2>
+          <span className="noCardsText">{errorMessage}</span>
         </span>
       )}
       <MainModal closeModal={closeModal} isModalOpen={isModalOpen} modalCard={modalCard} />
