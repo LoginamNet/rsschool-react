@@ -11,7 +11,14 @@ afterEach(cleanup);
 
 describe('Main modal test', function () {
   test('Main modal can be rendered and closed by button', async () => {
-    render(<MainModal closeModal={closeModal} isModalOpen={true} modalCard={cards[0]} />);
+    render(
+      <MainModal
+        closeModal={closeModal}
+        isModalOpen={true}
+        isCardPending={false}
+        modalCard={cards[0]}
+      />
+    );
 
     const button = screen.getByRole('mainmodalclose');
     expect(button).toBeInTheDocument();
@@ -19,7 +26,14 @@ describe('Main modal test', function () {
   });
 
   test('Main modal can be rendered and closed by background element', async () => {
-    render(<MainModal closeModal={closeModal} isModalOpen={true} modalCard={cards[0]} />);
+    render(
+      <MainModal
+        closeModal={closeModal}
+        isModalOpen={true}
+        isCardPending={false}
+        modalCard={cards[0]}
+      />
+    );
 
     const button = screen.getByRole('mainmodalback');
     expect(button).toBeInTheDocument();
@@ -27,21 +41,42 @@ describe('Main modal test', function () {
   });
 
   test('Main modal contains location and description', async () => {
-    render(<MainModal closeModal={closeModal} isModalOpen={true} modalCard={cards[0]} />);
+    render(
+      <MainModal
+        closeModal={closeModal}
+        isModalOpen={true}
+        isCardPending={false}
+        modalCard={cards[0]}
+      />
+    );
 
     expect(screen.getByText(`About: ${cards[0].description}`)).toBeInTheDocument();
     expect(screen.getByText('Wiesbaden, Germany')).toBeInTheDocument();
   });
 
   test('Main modal contains location and description', async () => {
-    render(<MainModal closeModal={closeModal} isModalOpen={true} modalCard={cards[0]} />);
+    render(
+      <MainModal
+        closeModal={closeModal}
+        isModalOpen={true}
+        isCardPending={false}
+        modalCard={cards[0]}
+      />
+    );
 
     expect(screen.getByText(`About: ${cards[0].description}`)).toBeInTheDocument();
     expect(screen.getByText(`${cards[0].user.location}`)).toBeInTheDocument();
   });
 
   test('Main modal contains message on null description', async () => {
-    render(<MainModal closeModal={closeModal} isModalOpen={true} modalCard={cards[1]} />);
+    render(
+      <MainModal
+        closeModal={closeModal}
+        isModalOpen={true}
+        isCardPending={false}
+        modalCard={cards[1]}
+      />
+    );
 
     expect(
       screen.getByText(
@@ -51,7 +86,14 @@ describe('Main modal test', function () {
   });
 
   test('Main modal contains message on null location', async () => {
-    render(<MainModal closeModal={closeModal} isModalOpen={true} modalCard={cards[2]} />);
+    render(
+      <MainModal
+        closeModal={closeModal}
+        isModalOpen={true}
+        isCardPending={false}
+        modalCard={cards[2]}
+      />
+    );
 
     expect(screen.getByText('Unknown location')).toBeInTheDocument();
   });

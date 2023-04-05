@@ -7,17 +7,12 @@ import { MainCard } from 'pages/Main';
 type ComponentProps = {
   cards: MainCard[];
   openModal: () => void;
-  getCurrentModalCard: (card: MainCard) => void;
+  getCardID: (id: string) => void;
 };
 
 export function Cards(props: ComponentProps) {
   const cards = props.cards.map((card, key) => (
-    <Card
-      key={key}
-      card={card}
-      openModal={props.openModal}
-      getCurrentModalCard={props.getCurrentModalCard}
-    />
+    <Card key={key} card={card} openModal={props.openModal} getCardID={props.getCardID} />
   ));
 
   return <div className="cardsContainer">{cards}</div>;

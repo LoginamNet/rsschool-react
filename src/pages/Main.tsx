@@ -37,12 +37,12 @@ type ComponentProps = {
 export function Main(props: ComponentProps) {
   const [search, setSearch] = useState(localStorage.getItem('search') || 'photo');
   const [isPending, setIsPending] = useState(true);
+  const [isCardPending, setIsCardPending] = useState(true);
   const [errorMessage, setErrorMessage] = useState('');
   const [cards, setCards] = useState<MainCard[]>([]);
+  const [cardID, setCardID] = useState('');
   const [isModalOpen, setModal] = useState(false);
-  const [modalCard, setModalCard] = useState<MainCard>(
-    JSON.parse(localStorage.getItem('modalCard')!) || null
-  );
+  const [modalCard, setModalCard] = useState<MainCard>();
 
   const fetchData = useCallback(async () => {
     setIsPending(true);
@@ -71,17 +71,31 @@ export function Main(props: ComponentProps) {
     () => clearTimeout(timer);
   }, [search]);
 
+  const fetchCardData = useCallback(async () => {
+    try {
+      const data = await fetch(`https://api.unsplash.com/photos/${cardID}?client_id=${ACCESS_KEY}`);
+      const result = await data.json();
+
+      setModalCard(result);
+    } catch (err) {
+      console.error(err);
+    }
+  }, [cardID]);
+
   const openModal = () => {
     setModal(true);
+    setIsCardPending(true);
+
+    const modalTimer = setTimeout(() => setIsCardPending(false), 1000);
+    () => clearTimeout(modalTimer);
   };
 
   const closeModal = () => {
     setModal(false);
   };
 
-  const getCurrenModalCard = (card: MainCard) => {
-    localStorage.setItem('modalCard', JSON.stringify(card));
-    setModalCard(card);
+  const getCardID = (id: string) => {
+    setCardID(id);
   };
 
   useEffect(() => {
@@ -92,20 +106,29 @@ export function Main(props: ComponentProps) {
     fetchData();
   }, [fetchData]);
 
+  useEffect(() => {
+    fetchCardData();
+  }, [fetchCardData]);
+
   return (
     <div className="page mainPage">
       <Search setSearch={setSearch} />
       {isPending ? (
         <Loading />
       ) : cards.length ? (
-        <Cards cards={cards} openModal={openModal} getCurrentModalCard={getCurrenModalCard} />
+        <Cards cards={cards} openModal={openModal} getCardID={getCardID} />
       ) : (
         <span className="noCardsContainer">
           <h2 className="noCardsHeader">Hmm, something`s wrong..</h2>
           <span className="noCardsText">{errorMessage}</span>
         </span>
       )}
-      <MainModal closeModal={closeModal} isModalOpen={isModalOpen} modalCard={modalCard} />
+      <MainModal
+        closeModal={closeModal}
+        isModalOpen={isModalOpen}
+        isCardPending={isCardPending}
+        modalCard={modalCard}
+      />
     </div>
   );
 }

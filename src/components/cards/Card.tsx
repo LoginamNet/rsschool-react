@@ -5,7 +5,7 @@ import { MainCard } from 'pages/Main';
 type ComponentProps = {
   card: MainCard;
   openModal: () => void;
-  getCurrentModalCard: (card: MainCard) => void;
+  getCardID: (id: string) => void;
 };
 
 export function Card(props: ComponentProps) {
@@ -16,7 +16,7 @@ export function Card(props: ComponentProps) {
       <div
         className="cardMessageContainer"
         onClick={() => {
-          props.getCurrentModalCard(props.card);
+          props.getCardID(props.card.id);
           props.openModal();
         }}
         role="mainopenmodal"

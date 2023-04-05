@@ -37,16 +37,12 @@ afterAll(() => {
 afterEach(cleanup);
 
 describe('Pages tests', function () {
-  test('should render main page and hidden modal', async () => {
+  test('should render main page', async () => {
     const json = await testingFetch();
     expect(Array.isArray(json)).toEqual(true);
     expect(json.length).toEqual(3);
 
     await act(async () => render(<Main setHeaderTitle={setHeaderTitle} />));
-
-    const button = screen.getByRole('mainmodalclose');
-    expect(button).toBeInTheDocument();
-    await act(async () => userEvent.click(button));
   });
 
   test('should render about page', () => {
