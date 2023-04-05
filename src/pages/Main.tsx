@@ -35,7 +35,7 @@ type ComponentProps = {
 };
 
 export function Main(props: ComponentProps) {
-  const [search, setSearch] = useState(localStorage.getItem('search') || '');
+  const [search, setSearch] = useState(localStorage.getItem('search') || 'photo');
   const [isPending, setIsPending] = useState(true);
   const [errorMessage, setErrorMessage] = useState('');
   const [cards, setCards] = useState<MainCard[]>([]);
