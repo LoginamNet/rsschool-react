@@ -7,13 +7,12 @@ import { Cards } from 'components/cards/Cards';
 import { cards } from 'common/data';
 
 const openModal = jest.fn();
-const getCardID = jest.fn();
 
 afterEach(cleanup);
 
 describe('Cards tests', function () {
   test('should render Card', () => {
-    render(<Card card={cards[0]} openModal={openModal} getCardID={getCardID} />);
+    render(<Card card={cards[0]} openModal={openModal} />);
 
     const button = screen.getByRole('mainopenmodal');
     expect(button).toBeInTheDocument();
@@ -21,7 +20,7 @@ describe('Cards tests', function () {
   });
 
   test('should render Cards', () => {
-    render(<Cards cards={cards} openModal={openModal} getCardID={getCardID} />);
+    render(<Cards cards={cards} openModal={openModal} />);
 
     const pageCards = screen.getAllByRole('card');
     expect(pageCards).toHaveLength(cards.length);

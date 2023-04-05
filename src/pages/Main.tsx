@@ -82,7 +82,8 @@ export function Main(props: ComponentProps) {
     }
   }, [cardID]);
 
-  const openModal = () => {
+  const openModal = (id: string) => {
+    setCardID(id);
     setModal(true);
     setIsCardPending(true);
 
@@ -92,10 +93,6 @@ export function Main(props: ComponentProps) {
 
   const closeModal = () => {
     setModal(false);
-  };
-
-  const getCardID = (id: string) => {
-    setCardID(id);
   };
 
   useEffect(() => {
@@ -116,7 +113,7 @@ export function Main(props: ComponentProps) {
       {isPending ? (
         <Loading />
       ) : cards.length ? (
-        <Cards cards={cards} openModal={openModal} getCardID={getCardID} />
+        <Cards cards={cards} openModal={openModal} />
       ) : (
         <span className="noCardsContainer">
           <h2 className="noCardsHeader">Hmm, something`s wrong..</h2>

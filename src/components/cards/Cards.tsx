@@ -6,13 +6,12 @@ import { MainCard } from 'pages/Main';
 
 type ComponentProps = {
   cards: MainCard[];
-  openModal: () => void;
-  getCardID: (id: string) => void;
+  openModal: (id: string) => void;
 };
 
 export function Cards(props: ComponentProps) {
   const cards = props.cards.map((card, key) => (
-    <Card key={key} card={card} openModal={props.openModal} getCardID={props.getCardID} />
+    <Card key={key} card={card} openModal={props.openModal} />
   ));
 
   return <div className="cardsContainer">{cards}</div>;
