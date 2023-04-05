@@ -1,6 +1,7 @@
-import { FormInputs } from 'pages/Form';
 import React from 'react';
 import { FieldErrors, UseFormRegister } from 'react-hook-form';
+
+import { FormInputs } from 'pages/Form';
 
 type ComponentProps = {
   register: UseFormRegister<FormInputs>;

@@ -1,9 +1,10 @@
 import React, { useCallback, useEffect, useState } from 'react';
+
 import { Search } from 'components/search/Search';
 import { Cards } from 'components/cards/Cards';
-import { ACCESS_KEY } from 'common/keys';
 import { MainModal } from 'components/modal/MainModal';
 import { Loading } from 'components/loading/Loading';
+import { ACCESS_KEY } from 'common/keys';
 
 export type MainCard = {
   id: string;
@@ -51,6 +52,7 @@ export function Main(props: ComponentProps) {
       );
       const json = await data.json();
       const result = json.results;
+
       setCards(result);
     } catch (err) {
       console.error(err);

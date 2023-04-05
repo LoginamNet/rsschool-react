@@ -1,7 +1,7 @@
 import React from 'react';
-import { Card } from './Card';
 import './Cards.css';
 
+import { Card } from './Card';
 import { MainCard } from 'pages/Main';
 
 type ComponentProps = {

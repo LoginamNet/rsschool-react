@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../common/constants.css';
+import '../../common/colors.css';
 import './Layout.css';
 
 import { Header } from './Header';

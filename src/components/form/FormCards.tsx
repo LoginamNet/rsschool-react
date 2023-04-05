@@ -1,8 +1,8 @@
 import React from 'react';
-import { SingleFormCard } from './FormCard';
 import './FormCards.css';
 
 import { FormCard } from 'pages/Form';
+import { SingleFormCard } from './FormCard';
 
 type ComponentProps = {
   cards: FormCard[];
