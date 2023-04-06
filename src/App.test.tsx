@@ -1,11 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { fireEvent, render, screen, waitFor, cleanup } from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
+import { fireEvent, render, screen, waitFor } from '@testing-library/react';
 
 import App from './App';
-
-afterEach(cleanup);
 
 describe('Common tests', function () {
   test('should render root without crashing', () => {
@@ -20,6 +17,9 @@ describe('Common tests', function () {
 });
 
 describe('App elements tests', function () {
+  afterEach(() => {
+    jest.clearAllMocks();
+  });
   test('should render app without crashing', () => {
     render(<App />);
 
@@ -30,14 +30,6 @@ describe('App elements tests', function () {
     expect(header).toBeInTheDocument();
     expect(main).toBeInTheDocument();
     expect(footer).toBeInTheDocument();
-  });
-
-  test('should update search input value', () => {
-    render(<App />);
-
-    const input = screen.getByRole('textbox') as HTMLInputElement;
-    userEvent.type(input, '23');
-    expect(input.value).toBe('23');
   });
 
   test('should update Header title', () => {

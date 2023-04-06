@@ -1,3 +1,5 @@
+/*----------------------- search ------------------------------ */
+
 .searchContainer {
     display: flex;
     justify-content: center;
@@ -36,4 +38,19 @@
 .searchButton:hover {
     color: var(--alter-text-color);
     background-color: var(--alter-element-color);
+}
+
+/*----------------------- search errors ------------------------------ */
+
+.noCardsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 10px;
+}
+
+.noCardsText {
+    width: 70%;
+    text-align: center;
 }

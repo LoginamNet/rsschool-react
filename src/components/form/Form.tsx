@@ -9,7 +9,6 @@ import { SelectInput } from './inputs/SelectInput';
 import { RadioInput } from './inputs/RadioInput';
 import { TextareaInput } from './inputs/TextareaInput';
 import { FileInput } from './inputs/FileInput';
-
 import { FormInputs } from 'pages/Form';
 
 type ComponentProps = {

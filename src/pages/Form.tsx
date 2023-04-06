@@ -33,10 +33,6 @@ export function Form(props: ComponentProps) {
   const [cards, setCards] = useState<FormCard[]>([]);
   const [isModalOpen, setModal] = useState(false);
 
-  useEffect(() => {
-    props.setHeaderTitle('FORM');
-  });
-
   const onSubmit: SubmitHandler<FormInputs> = (data) => {
     const card = {
       name: data.name,
@@ -55,6 +51,10 @@ export function Form(props: ComponentProps) {
   const closeModal = () => {
     setModal(false);
   };
+
+  useEffect(() => {
+    props.setHeaderTitle('FORM');
+  });
 
   return (
     <div className="page formPage">

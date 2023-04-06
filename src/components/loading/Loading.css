@@ -1,0 +1,36 @@
+.loadingContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.loadingSpinner {
+    content: "⠋";
+    color: var(--alter-element-color);
+    animation: rotate .8s linear infinite;
+  }
+  
+.loadingSpinner:after {
+    display: block;
+    content: "⠋";
+    font-size: 5rem;
+    animation: rotate .8s linear infinite;
+}
+
+.loadingText {
+    font-size: 1.1rem;
+}
+  
+@keyframes rotate {
+    10% { content: "⠙"; }
+    20% { content: "⠹"; }
+    30% { content: "⠸"; }
+    40% { content: "⠼"; }
+    50% { content: "⠴"; }
+    60% { content: "⠦"; }
+    70% { content: "⠧"; }
+    80% { content: "⠇"; }
+    90% { content: "⠏"; }
+}

@@ -1,19 +1,17 @@
 import React from 'react';
-import { Card } from './Card';
-import { cardsData } from 'common/data';
 import './Cards.css';
 
-export function Cards() {
-  const cards = cardsData.map((item, key) => (
-    <Card
-      key={key}
-      id={item.id}
-      title={item.title}
-      brand={item.brand}
-      description={item.description}
-      rating={item.rating}
-      thumbnail={item.thumbnail}
-    />
+import { Card } from './Card';
+import { MainCard } from 'pages/Main';
+
+type ComponentProps = {
+  cards: MainCard[];
+  openModal: (id: string) => void;
+};
+
+export function Cards(props: ComponentProps) {
+  const cards = props.cards.map((card, key) => (
+    <Card key={key} card={card} openModal={props.openModal} />
   ));
 
   return <div className="cardsContainer">{cards}</div>;

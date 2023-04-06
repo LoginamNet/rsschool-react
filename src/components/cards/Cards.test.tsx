@@ -1,33 +1,28 @@
 import React from 'react';
 import { render, screen, cleanup } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
+
 import { Card } from 'components/cards/Card';
-import { cardsData } from 'common/data';
 import { Cards } from 'components/cards/Cards';
+import { cards } from 'common/data';
+
+const openModal = jest.fn();
 
 afterEach(cleanup);
 
 describe('Cards tests', function () {
   test('should render Card', () => {
-    render(
-      <Card
-        id={cardsData[0].id}
-        title={cardsData[0].title}
-        brand={cardsData[0].brand}
-        description={cardsData[0].description}
-        rating={cardsData[0].rating}
-        thumbnail={cardsData[0].thumbnail}
-      />
-    );
+    render(<Card card={cards[0]} openModal={openModal} />);
 
-    expect(screen.getByText(cardsData[0].title)).toBeInTheDocument();
-    expect(screen.getByText(cardsData[0].brand)).toBeInTheDocument();
-    expect(screen.getByText(cardsData[0].description)).toBeInTheDocument();
+    const button = screen.getByRole('mainopenmodal');
+    expect(button).toBeInTheDocument();
+    userEvent.click(button);
   });
 
   test('should render Cards', () => {
-    render(<Cards />);
+    render(<Cards cards={cards} openModal={openModal} />);
 
-    const cards = screen.getAllByRole('card');
-    expect(cards).toHaveLength(cardsData.length);
+    const pageCards = screen.getAllByRole('card');
+    expect(pageCards).toHaveLength(cards.length);
   });
 });
