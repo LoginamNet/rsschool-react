@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import { store } from 'store';
 
 import { Layout } from 'components/layout/Layout';
 import { Main } from 'pages/Main';
@@ -8,18 +10,18 @@ import { Form } from 'pages/Form';
 import { NotFoundPage } from 'pages/NotFound';
 
 function App() {
-  const [headerTitle, setHeaderTitle] = useState('');
-
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Layout headerTitle={headerTitle} />}>
-          <Route index element={<Main setHeaderTitle={setHeaderTitle} />}></Route>
-          <Route path="about" element={<About setHeaderTitle={setHeaderTitle} />}></Route>
-          <Route path="form" element={<Form setHeaderTitle={setHeaderTitle} />}></Route>
-          <Route path="*" element={<NotFoundPage setHeaderTitle={setHeaderTitle} />}></Route>
-        </Route>
-      </Routes>
+      <Provider store={store}>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Main />}></Route>
+            <Route path="about" element={<About />}></Route>
+            <Route path="form" element={<Form />}></Route>
+            <Route path="*" element={<NotFoundPage />}></Route>
+          </Route>
+        </Routes>
+      </Provider>
     </BrowserRouter>
   );
 }

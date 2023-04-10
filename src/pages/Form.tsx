@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { SubmitHandler } from 'react-hook-form';
+import { useDispatch } from 'react-redux';
+import { setHeaderTitle } from 'store';
 
 import { CardForm } from 'components/form/Form';
 import { FormCards } from 'components/form/FormCards';
@@ -25,13 +27,11 @@ export type FormInputs = {
   text: string;
 };
 
-type ComponentProps = {
-  setHeaderTitle: React.Dispatch<React.SetStateAction<string>>;
-};
-
-export function Form(props: ComponentProps) {
+export function Form() {
   const [cards, setCards] = useState<FormCard[]>([]);
   const [isModalOpen, setModal] = useState(false);
+
+  const dispatch = useDispatch();
 
   const onSubmit: SubmitHandler<FormInputs> = (data) => {
     const card = {
@@ -53,7 +53,7 @@ export function Form(props: ComponentProps) {
   };
 
   useEffect(() => {
-    props.setHeaderTitle('FORM');
+    dispatch(setHeaderTitle({ headerTitle: 'FORM' }));
   });
 
   return (

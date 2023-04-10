@@ -10,8 +10,6 @@ import { NotFoundPage } from 'pages/NotFound';
 import { cards } from 'common/data';
 import { ACCESS_KEY } from 'common/keys';
 
-const setHeaderTitle = jest.fn();
-
 async function testingFetch() {
   const data = await fetch(
     `https://api.unsplash.com/search/photos?page=1&per_page=15&query=cat&client_id=${ACCESS_KEY}}`
@@ -42,11 +40,11 @@ describe('Pages tests', function () {
     expect(Array.isArray(json)).toEqual(true);
     expect(json.length).toEqual(3);
 
-    await act(async () => render(<Main setHeaderTitle={setHeaderTitle} />));
+    await act(async () => render(<Main />));
   });
 
   test('should render about page', () => {
-    render(<About setHeaderTitle={setHeaderTitle} />);
+    render(<About />);
 
     const header = screen.getByRole('heading');
     expect(header).toBeInTheDocument();
@@ -56,7 +54,7 @@ describe('Pages tests', function () {
   test('should render 404 page', () => {
     render(
       <BrowserRouter>
-        <NotFoundPage setHeaderTitle={setHeaderTitle} />
+        <NotFoundPage />
       </BrowserRouter>
     );
 
@@ -68,7 +66,7 @@ describe('Pages tests', function () {
   test('should render form page', () => {
     render(
       <BrowserRouter>
-        <Form setHeaderTitle={setHeaderTitle} />
+        <Form />
       </BrowserRouter>
     );
 
@@ -79,7 +77,7 @@ describe('Pages tests', function () {
   test('should open and close modal on form page', async () => {
     render(
       <BrowserRouter>
-        <Form setHeaderTitle={setHeaderTitle} />
+        <Form />
       </BrowserRouter>
     );
 

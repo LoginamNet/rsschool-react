@@ -1,4 +1,6 @@
 import React, { useCallback, useEffect, useState } from 'react';
+import { useDispatch } from 'react-redux/es/exports';
+import { setHeaderTitle } from 'store';
 
 import { Search } from 'components/search/Search';
 import { Cards } from 'components/cards/Cards';
@@ -30,11 +32,7 @@ export type MainCard = {
   };
 };
 
-type ComponentProps = {
-  setHeaderTitle: React.Dispatch<React.SetStateAction<string>>;
-};
-
-export function Main(props: ComponentProps) {
+export function Main() {
   const [search, setSearch] = useState(localStorage.getItem('search') || 'photo');
   const [isPending, setIsPending] = useState(true);
   const [isCardPending, setIsCardPending] = useState(true);
@@ -43,6 +41,8 @@ export function Main(props: ComponentProps) {
   const [cardID, setCardID] = useState('');
   const [isModalOpen, setModal] = useState(false);
   const [modalCard, setModalCard] = useState<MainCard>();
+
+  const dispatch = useDispatch();
 
   const fetchData = useCallback(async () => {
     setIsPending(true);
@@ -96,7 +96,7 @@ export function Main(props: ComponentProps) {
   };
 
   useEffect(() => {
-    props.setHeaderTitle('HOME');
+    dispatch(setHeaderTitle({ headerTitle: 'HOME' }));
   });
 
   useEffect(() => {
