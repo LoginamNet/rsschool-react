@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useState } from 'react';
-import { useDispatch } from 'react-redux/es/exports';
+import { useDispatch, useSelector } from 'react-redux/es/exports';
 import { setHeaderTitle } from 'store';
 
 import { Search } from 'components/search/Search';
@@ -7,6 +7,8 @@ import { Cards } from 'components/cards/Cards';
 import { MainModal } from 'components/modal/MainModal';
 import { Loading } from 'components/loading/Loading';
 import { ACCESS_KEY } from 'common/keys';
+
+import { RootState } from 'store';
 
 export type MainCard = {
   id: string;
@@ -33,7 +35,6 @@ export type MainCard = {
 };
 
 export function Main() {
-  const [search, setSearch] = useState(localStorage.getItem('search') || 'photo');
   const [isPending, setIsPending] = useState(true);
   const [isCardPending, setIsCardPending] = useState(true);
   const [errorMessage, setErrorMessage] = useState('');
@@ -43,6 +44,7 @@ export function Main() {
   const [modalCard, setModalCard] = useState<MainCard>();
 
   const dispatch = useDispatch();
+  const search = useSelector((state: RootState) => state.search.value.search);
 
   const fetchData = useCallback(async () => {
     setIsPending(true);
@@ -109,7 +111,7 @@ export function Main() {
 
   return (
     <div className="page mainPage">
-      <Search setSearch={setSearch} />
+      <Search />
       {isPending ? (
         <Loading />
       ) : cards.length ? (
