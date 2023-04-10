@@ -39,6 +39,6 @@ describe('Search tests', function () {
     );
 
     const input = screen.getByRole('textbox') as HTMLInputElement;
-    act(() => fireEvent.submit(input));
+    act(() => fireEvent.keyDown(input, { key: 'Enter', code: 13, charCode: 13 }));
   });
 });

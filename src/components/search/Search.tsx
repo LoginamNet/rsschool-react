@@ -21,8 +21,10 @@ export function Search() {
         onInput={(event: ChangeEvent<HTMLInputElement>) => {
           setInput(event.target.value);
         }}
-        onSubmit={() => {
-          dispatch(setSearch({ search: input }));
+        onKeyDown={(event: React.KeyboardEvent<HTMLInputElement>) => {
+          if (event.key === 'Enter') {
+            dispatch(setSearch({ search: input }));
+          }
         }}
       />
       <button
