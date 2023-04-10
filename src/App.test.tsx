@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { fireEvent, render, screen, waitFor } from '@testing-library/react';
+import { Provider } from 'react-redux';
+import { store } from 'store';
 
 import App from './App';
 
@@ -21,6 +23,11 @@ describe('App elements tests', function () {
     jest.clearAllMocks();
   });
   test('should render app without crashing', () => {
+    render(
+      <Provider store={store}>
+        <App />
+      </Provider>
+    );
     render(<App />);
 
     const header = screen.getByRole('header');
