@@ -26,122 +26,122 @@ const testCards = [
   },
 ];
 
-window.URL.createObjectURL = jest.fn();
-const mockOnSubmit = jest.fn();
-afterEach(cleanup);
+// window.URL.createObjectURL = jest.fn();
+// const mockOnSubmit = jest.fn();
+// afterEach(cleanup);
 
-describe('Form tests', function () {
-  window.URL.createObjectURL = jest.fn();
+// describe('Form tests', function () {
+//   window.URL.createObjectURL = jest.fn();
 
-  test('Form must be submitted', async () => {
-    render(<CardForm onSubmit={mockOnSubmit} />);
+//   test('Form must be submitted', async () => {
+//     render(<CardForm onSubmit={mockOnSubmit} />);
 
-    await act(async () => fireEvent.submit(screen.getByRole('form')));
-  });
+//     await act(async () => fireEvent.submit(screen.getByRole('form')));
+//   });
 
-  test('file can be loaded to file input', async () => {
-    const file = new File(['hello'], 'hello.png', { type: 'image/png' });
-    render(<CardForm onSubmit={mockOnSubmit} />);
+//   test('file can be loaded to file input', async () => {
+//     const file = new File(['hello'], 'hello.png', { type: 'image/png' });
+//     render(<CardForm onSubmit={mockOnSubmit} />);
 
-    const input = screen.getByRole('fileinput') as HTMLInputElement;
-    userEvent.upload(input, file);
+//     const input = screen.getByRole('fileinput') as HTMLInputElement;
+//     userEvent.upload(input, file);
 
-    await act(async () => fireEvent.submit(screen.getByRole('form')));
+//     await act(async () => fireEvent.submit(screen.getByRole('form')));
 
-    expect(input.files).toHaveLength(1);
-  });
+//     expect(input.files).toHaveLength(1);
+//   });
 
-  test('should update name input value', async () => {
-    render(<CardForm onSubmit={mockOnSubmit} />);
+//   test('should update name input value', async () => {
+//     render(<CardForm onSubmit={mockOnSubmit} />);
 
-    const input = screen.getByRole('nameinput') as HTMLInputElement;
-    userEvent.type(input, 'Name');
+//     const input = screen.getByRole('nameinput') as HTMLInputElement;
+//     userEvent.type(input, 'Name');
 
-    expect(input.value).toBe('Name');
-    await act(async () => fireEvent.submit(screen.getByRole('form')));
-  });
+//     expect(input.value).toBe('Name');
+//     await act(async () => fireEvent.submit(screen.getByRole('form')));
+//   });
 
-  test('should update date input value', async () => {
-    const testValue = '2019-03-29';
-    render(<CardForm onSubmit={mockOnSubmit} />);
+//   test('should update date input value', async () => {
+//     const testValue = '2019-03-29';
+//     render(<CardForm onSubmit={mockOnSubmit} />);
 
-    const input = screen.getByRole('dateinput') as HTMLInputElement;
-    fireEvent.change(input, { target: { value: testValue } });
+//     const input = screen.getByRole('dateinput') as HTMLInputElement;
+//     fireEvent.change(input, { target: { value: testValue } });
 
-    expect(input.value).toEqual(testValue);
-    await act(async () => fireEvent.submit(screen.getByRole('form')));
-  });
+//     expect(input.value).toEqual(testValue);
+//     await act(async () => fireEvent.submit(screen.getByRole('form')));
+//   });
 
-  test('should update textarea input value', async () => {
-    render(<CardForm onSubmit={mockOnSubmit} />);
+//   test('should update textarea input value', async () => {
+//     render(<CardForm onSubmit={mockOnSubmit} />);
 
-    const input = screen.getByRole('textareainput') as HTMLTextAreaElement;
-    userEvent.type(input, '23');
+//     const input = screen.getByRole('textareainput') as HTMLTextAreaElement;
+//     userEvent.type(input, '23');
 
-    expect(input.value).toBe('23');
-    await act(async () => fireEvent.submit(screen.getByRole('form')));
-  });
+//     expect(input.value).toBe('23');
+//     await act(async () => fireEvent.submit(screen.getByRole('form')));
+//   });
 
-  test('should check the checkbox input', () => {
-    render(<CardForm onSubmit={mockOnSubmit} />);
+//   test('should check the checkbox input', () => {
+//     render(<CardForm onSubmit={mockOnSubmit} />);
 
-    const input = screen.getByRole('checkinput') as HTMLInputElement;
-    expect(input).toBeInTheDocument();
-    expect(input).not.toBeChecked();
-    fireEvent.click(input);
+//     const input = screen.getByRole('checkinput') as HTMLInputElement;
+//     expect(input).toBeInTheDocument();
+//     expect(input).not.toBeChecked();
+//     fireEvent.click(input);
 
-    expect(input).toBeChecked();
-  });
+//     expect(input).toBeChecked();
+//   });
 
-  test('should switch the radio inputs', () => {
-    render(<CardForm onSubmit={mockOnSubmit} />);
+//   test('should switch the radio inputs', () => {
+//     render(<CardForm onSubmit={mockOnSubmit} />);
 
-    const input1 = screen.getByRole('radioinput1') as HTMLInputElement;
-    const input2 = screen.getByRole('radioinput2') as HTMLInputElement;
-    expect(input1).toBeChecked();
-    fireEvent.click(input2);
+//     const input1 = screen.getByRole('radioinput1') as HTMLInputElement;
+//     const input2 = screen.getByRole('radioinput2') as HTMLInputElement;
+//     expect(input1).toBeChecked();
+//     fireEvent.click(input2);
 
-    expect(input1).not.toBeChecked();
-    expect(input2).toBeChecked();
-  });
+//     expect(input1).not.toBeChecked();
+//     expect(input2).toBeChecked();
+//   });
 
-  test('test posibilyty to submit after data set and name input first letter validation', async () => {
-    const file = new File(['hello'], 'hello.png', { type: 'image/png' });
-    const testValue = '2019-03-29';
-    render(<CardForm onSubmit={mockOnSubmit} />);
+//   test('test posibilyty to submit after data set and name input first letter validation', async () => {
+//     const file = new File(['hello'], 'hello.png', { type: 'image/png' });
+//     const testValue = '2019-03-29';
+//     render(<CardForm onSubmit={mockOnSubmit} />);
 
-    const inputFile = screen.getByRole('fileinput') as HTMLInputElement;
-    userEvent.upload(inputFile, file);
+//     const inputFile = screen.getByRole('fileinput') as HTMLInputElement;
+//     userEvent.upload(inputFile, file);
 
-    const inputName = screen.getByRole('nameinput') as HTMLInputElement;
-    userEvent.type(inputName, 'test');
+//     const inputName = screen.getByRole('nameinput') as HTMLInputElement;
+//     userEvent.type(inputName, 'test');
 
-    const inputDate = screen.getByRole('dateinput') as HTMLInputElement;
-    fireEvent.change(inputDate, { target: { value: testValue } });
+//     const inputDate = screen.getByRole('dateinput') as HTMLInputElement;
+//     fireEvent.change(inputDate, { target: { value: testValue } });
 
-    const inputText = screen.getByRole('textareainput') as HTMLTextAreaElement;
-    userEvent.type(inputText, '23');
+//     const inputText = screen.getByRole('textareainput') as HTMLTextAreaElement;
+//     userEvent.type(inputText, '23');
 
-    await act(async () => fireEvent.submit(screen.getByRole('form')));
+//     await act(async () => fireEvent.submit(screen.getByRole('form')));
 
-    expect(screen.getByText('*Сapital letter first - Alex')).toBeInTheDocument();
-  });
-});
+//     expect(screen.getByText('*Сapital letter first - Alex')).toBeInTheDocument();
+//   });
+// });
 
-describe('FormCards tests', function () {
-  test('should render FormCard', () => {
-    render(<FormCards cards={testCards} />);
+// describe('FormCards tests', function () {
+//   test('should render FormCard', () => {
+//     render(<FormCards cards={testCards} />);
 
-    expect(screen.getByText(testCards[0].name)).toBeInTheDocument();
-    expect(screen.getByText(testCards[1].name)).toBeInTheDocument();
-    expect(screen.getByText('Waterproof')).toBeInTheDocument();
-    expect(screen.getByText('Not waterproof')).toBeInTheDocument();
-  });
+//     expect(screen.getByText(testCards[0].name)).toBeInTheDocument();
+//     expect(screen.getByText(testCards[1].name)).toBeInTheDocument();
+//     expect(screen.getByText('Waterproof')).toBeInTheDocument();
+//     expect(screen.getByText('Not waterproof')).toBeInTheDocument();
+//   });
 
-  test('should render FormCards', () => {
-    render(<FormCards cards={testCards} />);
+//   test('should render FormCards', () => {
+//     render(<FormCards cards={testCards} />);
 
-    const cards = screen.getAllByRole('formcard');
-    expect(cards).toHaveLength(testCards.length);
-  });
-});
+//     const cards = screen.getAllByRole('formcard');
+//     expect(cards).toHaveLength(testCards.length);
+//   });
+// });

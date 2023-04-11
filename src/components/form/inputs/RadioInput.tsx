@@ -1,7 +1,7 @@
 import React from 'react';
 import { UseFormRegister } from 'react-hook-form';
 
-import { FormInputs } from 'pages/Form';
+import { FormInputs } from '../Form';
 
 type ComponentProps = {
   register: UseFormRegister<FormInputs>;

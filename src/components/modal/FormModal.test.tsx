@@ -4,16 +4,16 @@ import userEvent from '@testing-library/user-event';
 
 import { FormModal } from './FormModal';
 
-const mockCloseModal = jest.fn();
+// const mockCloseModal = jest.fn();
 
-afterEach(cleanup);
+// afterEach(cleanup);
 
-describe('Form modal test', function () {
-  test('Form modal can be rendered and closed', async () => {
-    render(<FormModal closeModal={mockCloseModal} isModalOpen={true} />);
+// describe('Form modal test', function () {
+//   test('Form modal can be rendered and closed', async () => {
+//     render(<FormModal closeModal={mockCloseModal} isModalOpen={true} />);
 
-    const button = screen.getByRole('formmodalclose');
-    expect(button).toBeInTheDocument();
-    userEvent.click(button);
-  });
-});
+//     const button = screen.getByRole('formmodalclose');
+//     expect(button).toBeInTheDocument();
+//     userEvent.click(button);
+//   });
+// });

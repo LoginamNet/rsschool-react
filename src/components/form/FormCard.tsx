@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { FormCard as ComponentProps } from 'pages/Form';
+import { FormCard as ComponentProps } from 'reducers/form.reducer';
 
 export function SingleFormCard(props: ComponentProps) {
   return (

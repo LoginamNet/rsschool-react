@@ -1,5 +1,7 @@
 import React from 'react';
 import { useForm, SubmitHandler } from 'react-hook-form';
+import { useDispatch } from 'react-redux';
+import { setCards, setModal } from 'reducers/form.reducer';
 import './Form.css';
 
 import { NameInput } from './inputs/NameInput';
@@ -9,13 +11,20 @@ import { SelectInput } from './inputs/SelectInput';
 import { RadioInput } from './inputs/RadioInput';
 import { TextareaInput } from './inputs/TextareaInput';
 import { FileInput } from './inputs/FileInput';
-import { FormInputs } from 'pages/Form';
 
-type ComponentProps = {
-  onSubmit: SubmitHandler<FormInputs>;
+export type FormInputs = {
+  name: string;
+  date: string;
+  check: boolean;
+  select: string;
+  radio: string;
+  file: FileList;
+  text: string;
 };
 
-export function CardForm(props: ComponentProps) {
+export function CardForm() {
+  const dispatch = useDispatch();
+
   const {
     register,
     handleSubmit,
@@ -26,11 +35,26 @@ export function CardForm(props: ComponentProps) {
     reValidateMode: 'onSubmit',
   });
 
+  const onSubmit: SubmitHandler<FormInputs> = (data) => {
+    const card = {
+      name: data.name,
+      date: data.date,
+      checked: data.check,
+      selected: data.select,
+      radio: data.radio,
+      text: data.text,
+      file: URL.createObjectURL(data.file[0]),
+    };
+
+    dispatch(setCards(card));
+    dispatch(setModal(true));
+  };
+
   return (
     <form
       className="formProps"
       onSubmit={handleSubmit((data) => {
-        props.onSubmit(data);
+        onSubmit(data);
         reset();
       })}
       role="form"

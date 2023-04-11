@@ -1,15 +1,15 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import './FormCards.css';
 
-import { FormCard } from 'pages/Form';
 import { SingleFormCard } from './FormCard';
 
-type ComponentProps = {
-  cards: FormCard[];
-};
+import { RootState } from 'store';
 
-export function FormCards(props: ComponentProps) {
-  const cards = props.cards.map((item, key) => (
+export function FormCards() {
+  const cards = useSelector((state: RootState) => state.form.value.cards);
+
+  const formCards = cards.map((item, key) => (
     <SingleFormCard
       key={key}
       name={item.name}
@@ -22,5 +22,5 @@ export function FormCards(props: ComponentProps) {
     />
   ));
 
-  return <div className="formCardsContainer">{cards}</div>;
+  return <div className="formCardsContainer">{formCards}</div>;
 }
