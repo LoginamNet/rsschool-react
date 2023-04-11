@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux/es/exports';
-import { setHeaderTitle } from 'store';
+import { setHeaderTitle } from 'reducers/title.reducer';
 
 import { Search } from 'components/search/Search';
 import { Cards } from 'components/cards/Cards';

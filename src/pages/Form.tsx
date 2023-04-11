@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { SubmitHandler } from 'react-hook-form';
 import { useDispatch } from 'react-redux';
-import { setHeaderTitle } from 'store';
+import { setHeaderTitle } from 'reducers/title.reducer';
 
 import { CardForm } from 'components/form/Form';
 import { FormCards } from 'components/form/FormCards';

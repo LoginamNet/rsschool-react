@@ -1,6 +1,6 @@
 import React, { ChangeEvent, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { setSearch } from 'store';
+import { setSearch } from 'reducers/search.reducer';
 import './Search.css';
 
 import { RootState } from 'store';

@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import { setHeaderTitle } from 'store';
+import { setHeaderTitle } from 'reducers/title.reducer';
 
 export function NotFoundPage() {
   const dispatch = useDispatch();
