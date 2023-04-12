@@ -1,15 +1,15 @@
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux/es/exports';
 import { setHeaderTitle } from 'reducers/title.reducer';
+import { useGetCardsQuery } from 'reducers/api.reducer';
 
 import { Search } from 'components/search/Search';
 import { Cards } from 'components/cards/Cards';
 import { MainModal } from 'components/modal/MainModal';
 import { Loading } from 'components/loading/Loading';
-import { ACCESS_KEY } from 'common/keys';
+import { messages } from 'common/messages';
 
 import { RootState } from 'store';
-import { useGetCardsQuery } from 'api';
 
 export type MainCard = {
   id: string;
@@ -36,80 +36,14 @@ export type MainCard = {
 };
 
 export function Main() {
-  const [isPending, setIsPending] = useState(false);
-  const [isCardPending, setIsCardPending] = useState(true);
-  const [errorMessage, setErrorMessage] = useState('');
-  const [cardID, setCardID] = useState('');
-  const [isModalOpen, setModal] = useState(false);
-  const [modalCard, setModalCard] = useState<MainCard>();
-
   const dispatch = useDispatch();
+
   const search = useSelector((state: RootState) => state.search.value.search);
-  const { data, error, isLoading, isFetching } = useGetCardsQuery(search);
-
-  // const fetchData = useCallback(async () => {
-  //   setIsPending(true);
-
-  //   try {
-  //     const data = await fetch(
-  //       `https://api.unsplash.com/search/photos?page=1&per_page=15&query=${search}&client_id=${ACCESS_KEY}`
-  //     );
-  //     const json = await data.json();
-  //     const result = json.results;
-
-  //     setErrorMessage(
-  //       `Empty search or no results on your request! Please, add some text or try other keywords
-  //     in search area and press Find button or Enter to display pictures. For example, «cat» or
-  //     «plane»`
-  //     );
-  //     setCards(result);
-  //   } catch (err) {
-  //     setErrorMessage(
-  //       `An error occurred while uploading data! Please check the console or try searching again`
-  //     );
-  //     console.error(err);
-  //   }
-
-  //   const timer = setTimeout(() => setIsPending(false), 1000);
-  //   () => clearTimeout(timer);
-  // }, [search]);
-
-  const fetchCardData = useCallback(async () => {
-    try {
-      const data = await fetch(`https://api.unsplash.com/photos/${cardID}?client_id=${ACCESS_KEY}`);
-      const result = await data.json();
-
-      setModalCard(result);
-    } catch (err) {
-      console.error(err);
-    }
-  }, [cardID]);
-
-  const openModal = (id: string) => {
-    setCardID(id);
-    setModal(true);
-    setIsCardPending(true);
-
-    const modalTimer = setTimeout(() => setIsCardPending(false), 1000);
-    () => clearTimeout(modalTimer);
-  };
-
-  const closeModal = () => {
-    setModal(false);
-  };
+  const { data, error, isFetching } = useGetCardsQuery(search);
 
   useEffect(() => {
-    console.log(data, error, isLoading);
     dispatch(setHeaderTitle({ headerTitle: 'HOME' }));
   });
-
-  // useEffect(() => {
-  //   fetchData();
-  // }, [fetchData]);
-
-  // useEffect(() => {
-  //   fetchCardData();
-  // }, [fetchCardData]);
 
   return (
     <div className="page mainPage">
@@ -117,19 +51,16 @@ export function Main() {
       {isFetching ? (
         <Loading />
       ) : data.results.length ? (
-        <Cards cards={data.results} openModal={openModal} />
+        <Cards cards={data.results} />
       ) : (
         <span className="noCardsContainer">
           <h2 className="noCardsHeader">Hmm, something`s wrong..</h2>
-          <span className="noCardsText">{errorMessage}</span>
+          <span className="noCardsText">
+            {error ? messages.FETCHING_CARDS_ERROR : messages.EMPTY_SEARCH_ERROR}
+          </span>
         </span>
       )}
-      <MainModal
-        closeModal={closeModal}
-        isModalOpen={isModalOpen}
-        isCardPending={isCardPending}
-        modalCard={modalCard}
-      />
+      <MainModal />
     </div>
   );
 }
