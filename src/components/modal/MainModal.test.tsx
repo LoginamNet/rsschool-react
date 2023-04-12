@@ -1,9 +1,12 @@
 import React from 'react';
 import { render, screen, cleanup } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+import { Provider } from 'react-redux';
+import { store } from 'store';
 
 import { MainModal } from './MainModal';
 import { cards } from 'common/data';
+import { Main } from 'pages/Main';
 
 const closeModal = jest.fn();
 
@@ -12,12 +15,9 @@ afterEach(cleanup);
 // describe('Main modal test', function () {
 //   test('Main modal can be rendered and closed by button', async () => {
 //     render(
-//       <MainModal
-//         closeModal={closeModal}
-//         isModalOpen={true}
-//         isCardPending={false}
-//         modalCard={cards[0]}
-//       />
+//       <Provider store={store}>
+//         <Main />
+//       </Provider>
 //     );
 
 //     const button = screen.getByRole('mainmodalclose');
