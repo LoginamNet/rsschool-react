@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux/es/exports';
+import { useDispatch, useSelector } from 'react-redux';
 import { setHeaderTitle } from 'reducers/title.reducer';
 import { useGetCardsQuery } from 'reducers/api.reducer';
 

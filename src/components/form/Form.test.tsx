@@ -4,8 +4,30 @@ import userEvent from '@testing-library/user-event';
 import { Provider } from 'react-redux';
 import { store } from 'store';
 
-// import { FormCards } from './FormCards';
+import { FormCards } from './FormCards';
 import { CardForm } from './Form';
+import { renderWithProviders } from 'common/render';
+
+const testCards = [
+  {
+    name: 'name1',
+    date: 'date1',
+    checked: true,
+    selected: 'select1',
+    radio: 'radio1',
+    text: 'text1',
+    file: 'file1',
+  },
+  {
+    name: 'name2',
+    date: 'date2',
+    checked: false,
+    selected: 'select2',
+    radio: 'radio2',
+    text: 'text2',
+    file: 'file2',
+  },
+];
 
 window.URL.createObjectURL = jest.fn();
 
@@ -155,20 +177,28 @@ describe('Form tests', function () {
   });
 });
 
-// describe('FormCards tests', function () {
-//   test('should render FormCard', () => {
-//     render(<FormCards cards={testCards} />);
+describe('FormCards tests', function () {
+  test('should render FormCard', () => {
+    renderWithProviders(<FormCards />, {
+      preloadedState: {
+        form: { value: { cards: testCards, isModalOpen: false } },
+      },
+    });
 
-//     expect(screen.getByText(testCards[0].name)).toBeInTheDocument();
-//     expect(screen.getByText(testCards[1].name)).toBeInTheDocument();
-//     expect(screen.getByText('Waterproof')).toBeInTheDocument();
-//     expect(screen.getByText('Not waterproof')).toBeInTheDocument();
-//   });
+    expect(screen.getByText(testCards[0].name)).toBeInTheDocument();
+    expect(screen.getByText(testCards[1].name)).toBeInTheDocument();
+    expect(screen.getByText('Waterproof')).toBeInTheDocument();
+    expect(screen.getByText('Not waterproof')).toBeInTheDocument();
+  });
 
-//   test('should render FormCards', () => {
-//     render(<FormCards cards={testCards} />);
+  test('should render FormCards', () => {
+    renderWithProviders(<FormCards />, {
+      preloadedState: {
+        form: { value: { cards: testCards, isModalOpen: false } },
+      },
+    });
 
-//     const cards = screen.getAllByRole('formcard');
-//     expect(cards).toHaveLength(testCards.length);
-//   });
-// });
+    const cards = screen.getAllByRole('formcard');
+    expect(cards).toHaveLength(testCards.length);
+  });
+});

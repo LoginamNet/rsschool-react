@@ -1,5 +1,5 @@
 import React from 'react';
-import { useDispatch, useSelector } from 'react-redux/es/exports';
+import { useDispatch, useSelector } from 'react-redux';
 import { useGetCardQuery } from 'reducers/api.reducer';
 import { setModalClose } from 'reducers/modal.reducer';
 import './MainModal.css';

@@ -10,44 +10,14 @@ import { About } from 'pages/About';
 import { Form } from 'pages/Form';
 import { NotFoundPage } from 'pages/NotFound';
 import { cards } from 'common/data';
-import { ACCESS_KEY } from 'common/keys';
-
-async function testingFetch() {
-  const data = await fetch(
-    `https://api.unsplash.com/search/photos?page=1&per_page=15&query=cat&client_id=${ACCESS_KEY}}`
-  );
-  const json = await data.json();
-
-  return json;
-}
-
-const unmockedFetch = global.fetch;
-
-beforeAll(() => {
-  global.fetch = () =>
-    Promise.resolve({
-      json: () => Promise.resolve(cards),
-    }) as Promise<Response>;
-});
-
-afterAll(() => {
-  global.fetch = unmockedFetch;
-});
+import { renderWithProviders } from 'common/render';
 
 afterEach(cleanup);
 
 describe('Pages tests', function () {
-  // test('should render main page', async () => {
-  //   const json = await testingFetch();
-  //   expect(Array.isArray(json)).toEqual(true);
-  //   expect(json.length).toEqual(3);
-
-  //   render(
-  //     <Provider store={store}>
-  //       <Main />
-  //     </Provider>
-  //   );
-  // });
+  test('should render Main page', async () => {
+    renderWithProviders(<Main />);
+  });
 
   test('should render about page', () => {
     render(
