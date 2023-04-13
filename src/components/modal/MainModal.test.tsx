@@ -3,6 +3,7 @@ import { render, screen, cleanup } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { Provider } from 'react-redux';
 import { store } from 'store';
+import { renderWithProviders } from 'common/render';
 
 import { MainModal } from './MainModal';
 import { cards } from 'common/data';
@@ -14,11 +15,7 @@ afterEach(cleanup);
 
 // describe('Main modal test', function () {
 //   test('Main modal can be rendered and closed by button', async () => {
-//     render(
-//       <Provider store={store}>
-//         <Main />
-//       </Provider>
-//     );
+//     renderWithProviders(<Main />);
 
 //     const button = screen.getByRole('mainmodalclose');
 //     expect(button).toBeInTheDocument();

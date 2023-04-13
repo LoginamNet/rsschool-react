@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { fireEvent, render, screen, waitFor } from '@testing-library/react';
 import { Provider } from 'react-redux';
 import { store } from 'store';
+import { renderWithProviders } from 'common/render';
 
 import App from './App';
 
@@ -13,7 +14,7 @@ import App from './App';
 //       div.id = 'root';
 //       document.body.appendChild(div);
 //       require('./index');
-//       expect(ReactDOM.render).toHaveBeenCalledWith(<App />, div);
+//       expect(ReactDOM.render).toHaveBeenCalledWith(renderWithProviders(<App />), div);
 //     });
 //   });
 // });
