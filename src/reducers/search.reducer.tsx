@@ -5,7 +5,7 @@ export const searchSlice = createSlice({
   initialState: { value: { search: 'photo' } },
   reducers: {
     setSearch: (state, action) => {
-      state.value = action.payload;
+      state.value.search = action.payload;
     },
   },
 });

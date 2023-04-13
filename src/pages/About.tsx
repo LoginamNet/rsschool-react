@@ -6,7 +6,7 @@ export function About() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(setHeaderTitle({ headerTitle: 'ABOUT US' }));
+    dispatch(setHeaderTitle('ABOUT US'));
   });
 
   return (

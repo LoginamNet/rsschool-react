@@ -6,7 +6,7 @@ export function NotFoundPage() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(setHeaderTitle({ headerTitle: '404' }));
+    dispatch(setHeaderTitle('404'));
   });
 
   return (

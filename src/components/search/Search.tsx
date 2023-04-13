@@ -23,13 +23,13 @@ export function Search() {
         }}
         onKeyDown={(event: React.KeyboardEvent<HTMLInputElement>) => {
           if (event.key === 'Enter') {
-            dispatch(setSearch({ search: input }));
+            dispatch(setSearch(input));
           }
         }}
       />
       <button
         className="searchButton"
-        onClick={() => dispatch(setSearch({ search: input }))}
+        onClick={() => dispatch(setSearch(input))}
         role="searchbutton"
       >
         FIND!

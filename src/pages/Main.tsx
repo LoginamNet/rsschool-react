@@ -42,7 +42,7 @@ export function Main() {
   const { data, error, isFetching } = useGetCardsQuery(search);
 
   useEffect(() => {
-    dispatch(setHeaderTitle({ headerTitle: 'HOME' }));
+    dispatch(setHeaderTitle('HOME'));
   });
 
   return (

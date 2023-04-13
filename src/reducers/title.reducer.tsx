@@ -5,7 +5,7 @@ export const headerTitleSlice = createSlice({
   initialState: { value: { headerTitle: '' } },
   reducers: {
     setHeaderTitle: (state, action) => {
-      state.value = action.payload;
+      state.value.headerTitle = action.payload;
     },
   },
 });

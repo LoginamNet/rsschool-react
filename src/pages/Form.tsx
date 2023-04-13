@@ -13,7 +13,7 @@ export function Form() {
   const cards = useSelector((state: RootState) => state.form.value.cards);
 
   useEffect(() => {
-    dispatch(setHeaderTitle({ headerTitle: 'FORM' }));
+    dispatch(setHeaderTitle('FORM'));
   });
 
   return (
