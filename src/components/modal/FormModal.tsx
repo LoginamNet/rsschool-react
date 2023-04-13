@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { setModal } from 'reducers/form.reducer';
+import { setModalClose } from 'reducers/form.reducer';
 import './FormModal.css';
 
 import { RootState } from 'store';
@@ -18,7 +18,7 @@ export function FormModal() {
         </span>
         <button
           className="formModalButton"
-          onClick={() => dispatch(setModal(false))}
+          onClick={() => dispatch(setModalClose())}
           role="formmodalclose"
         >
           Close & add more
