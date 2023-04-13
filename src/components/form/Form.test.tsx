@@ -1,12 +1,12 @@
 import React from 'react';
-import { render, screen, cleanup, fireEvent, act } from '@testing-library/react';
+import { render, screen, cleanup, fireEvent, act, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { Provider } from 'react-redux';
 import { store } from 'store';
+import { renderWithProviders } from 'common/render';
 
 import { FormCards } from './FormCards';
 import { CardForm } from './Form';
-import { renderWithProviders } from 'common/render';
 
 const testCards = [
   {
@@ -153,11 +153,11 @@ describe('Form tests', function () {
   test('test posibilyty to submit after data set', async () => {
     const file = new File(['hello'], 'hello.png', { type: 'image/png' });
     const testValue = '2019-03-29';
-    render(
-      <Provider store={store}>
-        <CardForm />
-      </Provider>
-    );
+    renderWithProviders(<CardForm />, {
+      preloadedState: {
+        form: { value: { cards: testCards, isModalOpen: false } },
+      },
+    });
 
     const inputFile = screen.getByRole('fileinput') as HTMLInputElement;
     userEvent.upload(inputFile, file);
@@ -172,6 +172,8 @@ describe('Form tests', function () {
     userEvent.type(inputText, '23');
 
     await act(async () => fireEvent.submit(screen.getByRole('form')));
+
+    waitFor(() => expect(screen.getAllByRole('formcard')).toHaveLength(3));
   });
 });
 
