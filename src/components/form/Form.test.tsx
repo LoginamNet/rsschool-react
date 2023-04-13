@@ -34,8 +34,6 @@ window.URL.createObjectURL = jest.fn();
 afterEach(cleanup);
 
 describe('Form tests', function () {
-  window.URL.createObjectURL = jest.fn();
-
   test('Form must be submitted', async () => {
     render(
       <Provider store={store}>
