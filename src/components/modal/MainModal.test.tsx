@@ -27,8 +27,6 @@ describe('Main modal test', function () {
 
     const closeBtn = await screen.findByRole('mainmodalclose');
     await act(async () => userEvent.click(closeBtn));
-
-    screen.debug();
   });
 
   test('Main modal can be rendered and closed by background', async () => {
@@ -36,7 +34,5 @@ describe('Main modal test', function () {
 
     const background = await screen.findByRole('mainmodalback');
     await act(async () => userEvent.click(background));
-
-    screen.debug();
   });
 });
