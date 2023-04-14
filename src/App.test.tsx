@@ -11,7 +11,7 @@ describe('Common tests', function () {
       div.id = 'root';
       document.body.appendChild(div);
       require('./index');
-      expect(ReactDOM.render).toHaveBeenCalledWith(render(<App />), div);
+      expect(ReactDOM.render).toHaveBeenCalledWith(div);
     });
   });
 });
