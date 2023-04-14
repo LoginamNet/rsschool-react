@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { render, waitFor } from '@testing-library/react';
-import { renderWithProviders } from 'common/render';
 
 import App from './App';
 
@@ -12,7 +11,7 @@ describe('Common tests', function () {
       div.id = 'root';
       document.body.appendChild(div);
       require('./index');
-      expect(ReactDOM.render).toHaveBeenCalledWith(renderWithProviders(<App />), div);
+      expect(ReactDOM.render).toHaveBeenCalledWith(render(<App />), div);
     });
   });
 });

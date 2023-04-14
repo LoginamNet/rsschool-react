@@ -4,19 +4,22 @@ import { BrowserRouter } from 'react-router-dom';
 import userEvent from '@testing-library/user-event';
 import { Provider } from 'react-redux';
 import { store } from 'store';
+import { renderWithProviders } from 'common/render';
+import { search } from 'common/data';
 
 import { Main } from './Main';
 import { About } from 'pages/About';
 import { Form } from 'pages/Form';
 import { NotFoundPage } from 'pages/NotFound';
-import { cards } from 'common/data';
-import { renderWithProviders } from 'common/render';
 
 afterEach(cleanup);
 
 describe('Pages tests', function () {
-  test('should render Main page', async () => {
+  test('should render Main page with two test cards', async () => {
     renderWithProviders(<Main />);
+
+    const cards = await screen.findAllByText(/Click for info/i);
+    expect(cards.length).toEqual(search.results.length);
   });
 
   test('should render about page', () => {
