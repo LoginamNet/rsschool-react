@@ -1,12 +1,12 @@
 import React, { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { setHeaderTitle } from 'reducers/title.reducer';
 
-type ComponentProps = {
-  setHeaderTitle: React.Dispatch<React.SetStateAction<string>>;
-};
+export function NotFoundPage() {
+  const dispatch = useDispatch();
 
-export function NotFoundPage(props: ComponentProps) {
   useEffect(() => {
-    props.setHeaderTitle('404');
+    dispatch(setHeaderTitle('404'));
   });
 
   return (

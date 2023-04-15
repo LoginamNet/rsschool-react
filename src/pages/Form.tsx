@@ -1,71 +1,31 @@
-import React, { useEffect, useState } from 'react';
-import { SubmitHandler } from 'react-hook-form';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { setHeaderTitle } from 'reducers/title.reducer';
 
 import { CardForm } from 'components/form/Form';
 import { FormCards } from 'components/form/FormCards';
 import { FormModal } from 'components/modal/FormModal';
 
-export type FormCard = {
-  name: string;
-  date: string;
-  checked: boolean;
-  selected: string;
-  radio: string;
-  text: string;
-  file: string | false;
-};
+import { RootState } from 'store';
 
-export type FormInputs = {
-  name: string;
-  date: string;
-  check: boolean;
-  select: string;
-  radio: string;
-  file: FileList;
-  text: string;
-};
-
-type ComponentProps = {
-  setHeaderTitle: React.Dispatch<React.SetStateAction<string>>;
-};
-
-export function Form(props: ComponentProps) {
-  const [cards, setCards] = useState<FormCard[]>([]);
-  const [isModalOpen, setModal] = useState(false);
-
-  const onSubmit: SubmitHandler<FormInputs> = (data) => {
-    const card = {
-      name: data.name,
-      date: data.date,
-      checked: data.check,
-      selected: data.select,
-      radio: data.radio,
-      text: data.text,
-      file: URL.createObjectURL(data.file[0]),
-    };
-
-    setCards((cards) => [...cards, card]);
-    setModal(true);
-  };
-
-  const closeModal = () => {
-    setModal(false);
-  };
+export function Form() {
+  const dispatch = useDispatch();
+  const cards = useSelector((state: RootState) => state.form.value.cards);
 
   useEffect(() => {
-    props.setHeaderTitle('FORM');
+    dispatch(setHeaderTitle('FORM'));
   });
 
   return (
     <div className="page formPage">
       <div className="form">
         <div className="formImage"></div>
-        <CardForm onSubmit={onSubmit} />
-        <FormModal closeModal={closeModal} isModalOpen={isModalOpen} />
+        <CardForm />
+        <FormModal />
       </div>
       <div>
         {cards.length > 0 ? (
-          <FormCards cards={cards} />
+          <FormCards />
         ) : (
           <h3 style={{ textAlign: 'center' }}>NO CARDS FOR NOW!</h3>
         )}

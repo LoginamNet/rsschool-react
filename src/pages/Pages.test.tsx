@@ -2,51 +2,32 @@ import React from 'react';
 import { render, screen, cleanup, act, fireEvent } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
 import userEvent from '@testing-library/user-event';
+import { Provider } from 'react-redux';
+import { store } from 'store';
+import { renderWithProviders } from 'common/render';
+import { search } from 'common/data';
 
 import { Main } from './Main';
 import { About } from 'pages/About';
 import { Form } from 'pages/Form';
 import { NotFoundPage } from 'pages/NotFound';
-import { cards } from 'common/data';
-import { ACCESS_KEY } from 'common/keys';
-
-const setHeaderTitle = jest.fn();
-
-async function testingFetch() {
-  const data = await fetch(
-    `https://api.unsplash.com/search/photos?page=1&per_page=15&query=cat&client_id=${ACCESS_KEY}}`
-  );
-  const json = await data.json();
-
-  return json;
-}
-
-const unmockedFetch = global.fetch;
-
-beforeAll(() => {
-  global.fetch = () =>
-    Promise.resolve({
-      json: () => Promise.resolve(cards),
-    }) as Promise<Response>;
-});
-
-afterAll(() => {
-  global.fetch = unmockedFetch;
-});
 
 afterEach(cleanup);
 
 describe('Pages tests', function () {
-  test('should render main page', async () => {
-    const json = await testingFetch();
-    expect(Array.isArray(json)).toEqual(true);
-    expect(json.length).toEqual(3);
+  test('should render Main page with two test cards', async () => {
+    renderWithProviders(<Main />);
 
-    await act(async () => render(<Main setHeaderTitle={setHeaderTitle} />));
+    const cards = await screen.findAllByText(/Click for info/i);
+    expect(cards.length).toEqual(search.results.length);
   });
 
   test('should render about page', () => {
-    render(<About setHeaderTitle={setHeaderTitle} />);
+    render(
+      <Provider store={store}>
+        <About />
+      </Provider>
+    );
 
     const header = screen.getByRole('heading');
     expect(header).toBeInTheDocument();
@@ -55,9 +36,11 @@ describe('Pages tests', function () {
 
   test('should render 404 page', () => {
     render(
-      <BrowserRouter>
-        <NotFoundPage setHeaderTitle={setHeaderTitle} />
-      </BrowserRouter>
+      <Provider store={store}>
+        <BrowserRouter>
+          <NotFoundPage />
+        </BrowserRouter>
+      </Provider>
     );
 
     const header = screen.getByRole('heading');
@@ -67,9 +50,11 @@ describe('Pages tests', function () {
 
   test('should render form page', () => {
     render(
-      <BrowserRouter>
-        <Form setHeaderTitle={setHeaderTitle} />
-      </BrowserRouter>
+      <Provider store={store}>
+        <BrowserRouter>
+          <Form />
+        </BrowserRouter>
+      </Provider>
     );
 
     const header = screen.getByRole('form');
@@ -78,9 +63,11 @@ describe('Pages tests', function () {
 
   test('should open and close modal on form page', async () => {
     render(
-      <BrowserRouter>
-        <Form setHeaderTitle={setHeaderTitle} />
-      </BrowserRouter>
+      <Provider store={store}>
+        <BrowserRouter>
+          <Form />
+        </BrowserRouter>
+      </Provider>
     );
 
     const header = screen.getByRole('form');

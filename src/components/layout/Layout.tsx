@@ -6,14 +6,10 @@ import { Header } from './Header';
 import { Outlet } from 'react-router-dom';
 import { Footer } from './Footer';
 
-type ComponentProps = {
-  headerTitle: string;
-};
-
-export function Layout(props: ComponentProps) {
+export function Layout() {
   return (
     <>
-      <Header headerTitle={props.headerTitle} />
+      <Header />
 
       <main>
         <div className="mainContainer">

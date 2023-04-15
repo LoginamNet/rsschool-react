@@ -1,32 +1,15 @@
-import React, { ChangeEvent, useEffect, useState } from 'react';
+import React, { ChangeEvent, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { setSearch } from 'reducers/search.reducer';
 import './Search.css';
 
-type ComponentProps = {
-  setSearch: React.Dispatch<React.SetStateAction<string>>;
-};
+import { RootState } from 'store';
 
-export function Search(props: ComponentProps) {
+export function Search() {
   const [input, setInput] = useState('');
 
-  const handleInputEvent = (event: ChangeEvent<HTMLInputElement>) => {
-    setInput(event.target.value);
-  };
-
-  const handleEnterPress = (event: React.KeyboardEvent<HTMLInputElement>) => {
-    if (event.key === 'Enter') {
-      localStorage.setItem('search', input);
-      props.setSearch(input);
-    }
-  };
-
-  const handleFindPress = () => {
-    localStorage.setItem('search', input);
-    props.setSearch(input);
-  };
-
-  useEffect(() => {
-    setInput(localStorage.getItem('search') || '');
-  }, []);
+  const dispatch = useDispatch();
+  const search = useSelector((state: RootState) => state.search.value.search);
 
   return (
     <div className="searchContainer">
@@ -34,11 +17,21 @@ export function Search(props: ComponentProps) {
         className="searchInput"
         type="text"
         placeholder="Print something!"
-        defaultValue={input}
-        onInput={handleInputEvent}
-        onKeyDown={handleEnterPress}
+        defaultValue={search !== 'photo' ? search : ''}
+        onInput={(event: ChangeEvent<HTMLInputElement>) => {
+          setInput(event.target.value);
+        }}
+        onKeyDown={(event: React.KeyboardEvent<HTMLInputElement>) => {
+          if (event.key === 'Enter') {
+            dispatch(setSearch(input));
+          }
+        }}
       />
-      <button className="searchButton" onClick={handleFindPress} role="searchbutton">
+      <button
+        className="searchButton"
+        onClick={() => dispatch(setSearch(input))}
+        role="searchbutton"
+      >
         FIND!
       </button>
     </div>

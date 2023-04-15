@@ -1,12 +1,12 @@
 import React, { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { setHeaderTitle } from 'reducers/title.reducer';
 
-type ComponentProps = {
-  setHeaderTitle: React.Dispatch<React.SetStateAction<string>>;
-};
+export function About() {
+  const dispatch = useDispatch();
 
-export function About(props: ComponentProps) {
   useEffect(() => {
-    props.setHeaderTitle('ABOUT US');
+    dispatch(setHeaderTitle('ABOUT US'));
   });
 
   return (

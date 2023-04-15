@@ -1,5 +1,7 @@
 import React from 'react';
-import { useForm, SubmitHandler } from 'react-hook-form';
+import { useForm } from 'react-hook-form';
+import { useDispatch } from 'react-redux';
+import { setCards, setModalOpen } from 'reducers/form.reducer';
 import './Form.css';
 
 import { NameInput } from './inputs/NameInput';
@@ -9,13 +11,20 @@ import { SelectInput } from './inputs/SelectInput';
 import { RadioInput } from './inputs/RadioInput';
 import { TextareaInput } from './inputs/TextareaInput';
 import { FileInput } from './inputs/FileInput';
-import { FormInputs } from 'pages/Form';
 
-type ComponentProps = {
-  onSubmit: SubmitHandler<FormInputs>;
+export type FormInputs = {
+  name: string;
+  date: string;
+  check: boolean;
+  select: string;
+  radio: string;
+  file: FileList;
+  text: string;
 };
 
-export function CardForm(props: ComponentProps) {
+export function CardForm() {
+  const dispatch = useDispatch();
+
   const {
     register,
     handleSubmit,
@@ -30,7 +39,8 @@ export function CardForm(props: ComponentProps) {
     <form
       className="formProps"
       onSubmit={handleSubmit((data) => {
-        props.onSubmit(data);
+        dispatch(setCards(data));
+        dispatch(setModalOpen());
         reset();
       })}
       role="form"
