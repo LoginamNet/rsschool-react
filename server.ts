@@ -23,10 +23,12 @@ app.use('*', async (req, res) => {
   const url = req.originalUrl;
 
   try {
+    const { render } = await vite.ssrLoadModule('/src/entry-server.tsx');
+
     let template = fs.readFileSync(path.resolve(__dirname, 'index.html'), 'utf-8');
     template = await vite.transformIndexHtml(url, template);
+
     const html = template.split('<!--ssr-app-->');
-    const { render } = await vite.ssrLoadModule('/src/entry-server.tsx');
 
     const { pipe } = await render(url, {
       onShellReady() {
@@ -42,15 +44,16 @@ app.use('*', async (req, res) => {
         res.write(html[0] + html[1]);
         res.end();
       },
-      onError(err) {
+      onError(err: Error) {
         console.error(err);
-        logServerCrashReport(err);
       },
     });
   } catch (err) {
-    vite.ssrFixStacktrace(err);
-    console.log(err.stack);
-    res.status(500).end(err.stack);
+    const error = err as Error;
+
+    vite.ssrFixStacktrace(error);
+    console.log(error.stack);
+    res.status(500).end(error.stack);
   }
 });
 
