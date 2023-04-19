@@ -32,8 +32,10 @@
     "test": "vitest watch",
     "test:no-watch": "vitest run",
     "coverage": "vitest run --coverage",
-    "cypress": "npx cypress open",
-    "e2e": "start-server-and-test dev http://localhost:5173 cypress",
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
+    "e2e": "start-server-and-test dev http://localhost:5173 cy:run",
+    "e2e:interface": "start-server-and-test dev http://localhost:5173 cy:open",
     "lint": "eslint --fix --ext .js,.jsx,.ts,.tsx ."
   },
   "eslintConfig": {
