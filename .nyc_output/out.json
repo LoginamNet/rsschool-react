@@ -1,6 +1,6 @@
 {
-  "C:/Users/Programmist/Desktop/rsschool-react/src/reducers/search.reducer.tsx": {
-    "path": "C:/Users/Programmist/Desktop/rsschool-react/src/reducers/search.reducer.tsx",
+  "C:/Users/LoginamNet/Desktop/rsschool-react/src/reducers/search.reducer.tsx": {
+    "path": "C:/Users/LoginamNet/Desktop/rsschool-react/src/reducers/search.reducer.tsx",
     "statementMap": {
       "0": {
         "start": {
@@ -87,15 +87,15 @@
         "actions"
       ],
       "sources": [
-        "C:/Users/Programmist/Desktop/rsschool-react/src/reducers/search.reducer.tsx"
+        "C:/Users/LoginamNet/Desktop/rsschool-react/src/reducers/search.reducer.tsx"
       ],
-      "file": "C:/Users/Programmist/Desktop/rsschool-react/src/reducers/search.reducer.tsx"
+      "file": "C:/Users/LoginamNet/Desktop/rsschool-react/src/reducers/search.reducer.tsx"
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "74dbf71c58854f341a7174e89dc45c88990acfb3"
+    "hash": "46082c88f26576c07a514d9a5a3d720ed5ea1955"
   },
-  "C:/Users/Programmist/Desktop/rsschool-react/src/reducers/title.reducer.tsx": {
-    "path": "C:/Users/Programmist/Desktop/rsschool-react/src/reducers/title.reducer.tsx",
+  "C:/Users/LoginamNet/Desktop/rsschool-react/src/reducers/title.reducer.tsx": {
+    "path": "C:/Users/LoginamNet/Desktop/rsschool-react/src/reducers/title.reducer.tsx",
     "statementMap": {
       "0": {
         "start": {
@@ -182,15 +182,15 @@
         "actions"
       ],
       "sources": [
-        "C:/Users/Programmist/Desktop/rsschool-react/src/reducers/title.reducer.tsx"
+        "C:/Users/LoginamNet/Desktop/rsschool-react/src/reducers/title.reducer.tsx"
       ],
-      "file": "C:/Users/Programmist/Desktop/rsschool-react/src/reducers/title.reducer.tsx"
+      "file": "C:/Users/LoginamNet/Desktop/rsschool-react/src/reducers/title.reducer.tsx"
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "6b77d5732f0f0532752de1e8758d72d8bfb52544"
+    "hash": "e38fd15543d6b5ca4173f37de7cc187c64a2b02e"
   },
-  "C:/Users/Programmist/Desktop/rsschool-react/src/reducers/form.reducer.tsx": {
-    "path": "C:/Users/Programmist/Desktop/rsschool-react/src/reducers/form.reducer.tsx",
+  "C:/Users/LoginamNet/Desktop/rsschool-react/src/reducers/form.reducer.tsx": {
+    "path": "C:/Users/LoginamNet/Desktop/rsschool-react/src/reducers/form.reducer.tsx",
     "statementMap": {
       "0": {
         "start": {
@@ -363,15 +363,15 @@
         "actions"
       ],
       "sources": [
-        "C:/Users/Programmist/Desktop/rsschool-react/src/reducers/form.reducer.tsx"
+        "C:/Users/LoginamNet/Desktop/rsschool-react/src/reducers/form.reducer.tsx"
       ],
-      "file": "C:/Users/Programmist/Desktop/rsschool-react/src/reducers/form.reducer.tsx"
+      "file": "C:/Users/LoginamNet/Desktop/rsschool-react/src/reducers/form.reducer.tsx"
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "93ca816a445c5a0fc03496bf42c0e0719f948f06"
+    "hash": "d2b4cba8941dccd187d67dfc7168b97bbacb9a58"
   },
-  "C:/Users/Programmist/Desktop/rsschool-react/src/common/keys.tsx": {
-    "path": "C:/Users/Programmist/Desktop/rsschool-react/src/common/keys.tsx",
+  "C:/Users/LoginamNet/Desktop/rsschool-react/src/common/keys.tsx": {
+    "path": "C:/Users/LoginamNet/Desktop/rsschool-react/src/common/keys.tsx",
     "statementMap": {
       "0": {
         "start": {
@@ -398,15 +398,15 @@
         "ACCESS_KEY"
       ],
       "sources": [
-        "C:/Users/Programmist/Desktop/rsschool-react/src/common/keys.tsx"
+        "C:/Users/LoginamNet/Desktop/rsschool-react/src/common/keys.tsx"
       ],
-      "file": "C:/Users/Programmist/Desktop/rsschool-react/src/common/keys.tsx"
+      "file": "C:/Users/LoginamNet/Desktop/rsschool-react/src/common/keys.tsx"
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "072745967e924960f49c55c50c2131070d46eff8"
+    "hash": "e8513ac75f67aa759333ec107787b30a482c6fba"
   },
-  "C:/Users/Programmist/Desktop/rsschool-react/src/reducers/api.reducer.tsx": {
-    "path": "C:/Users/Programmist/Desktop/rsschool-react/src/reducers/api.reducer.tsx",
+  "C:/Users/LoginamNet/Desktop/rsschool-react/src/reducers/api.reducer.tsx": {
+    "path": "C:/Users/LoginamNet/Desktop/rsschool-react/src/reducers/api.reducer.tsx",
     "statementMap": {
       "0": {
         "start": {
@@ -569,15 +569,15 @@
         "useGetCardQuery"
       ],
       "sources": [
-        "C:/Users/Programmist/Desktop/rsschool-react/src/reducers/api.reducer.tsx"
+        "C:/Users/LoginamNet/Desktop/rsschool-react/src/reducers/api.reducer.tsx"
       ],
-      "file": "C:/Users/Programmist/Desktop/rsschool-react/src/reducers/api.reducer.tsx"
+      "file": "C:/Users/LoginamNet/Desktop/rsschool-react/src/reducers/api.reducer.tsx"
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "f7a54827104bec15f7abd5b9f75d531a628d04d5"
+    "hash": "2aaff715356c0ff20913ce00d9c58194f892ff50"
   },
-  "C:/Users/Programmist/Desktop/rsschool-react/src/reducers/modal.reducer.tsx": {
-    "path": "C:/Users/Programmist/Desktop/rsschool-react/src/reducers/modal.reducer.tsx",
+  "C:/Users/LoginamNet/Desktop/rsschool-react/src/reducers/modal.reducer.tsx": {
+    "path": "C:/Users/LoginamNet/Desktop/rsschool-react/src/reducers/modal.reducer.tsx",
     "statementMap": {
       "0": {
         "start": {
@@ -750,15 +750,15 @@
         "actions"
       ],
       "sources": [
-        "C:/Users/Programmist/Desktop/rsschool-react/src/reducers/modal.reducer.tsx"
+        "C:/Users/LoginamNet/Desktop/rsschool-react/src/reducers/modal.reducer.tsx"
       ],
-      "file": "C:/Users/Programmist/Desktop/rsschool-react/src/reducers/modal.reducer.tsx"
+      "file": "C:/Users/LoginamNet/Desktop/rsschool-react/src/reducers/modal.reducer.tsx"
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "56c17adb07c439c6772ae37af1b2dacb2185b8c2"
+    "hash": "eab4f28d88074bb3a4255f1137b7aab661f431aa"
   },
-  "C:/Users/Programmist/Desktop/rsschool-react/src/store.tsx": {
-    "path": "C:/Users/Programmist/Desktop/rsschool-react/src/store.tsx",
+  "C:/Users/LoginamNet/Desktop/rsschool-react/src/store.tsx": {
+    "path": "C:/Users/LoginamNet/Desktop/rsschool-react/src/store.tsx",
     "statementMap": {
       "0": {
         "start": {
@@ -839,15 +839,15 @@
         "concat"
       ],
       "sources": [
-        "C:/Users/Programmist/Desktop/rsschool-react/src/store.tsx"
+        "C:/Users/LoginamNet/Desktop/rsschool-react/src/store.tsx"
       ],
-      "file": "C:/Users/Programmist/Desktop/rsschool-react/src/store.tsx"
+      "file": "C:/Users/LoginamNet/Desktop/rsschool-react/src/store.tsx"
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "ac3b147d58fc13b864f07cb5a9aad8bb89c5a2b3"
+    "hash": "d37123b991cbaa190abc7b11da0295ee623b941d"
   },
-  "C:/Users/Programmist/Desktop/rsschool-react/src/components/layout/Header.tsx": {
-    "path": "C:/Users/Programmist/Desktop/rsschool-react/src/components/layout/Header.tsx",
+  "C:/Users/LoginamNet/Desktop/rsschool-react/src/components/layout/Header.tsx": {
+    "path": "C:/Users/LoginamNet/Desktop/rsschool-react/src/components/layout/Header.tsx",
     "statementMap": {
       "0": {
         "start": {
@@ -916,7 +916,7 @@
         },
         "end": {
           "line": 12,
-          "column": 120
+          "column": 119
         }
       },
       "7": {
@@ -1066,7 +1066,7 @@
         },
         "end": {
           "line": 72,
-          "column": 146
+          "column": 145
         }
       },
       "22": {
@@ -1503,15 +1503,15 @@
         "$RefreshReg$"
       ],
       "sources": [
-        "C:/Users/Programmist/Desktop/rsschool-react/src/components/layout/Header.tsx"
+        "C:/Users/LoginamNet/Desktop/rsschool-react/src/components/layout/Header.tsx"
       ],
-      "file": "C:/Users/Programmist/Desktop/rsschool-react/src/components/layout/Header.tsx"
+      "file": "C:/Users/LoginamNet/Desktop/rsschool-react/src/components/layout/Header.tsx"
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "3e6aecb9d15b0a4ba349c2bb38203788bcb66136"
+    "hash": "40d7a62e836325705d2ea21af928dbba8a452831"
   },
-  "C:/Users/Programmist/Desktop/rsschool-react/src/components/layout/Footer.tsx": {
-    "path": "C:/Users/Programmist/Desktop/rsschool-react/src/components/layout/Footer.tsx",
+  "C:/Users/LoginamNet/Desktop/rsschool-react/src/components/layout/Footer.tsx": {
+    "path": "C:/Users/LoginamNet/Desktop/rsschool-react/src/components/layout/Footer.tsx",
     "statementMap": {
       "0": {
         "start": {
@@ -1580,7 +1580,7 @@
         },
         "end": {
           "line": 12,
-          "column": 120
+          "column": 119
         }
       },
       "7": {
@@ -1670,7 +1670,7 @@
         },
         "end": {
           "line": 33,
-          "column": 146
+          "column": 145
         }
       },
       "16": {
@@ -2046,15 +2046,15 @@
         "$RefreshReg$"
       ],
       "sources": [
-        "C:/Users/Programmist/Desktop/rsschool-react/src/components/layout/Footer.tsx"
+        "C:/Users/LoginamNet/Desktop/rsschool-react/src/components/layout/Footer.tsx"
       ],
-      "file": "C:/Users/Programmist/Desktop/rsschool-react/src/components/layout/Footer.tsx"
+      "file": "C:/Users/LoginamNet/Desktop/rsschool-react/src/components/layout/Footer.tsx"
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "00c12a2b507d49c6a0dc1eaf7ca592db8f8098c0"
+    "hash": "2b980fadce75a70fbb2f6e2555297504be37366a"
   },
-  "C:/Users/Programmist/Desktop/rsschool-react/src/components/layout/Layout.tsx": {
-    "path": "C:/Users/Programmist/Desktop/rsschool-react/src/components/layout/Layout.tsx",
+  "C:/Users/LoginamNet/Desktop/rsschool-react/src/components/layout/Layout.tsx": {
+    "path": "C:/Users/LoginamNet/Desktop/rsschool-react/src/components/layout/Layout.tsx",
     "statementMap": {
       "0": {
         "start": {
@@ -2123,7 +2123,7 @@
         },
         "end": {
           "line": 12,
-          "column": 120
+          "column": 119
         }
       },
       "7": {
@@ -2213,7 +2213,7 @@
         },
         "end": {
           "line": 62,
-          "column": 146
+          "column": 145
         }
       },
       "16": {
@@ -2592,15 +2592,15 @@
         "$RefreshReg$"
       ],
       "sources": [
-        "C:/Users/Programmist/Desktop/rsschool-react/src/components/layout/Layout.tsx"
+        "C:/Users/LoginamNet/Desktop/rsschool-react/src/components/layout/Layout.tsx"
       ],
-      "file": "C:/Users/Programmist/Desktop/rsschool-react/src/components/layout/Layout.tsx"
+      "file": "C:/Users/LoginamNet/Desktop/rsschool-react/src/components/layout/Layout.tsx"
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "ef2370e6df1f7cc28fec40c5f08c507749c74d84"
+    "hash": "598014139d1ffc0ae16ff3738fce487227586208"
   },
-  "C:/Users/Programmist/Desktop/rsschool-react/src/components/search/Search.tsx": {
-    "path": "C:/Users/Programmist/Desktop/rsschool-react/src/components/search/Search.tsx",
+  "C:/Users/LoginamNet/Desktop/rsschool-react/src/components/search/Search.tsx": {
+    "path": "C:/Users/LoginamNet/Desktop/rsschool-react/src/components/search/Search.tsx",
     "statementMap": {
       "0": {
         "start": {
@@ -2669,7 +2669,7 @@
         },
         "end": {
           "line": 12,
-          "column": 120
+          "column": 119
         }
       },
       "7": {
@@ -2879,7 +2879,7 @@
         },
         "end": {
           "line": 62,
-          "column": 146
+          "column": 145
         }
       },
       "28": {
@@ -3458,7 +3458,7 @@
     },
     "inputSourceMap": {
       "version": 3,
-      "mappings": "AAeM;;;;;;;;;;;;;;;;AAfN,SAA6BA,gBAAgB;AAC7C,SAASC,aAAaC,mBAAmB;AACzC,SAASC,iBAAiB;AAC1B,OAAO;AAIA,gBAASC,SAAS;AAAAC;AACvB,QAAM,CAACC,OAAOC,QAAQ,IAAIP,SAAS,EAAE;AAErC,QAAMQ,WAAWP,YAAW;AAC5B,QAAMQ,SAASP,YAAY,CAACQ,UAAqBA,MAAMD,OAAOE,MAAMF,MAAM;AAE1E,SACE,uBAAC,SAAI,WAAU,mBACb;AAAA,2BAAC,WACC,WAAU,eACV,MAAK,QACL,aAAY,oBACZ,cAAcA,WAAW,UAAUA,SAAS,IAC5C,SAAS,CAACG,UAAyC;AACjDL,eAASK,MAAMC,OAAOF,KAAK;AAAA,IAC7B,GACA,WAAW,CAACC,UAAiD;AAC3D,UAAIA,MAAME,QAAQ,SAAS;AACzBN,iBAASL,UAAUG,KAAK,CAAC;AAAA,MAC3B;AAAA,IACF,KAZF;AAAA;AAAA;AAAA;AAAA,WAYI;AAAA,IAEJ,uBAAC,YACC,WAAU,gBACV,SAAS,MAAME,SAASL,UAAUG,KAAK,CAAC,GACxC,MAAK,gBAAc,qBAHrB;AAAA;AAAA;AAAA;AAAA,WAMA;AAAA,OArBF;AAAA;AAAA;AAAA;AAAA,SAsBA;AAEJ;AAACD,GA/BeD,QAAM;AAAA,UAGHH,aACFC,WAAW;AAAA;AAAAa,KAJZX;AAAM;AAAAY",
+      "mappings": "AAeM;;;;;;;;;;;;;;;;AAfN,SAA6BA,gBAAgB;AAC7C,SAASC,aAAaC,mBAAmB;AACzC,SAASC,iBAAiB;AAC1B,OAAO;AAIA,gBAASC,SAAS;AAAAC;AACvB,QAAM,CAACC,OAAOC,QAAQ,IAAIP,SAAS,EAAE;AAErC,QAAMQ,WAAWP,YAAW;AAC5B,QAAMQ,SAASP,YAAY,CAACQ,UAAqBA,MAAMD,OAAOE,MAAMF,MAAM;AAE1E,SACE,uBAAC,SAAI,WAAU,mBACb;AAAA,2BAAC,WACC,WAAU,eACV,MAAK,QACL,aAAY,oBACZ,cAAcA,WAAW,UAAUA,SAAS,IAC5C,SAAS,CAACG,UAAyC;AACjDL,eAASK,MAAMC,OAAOF,KAAK;AAAA,IAC7B,GACA,WAAW,CAACC,UAAiD;AAC3D,UAAIA,MAAME,QAAQ,SAAS;AACzBN,iBAASL,UAAUG,KAAK,CAAC;AAAA,MAC3B;AAAA,IACF,KAZF;AAAA;AAAA;AAAA;AAAA,WAYI;AAAA,IAEJ,uBAAC,YACC,WAAU,gBACV,SAAS,MAAME,SAASL,UAAUG,KAAK,CAAC,GACxC,MAAK,gBACN,qBAJD;AAAA;AAAA;AAAA;AAAA,WAMA;AAAA,OArBF;AAAA;AAAA;AAAA;AAAA,SAsBA;AAEJ;AAACD,GA/BeD,QAAM;AAAA,UAGHH,aACFC,WAAW;AAAA;AAAAa,KAJZX;AAAM;AAAAY",
       "names": [
         "useState",
         "useDispatch",
@@ -3479,15 +3479,15 @@
         "$RefreshReg$"
       ],
       "sources": [
-        "C:/Users/Programmist/Desktop/rsschool-react/src/components/search/Search.tsx"
+        "C:/Users/LoginamNet/Desktop/rsschool-react/src/components/search/Search.tsx"
       ],
-      "file": "C:/Users/Programmist/Desktop/rsschool-react/src/components/search/Search.tsx"
+      "file": "C:/Users/LoginamNet/Desktop/rsschool-react/src/components/search/Search.tsx"
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "3e5c0b286d12137e7ddb1246cce3284ed8e0d8a4"
+    "hash": "094ceb08d8b9e6dacad74e35b1049819122a94d7"
   },
-  "C:/Users/Programmist/Desktop/rsschool-react/src/components/cards/Card.tsx": {
-    "path": "C:/Users/Programmist/Desktop/rsschool-react/src/components/cards/Card.tsx",
+  "C:/Users/LoginamNet/Desktop/rsschool-react/src/components/cards/Card.tsx": {
+    "path": "C:/Users/LoginamNet/Desktop/rsschool-react/src/components/cards/Card.tsx",
     "statementMap": {
       "0": {
         "start": {
@@ -3556,7 +3556,7 @@
         },
         "end": {
           "line": 12,
-          "column": 117
+          "column": 116
         }
       },
       "7": {
@@ -3716,7 +3716,7 @@
         },
         "end": {
           "line": 69,
-          "column": 143
+          "column": 142
         }
       },
       "23": {
@@ -4160,15 +4160,15 @@
         "$RefreshReg$"
       ],
       "sources": [
-        "C:/Users/Programmist/Desktop/rsschool-react/src/components/cards/Card.tsx"
+        "C:/Users/LoginamNet/Desktop/rsschool-react/src/components/cards/Card.tsx"
       ],
-      "file": "C:/Users/Programmist/Desktop/rsschool-react/src/components/cards/Card.tsx"
+      "file": "C:/Users/LoginamNet/Desktop/rsschool-react/src/components/cards/Card.tsx"
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "beceb145c16f92064ffff30e5735d6ca5798e8a8"
+    "hash": "b482aaec12f12f1c0e263999a5507280a895260b"
   },
-  "C:/Users/Programmist/Desktop/rsschool-react/src/components/cards/Cards.tsx": {
-    "path": "C:/Users/Programmist/Desktop/rsschool-react/src/components/cards/Cards.tsx",
+  "C:/Users/LoginamNet/Desktop/rsschool-react/src/components/cards/Cards.tsx": {
+    "path": "C:/Users/LoginamNet/Desktop/rsschool-react/src/components/cards/Cards.tsx",
     "statementMap": {
       "0": {
         "start": {
@@ -4237,7 +4237,7 @@
         },
         "end": {
           "line": 12,
-          "column": 118
+          "column": 117
         }
       },
       "7": {
@@ -4347,7 +4347,7 @@
         },
         "end": {
           "line": 40,
-          "column": 144
+          "column": 143
         }
       },
       "18": {
@@ -4756,15 +4756,15 @@
         "$RefreshReg$"
       ],
       "sources": [
-        "C:/Users/Programmist/Desktop/rsschool-react/src/components/cards/Cards.tsx"
+        "C:/Users/LoginamNet/Desktop/rsschool-react/src/components/cards/Cards.tsx"
       ],
-      "file": "C:/Users/Programmist/Desktop/rsschool-react/src/components/cards/Cards.tsx"
+      "file": "C:/Users/LoginamNet/Desktop/rsschool-react/src/components/cards/Cards.tsx"
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "b992d4280232c86a44d94aa944757567dfc2540f"
+    "hash": "51e3367b3ea9856b28bc9228478ff076abfd23b9"
   },
-  "C:/Users/Programmist/Desktop/rsschool-react/src/components/loading/Loading.tsx": {
-    "path": "C:/Users/Programmist/Desktop/rsschool-react/src/components/loading/Loading.tsx",
+  "C:/Users/LoginamNet/Desktop/rsschool-react/src/components/loading/Loading.tsx": {
+    "path": "C:/Users/LoginamNet/Desktop/rsschool-react/src/components/loading/Loading.tsx",
     "statementMap": {
       "0": {
         "start": {
@@ -4833,7 +4833,7 @@
         },
         "end": {
           "line": 12,
-          "column": 122
+          "column": 121
         }
       },
       "7": {
@@ -4923,7 +4923,7 @@
         },
         "end": {
           "line": 45,
-          "column": 148
+          "column": 147
         }
       },
       "16": {
@@ -5299,15 +5299,15 @@
         "$RefreshReg$"
       ],
       "sources": [
-        "C:/Users/Programmist/Desktop/rsschool-react/src/components/loading/Loading.tsx"
+        "C:/Users/LoginamNet/Desktop/rsschool-react/src/components/loading/Loading.tsx"
       ],
-      "file": "C:/Users/Programmist/Desktop/rsschool-react/src/components/loading/Loading.tsx"
+      "file": "C:/Users/LoginamNet/Desktop/rsschool-react/src/components/loading/Loading.tsx"
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "9c120a6999023105d9244b45f14597bf71b4a51a"
+    "hash": "d44a7e26acbefeadfcb48c1ce78404f621bd2c7f"
   },
-  "C:/Users/Programmist/Desktop/rsschool-react/src/components/modal/MainModal.tsx": {
-    "path": "C:/Users/Programmist/Desktop/rsschool-react/src/components/modal/MainModal.tsx",
+  "C:/Users/LoginamNet/Desktop/rsschool-react/src/components/modal/MainModal.tsx": {
+    "path": "C:/Users/LoginamNet/Desktop/rsschool-react/src/components/modal/MainModal.tsx",
     "statementMap": {
       "0": {
         "start": {
@@ -5376,7 +5376,7 @@
         },
         "end": {
           "line": 12,
-          "column": 122
+          "column": 121
         }
       },
       "7": {
@@ -5606,7 +5606,7 @@
         },
         "end": {
           "line": 140,
-          "column": 148
+          "column": 147
         }
       },
       "30": {
@@ -6689,7 +6689,7 @@
     },
     "inputSourceMap": {
       "version": 3,
-      "mappings": "AA4BU;;;;;;;;;;;;;;;;AA3BV,SAASA,aAAaC,mBAAmB;AACzC,SAASC,uBAAuB;AAChC,SAASC,qBAAqB;AAC9B,OAAO;AAEP,SAASC,eAAe;AAIjB,gBAASC,YAAY;AAAAC;AAC1B,QAAMC,WAAWP,YAAW;AAE5B,QAAMQ,KAAKP,YAAY,CAACQ,UAAqBA,MAAMC,UAAUC,MAAMH,EAAE;AACrE,QAAMI,cAAcX,YAAY,CAACQ,UAAqBA,MAAMC,UAAUC,MAAMC,WAAW;AACvF,QAAM;AAAA,IAAEC;AAAAA,IAAMC;AAAAA,EAAW,IAAIZ,gBAAgBM,EAAE;AAE/C,SACE,uBAAC,SACC,WAAY,sBAAqBI,eAAe,4BAChD,SAAUG,WAAU;AAClB,QAAIA,MAAMC,WAAWD,MAAME;AAAe;AAC1CV,aAASJ,cAAa,CAAE;AAAA,EAC1B,GACA,MAAK,iBAEL,iCAAC,SAAI,WAAY,aAAYS,eAAe,mBACzCE,uBACC,uBAAC,aAAD;AAAA;AAAA;AAAA;AAAA,SAAQ,IAERD,KAAKL,MACH,uBAAC,SACC;AAAA,2BAAC,SAAI,WAAU,iBACb;AAAA,6BAAC,SACC,WAAU,kBACV,OAAO;AAAA,QACLU,iBAAkB,OAAML,QAAQA,KAAKM,KAAKC;AAAAA,QAC1CC,WAAY,eAAcR,QAAQA,KAAKS;AAAAA,MACzC,KALF;AAAA;AAAA;AAAA;AAAA,aAMC;AAAA,MACD,uBAAC,SAAI,WAAU,iBACb;AAAA,+BAAC,QAAG,WAAU,mBAAmBT,kBAAQA,KAAKU,KAAKC,KAAKC,YAAW,KAAnE;AAAA;AAAA;AAAA;AAAA,eAAsE;AAAA,QACtE,uBAAC,UAAK,WAAU,qBACbZ,mBAASA,KAAKU,KAAKG,YAAY,uBADlC;AAAA;AAAA;AAAA;AAAA,eAEA;AAAA,QACA,uBAAC,UAAK,WAAU,iBAAe;AAAA;AAAA,UAChBb,QAAS,GAAEA,KAAKc,aAAad,KAAKe;AAAAA,aADjD;AAAA;AAAA;AAAA;AAAA,eAEA;AAAA,QACA,uBAAC,UAAK,WAAU,iBAAe;AAAA;AAAA,UACtBf,QAAQA,KAAKgB,WAAWC,MAAM,GAAG,EAAE,EAAEC,MAAM,GAAG,EAAEC,QAAO,EAAGC,KAAK,GAAG;AAAA,aAD3E;AAAA;AAAA;AAAA;AAAA,eAEA;AAAA,QACA,uBAAC,UAAK,WAAU,kBAAiB;AAAA;AAAA,UAAQpB,QAAQA,KAAKqB;AAAAA,aAAtD;AAAA;AAAA;AAAA;AAAA,eAA4D;AAAA,QAC5D,uBAAC,UAAK,WAAU,wBAAsB;AAAA;AAAA,UAC7B;AAAA,UACNrB,SACEA,KAAKsB,eACH;AAAA,aAJP;AAAA;AAAA;AAAA;AAAA,eAKA;AAAA,QACA,uBAAC,OACC,WAAU,iBACV,MAAMtB,QAAQA,KAAKM,KAAKiB,KACxB,QAAO,UACP,KAAI,cAAY,4CAJlB;AAAA;AAAA;AAAA;AAAA,eAOA;AAAA,WAzBF;AAAA;AAAA;AAAA;AAAA,aA0BA;AAAA,SAlCF;AAAA;AAAA;AAAA;AAAA,WAmCA;AAAA,IACA,uBAAC,YACC,WAAU,mBACV,SAAS,MAAM7B,SAASJ,cAAa,CAAE,GACvC,MAAK,kBAAgB,iBAHvB;AAAA;AAAA;AAAA;AAAA,WAMA;AAAA,OA3CF;AAAA;AAAA;AAAA;AAAA,SA4CA,KAjDN;AAAA;AAAA;AAAA;AAAA,SAoDA,KA5DF;AAAA;AAAA;AAAA;AAAA,SA6DA;AAEJ;AAACG,GAvEeD,WAAS;AAAA,UACNL,aAENC,aACSA,aACSC,eAAe;AAAA;AAAAmC,KAL9BhC;AAAS;AAAAiC",
+      "mappings": "AA4BU;;;;;;;;;;;;;;;;AA3BV,SAASA,aAAaC,mBAAmB;AACzC,SAASC,uBAAuB;AAChC,SAASC,qBAAqB;AAC9B,OAAO;AAEP,SAASC,eAAe;AAIjB,gBAASC,YAAY;AAAAC;AAC1B,QAAMC,WAAWP,YAAW;AAE5B,QAAMQ,KAAKP,YAAY,CAACQ,UAAqBA,MAAMC,UAAUC,MAAMH,EAAE;AACrE,QAAMI,cAAcX,YAAY,CAACQ,UAAqBA,MAAMC,UAAUC,MAAMC,WAAW;AACvF,QAAM;AAAA,IAAEC;AAAAA,IAAMC;AAAAA,EAAW,IAAIZ,gBAAgBM,EAAE;AAE/C,SACE,uBAAC,SACC,WAAY,sBAAqBI,eAAe,4BAChD,SAAUG,WAAU;AAClB,QAAIA,MAAMC,WAAWD,MAAME;AAAe;AAC1CV,aAASJ,cAAa,CAAE;AAAA,EAC1B,GACA,MAAK,iBAEL,iCAAC,SAAI,WAAY,aAAYS,eAAe,mBACzCE,uBACC,uBAAC,aAAD;AAAA;AAAA;AAAA;AAAA,SAAQ,IAERD,KAAKL,MACH,uBAAC,SACC;AAAA,2BAAC,SAAI,WAAU,iBACb;AAAA,6BAAC,SACC,WAAU,kBACV,OAAO;AAAA,QACLU,iBAAkB,OAAML,QAAQA,KAAKM,KAAKC;AAAAA,QAC1CC,WAAY,eAAcR,QAAQA,KAAKS;AAAAA,MACzC,KALF;AAAA;AAAA;AAAA;AAAA,aAMC;AAAA,MACD,uBAAC,SAAI,WAAU,iBACb;AAAA,+BAAC,QAAG,WAAU,mBAAmBT,kBAAQA,KAAKU,KAAKC,KAAKC,YAAW,KAAnE;AAAA;AAAA;AAAA;AAAA,eAAsE;AAAA,QACtE,uBAAC,UAAK,WAAU,qBACbZ,mBAASA,KAAKU,KAAKG,YAAY,uBADlC;AAAA;AAAA;AAAA;AAAA,eAEA;AAAA,QACA,uBAAC,UAAK,WAAU,iBAAgB;AAAA;AAAA,UACjBb,QAAS,GAAEA,KAAKc,aAAad,KAAKe;AAAAA,aADjD;AAAA;AAAA;AAAA;AAAA,eAEA;AAAA,QACA,uBAAC,UAAK,WAAU,iBAAgB;AAAA;AAAA,UACvBf,QAAQA,KAAKgB,WAAWC,MAAM,GAAG,EAAE,EAAEC,MAAM,GAAG,EAAEC,QAAO,EAAGC,KAAK,GAAG;AAAA,aAD3E;AAAA;AAAA;AAAA;AAAA,eAEA;AAAA,QACA,uBAAC,UAAK,WAAU,kBAAiB;AAAA;AAAA,UAAQpB,QAAQA,KAAKqB;AAAAA,aAAtD;AAAA;AAAA;AAAA;AAAA,eAA4D;AAAA,QAC5D,uBAAC,UAAK,WAAU,wBAAuB;AAAA;AAAA,UAC9B;AAAA,UACNrB,SACEA,KAAKsB,eACH;AAAA,aAJP;AAAA;AAAA;AAAA;AAAA,eAKA;AAAA,QACA,uBAAC,OACC,WAAU,iBACV,MAAMtB,QAAQA,KAAKM,KAAKiB,KACxB,QAAO,UACP,KAAI,cACL,4CALD;AAAA;AAAA;AAAA;AAAA,eAOA;AAAA,WAzBF;AAAA;AAAA;AAAA;AAAA,aA0BA;AAAA,SAlCF;AAAA;AAAA;AAAA;AAAA,WAmCA;AAAA,IACA,uBAAC,YACC,WAAU,mBACV,SAAS,MAAM7B,SAASJ,cAAa,CAAE,GACvC,MAAK,kBACN,iBAJD;AAAA;AAAA;AAAA;AAAA,WAMA;AAAA,OA3CF;AAAA;AAAA;AAAA;AAAA,SA4CA,KAjDN;AAAA;AAAA;AAAA;AAAA,SAoDA,KA5DF;AAAA;AAAA;AAAA;AAAA,SA6DA;AAEJ;AAACG,GAvEeD,WAAS;AAAA,UACNL,aAENC,aACSA,aACSC,eAAe;AAAA;AAAAmC,KAL9BhC;AAAS;AAAAiC",
       "names": [
         "useDispatch",
         "useSelector",
@@ -6732,15 +6732,15 @@
         "$RefreshReg$"
       ],
       "sources": [
-        "C:/Users/Programmist/Desktop/rsschool-react/src/components/modal/MainModal.tsx"
+        "C:/Users/LoginamNet/Desktop/rsschool-react/src/components/modal/MainModal.tsx"
       ],
-      "file": "C:/Users/Programmist/Desktop/rsschool-react/src/components/modal/MainModal.tsx"
+      "file": "C:/Users/LoginamNet/Desktop/rsschool-react/src/components/modal/MainModal.tsx"
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "9bc6b58bd2198d0a56ef8b7fe769bc4633213a25"
+    "hash": "03feacbc4f014f08f409fbfa0ce4d8717595bcdc"
   },
-  "C:/Users/Programmist/Desktop/rsschool-react/src/common/messages.tsx": {
-    "path": "C:/Users/Programmist/Desktop/rsschool-react/src/common/messages.tsx",
+  "C:/Users/LoginamNet/Desktop/rsschool-react/src/common/messages.tsx": {
+    "path": "C:/Users/LoginamNet/Desktop/rsschool-react/src/common/messages.tsx",
     "statementMap": {
       "0": {
         "start": {
@@ -6769,15 +6769,15 @@
         "FETCHING_CARDS_ERROR"
       ],
       "sources": [
-        "C:/Users/Programmist/Desktop/rsschool-react/src/common/messages.tsx"
+        "C:/Users/LoginamNet/Desktop/rsschool-react/src/common/messages.tsx"
       ],
-      "file": "C:/Users/Programmist/Desktop/rsschool-react/src/common/messages.tsx"
+      "file": "C:/Users/LoginamNet/Desktop/rsschool-react/src/common/messages.tsx"
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "1676ee5c9aa2bc005a08e4d45d2739ed762257e0"
+    "hash": "6d090273bdf275ac830cbead315443e280ebf644"
   },
-  "C:/Users/Programmist/Desktop/rsschool-react/src/pages/Main.tsx": {
-    "path": "C:/Users/Programmist/Desktop/rsschool-react/src/pages/Main.tsx",
+  "C:/Users/LoginamNet/Desktop/rsschool-react/src/pages/Main.tsx": {
+    "path": "C:/Users/LoginamNet/Desktop/rsschool-react/src/pages/Main.tsx",
     "statementMap": {
       "0": {
         "start": {
@@ -6846,7 +6846,7 @@
         },
         "end": {
           "line": 12,
-          "column": 106
+          "column": 105
         }
       },
       "7": {
@@ -7036,7 +7036,7 @@
         },
         "end": {
           "line": 92,
-          "column": 132
+          "column": 131
         }
       },
       "26": {
@@ -7638,15 +7638,15 @@
         "$RefreshReg$"
       ],
       "sources": [
-        "C:/Users/Programmist/Desktop/rsschool-react/src/pages/Main.tsx"
+        "C:/Users/LoginamNet/Desktop/rsschool-react/src/pages/Main.tsx"
       ],
-      "file": "C:/Users/Programmist/Desktop/rsschool-react/src/pages/Main.tsx"
+      "file": "C:/Users/LoginamNet/Desktop/rsschool-react/src/pages/Main.tsx"
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "eb849e106801ff2341af4dfd050d0d95a0d45af6"
+    "hash": "e900a475db684d1090922137f29fb6ff4b62159c"
   },
-  "C:/Users/Programmist/Desktop/rsschool-react/src/pages/About.tsx": {
-    "path": "C:/Users/Programmist/Desktop/rsschool-react/src/pages/About.tsx",
+  "C:/Users/LoginamNet/Desktop/rsschool-react/src/pages/About.tsx": {
+    "path": "C:/Users/LoginamNet/Desktop/rsschool-react/src/pages/About.tsx",
     "statementMap": {
       "0": {
         "start": {
@@ -7715,7 +7715,7 @@
         },
         "end": {
           "line": 12,
-          "column": 107
+          "column": 106
         }
       },
       "7": {
@@ -7875,7 +7875,7 @@
         },
         "end": {
           "line": 56,
-          "column": 133
+          "column": 132
         }
       },
       "23": {
@@ -8300,7 +8300,7 @@
     },
     "inputSourceMap": {
       "version": 3,
-      "mappings": "AAaM;;;;;;;;;;;;;;;;AAbN,SAAgBA,iBAAiB;AACjC,SAASC,mBAAmB;AAC5B,SAASC,sBAAsB;AAExB,gBAASC,QAAQ;AAAAC;AACtB,QAAMC,WAAWJ,YAAW;AAE5BD,YAAU,MAAM;AACdK,aAASH,eAAe,UAAU,CAAC;AAAA,EACrC,CAAC;AAED,SACE,uBAAC,SAAI,WAAU,kBACb;AAAA,2BAAC,QAAG,mCAAJ;AAAA;AAAA;AAAA;AAAA,WAAuB;AAAA,IACvB,uBAAC,UAAI,6cAAL;AAAA;AAAA;AAAA;AAAA,WAMA;AAAA,OARF;AAAA;AAAA;AAAA;AAAA,SASA;AAEJ;AAACE,GAnBeD,OAAK;AAAA,UACFF,WAAW;AAAA;AAAAK,KADdH;AAAK;AAAAI",
+      "mappings": "AAaM;;;;;;;;;;;;;;;;AAbN,SAAgBA,iBAAiB;AACjC,SAASC,mBAAmB;AAC5B,SAASC,sBAAsB;AAExB,gBAASC,QAAQ;AAAAC;AACtB,QAAMC,WAAWJ,YAAW;AAE5BD,YAAU,MAAM;AACdK,aAASH,eAAe,UAAU,CAAC;AAAA,EACrC,CAAC;AAED,SACE,uBAAC,SAAI,WAAU,kBACb;AAAA,2BAAC,QAAG,mCAAJ;AAAA;AAAA;AAAA;AAAA,WAAuB;AAAA,IACvB,uBAAC,UAAK,6cAAN;AAAA;AAAA;AAAA;AAAA,WAMA;AAAA,OARF;AAAA;AAAA;AAAA;AAAA,SASA;AAEJ;AAACE,GAnBeD,OAAK;AAAA,UACFF,WAAW;AAAA;AAAAK,KADdH;AAAK;AAAAI",
       "names": [
         "useEffect",
         "useDispatch",
@@ -8312,15 +8312,15 @@
         "$RefreshReg$"
       ],
       "sources": [
-        "C:/Users/Programmist/Desktop/rsschool-react/src/pages/About.tsx"
+        "C:/Users/LoginamNet/Desktop/rsschool-react/src/pages/About.tsx"
       ],
-      "file": "C:/Users/Programmist/Desktop/rsschool-react/src/pages/About.tsx"
+      "file": "C:/Users/LoginamNet/Desktop/rsschool-react/src/pages/About.tsx"
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "4fb1c3a0c19d00999f8e05876d6b926aa88ddd34"
+    "hash": "4585d88eac212132eee3f913648652054ad71fd5"
   },
-  "C:/Users/Programmist/Desktop/rsschool-react/src/components/form/inputs/NameInput.tsx": {
-    "path": "C:/Users/Programmist/Desktop/rsschool-react/src/components/form/inputs/NameInput.tsx",
+  "C:/Users/LoginamNet/Desktop/rsschool-react/src/components/form/inputs/NameInput.tsx": {
+    "path": "C:/Users/LoginamNet/Desktop/rsschool-react/src/components/form/inputs/NameInput.tsx",
     "statementMap": {
       "0": {
         "start": {
@@ -8389,7 +8389,7 @@
         },
         "end": {
           "line": 12,
-          "column": 128
+          "column": 127
         }
       },
       "7": {
@@ -8489,7 +8489,7 @@
         },
         "end": {
           "line": 54,
-          "column": 154
+          "column": 153
         }
       },
       "17": {
@@ -8980,15 +8980,15 @@
         "$RefreshReg$"
       ],
       "sources": [
-        "C:/Users/Programmist/Desktop/rsschool-react/src/components/form/inputs/NameInput.tsx"
+        "C:/Users/LoginamNet/Desktop/rsschool-react/src/components/form/inputs/NameInput.tsx"
       ],
-      "file": "C:/Users/Programmist/Desktop/rsschool-react/src/components/form/inputs/NameInput.tsx"
+      "file": "C:/Users/LoginamNet/Desktop/rsschool-react/src/components/form/inputs/NameInput.tsx"
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "3a02e843864f61fc5300ac01b42b35ebb6acefd4"
+    "hash": "263955e930dbf8e86aeb8f05f865d2adf5f49569"
   },
-  "C:/Users/Programmist/Desktop/rsschool-react/src/components/form/inputs/DateInput.tsx": {
-    "path": "C:/Users/Programmist/Desktop/rsschool-react/src/components/form/inputs/DateInput.tsx",
+  "C:/Users/LoginamNet/Desktop/rsschool-react/src/components/form/inputs/DateInput.tsx": {
+    "path": "C:/Users/LoginamNet/Desktop/rsschool-react/src/components/form/inputs/DateInput.tsx",
     "statementMap": {
       "0": {
         "start": {
@@ -9057,7 +9057,7 @@
         },
         "end": {
           "line": 12,
-          "column": 128
+          "column": 127
         }
       },
       "7": {
@@ -9147,7 +9147,7 @@
         },
         "end": {
           "line": 51,
-          "column": 154
+          "column": 153
         }
       },
       "16": {
@@ -9569,15 +9569,15 @@
         "$RefreshReg$"
       ],
       "sources": [
-        "C:/Users/Programmist/Desktop/rsschool-react/src/components/form/inputs/DateInput.tsx"
+        "C:/Users/LoginamNet/Desktop/rsschool-react/src/components/form/inputs/DateInput.tsx"
       ],
-      "file": "C:/Users/Programmist/Desktop/rsschool-react/src/components/form/inputs/DateInput.tsx"
+      "file": "C:/Users/LoginamNet/Desktop/rsschool-react/src/components/form/inputs/DateInput.tsx"
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "5be65931ccd6947357f02e8d27f464b05e8f9b0c"
+    "hash": "5fc8d0f73dac57cb9fcc406d9902ae1b85bd3343"
   },
-  "C:/Users/Programmist/Desktop/rsschool-react/src/components/form/inputs/CheckInput.tsx": {
-    "path": "C:/Users/Programmist/Desktop/rsschool-react/src/components/form/inputs/CheckInput.tsx",
+  "C:/Users/LoginamNet/Desktop/rsschool-react/src/components/form/inputs/CheckInput.tsx": {
+    "path": "C:/Users/LoginamNet/Desktop/rsschool-react/src/components/form/inputs/CheckInput.tsx",
     "statementMap": {
       "0": {
         "start": {
@@ -9646,7 +9646,7 @@
         },
         "end": {
           "line": 12,
-          "column": 129
+          "column": 128
         }
       },
       "7": {
@@ -9736,7 +9736,7 @@
         },
         "end": {
           "line": 40,
-          "column": 155
+          "column": 154
         }
       },
       "16": {
@@ -10104,7 +10104,7 @@
     },
     "inputSourceMap": {
       "version": 3,
-      "mappings": "AAaM;AAbN,OAAOA,oBAAkB;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AASlB,gBAASC,WAAWC,OAAuB;AAChD,SACE,uBAAC,WAAM,WAAU,cAAY;AAAA;AAAA,IAE3B,uBAAC,WACC,WAAU,cACV,MAAK,YACL,GAAIA,MAAMC,SAAS,OAAO,GAC1B,MAAK,gBAJP;AAAA;AAAA;AAAA;AAAA,WAImB;AAAA,OANrB;AAAA;AAAA;AAAA;AAAA,SAQA;AAEJ;AAACC,KAZeH;AAAU;AAAAI",
+      "mappings": "AAaM;AAbN,OAAOA,oBAAkB;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AASlB,gBAASC,WAAWC,OAAuB;AAChD,SACE,uBAAC,WAAM,WAAU,cAAa;AAAA;AAAA,IAE5B,uBAAC,WACC,WAAU,cACV,MAAK,YACL,GAAIA,MAAMC,SAAS,OAAO,GAC1B,MAAK,gBAJP;AAAA;AAAA;AAAA;AAAA,WAImB;AAAA,OANrB;AAAA;AAAA;AAAA;AAAA,SAQA;AAEJ;AAACC,KAZeH;AAAU;AAAAI",
       "names": [
         "React",
         "CheckInput",
@@ -10114,15 +10114,15 @@
         "$RefreshReg$"
       ],
       "sources": [
-        "C:/Users/Programmist/Desktop/rsschool-react/src/components/form/inputs/CheckInput.tsx"
+        "C:/Users/LoginamNet/Desktop/rsschool-react/src/components/form/inputs/CheckInput.tsx"
       ],
-      "file": "C:/Users/Programmist/Desktop/rsschool-react/src/components/form/inputs/CheckInput.tsx"
+      "file": "C:/Users/LoginamNet/Desktop/rsschool-react/src/components/form/inputs/CheckInput.tsx"
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "f8303b20ecc3371be68ec9afd7b8cbcc0951d54b"
+    "hash": "6720df02b3655064c845f5648b3206751fd90959"
   },
-  "C:/Users/Programmist/Desktop/rsschool-react/src/components/form/inputs/SelectInput.tsx": {
-    "path": "C:/Users/Programmist/Desktop/rsschool-react/src/components/form/inputs/SelectInput.tsx",
+  "C:/Users/LoginamNet/Desktop/rsschool-react/src/components/form/inputs/SelectInput.tsx": {
+    "path": "C:/Users/LoginamNet/Desktop/rsschool-react/src/components/form/inputs/SelectInput.tsx",
     "statementMap": {
       "0": {
         "start": {
@@ -10191,7 +10191,7 @@
         },
         "end": {
           "line": 12,
-          "column": 130
+          "column": 129
         }
       },
       "7": {
@@ -10281,7 +10281,7 @@
         },
         "end": {
           "line": 61,
-          "column": 156
+          "column": 155
         }
       },
       "16": {
@@ -10649,7 +10649,7 @@
     },
     "inputSourceMap": {
       "version": 3,
-      "mappings": "AAcQ;AAdR,OAAOA,oBAAkB;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AASlB,gBAASC,YAAYC,OAAuB;AACjD,SACE,uBAAC,WAAM,WAAU,eAAa;AAAA;AAAA,IAE5B,uBAAC,YAAO,WAAU,eAAc,GAAIA,MAAMC,SAAS,QAAQ,GACzD;AAAA,6BAAC,YAAO,OAAM,SAAQ,qBAAtB;AAAA;AAAA;AAAA;AAAA,aAA2B;AAAA,MAC3B,uBAAC,YAAO,OAAM,WAAU,uBAAxB;AAAA;AAAA;AAAA;AAAA,aAA+B;AAAA,MAC/B,uBAAC,YAAO,OAAM,QAAO,oBAArB;AAAA;AAAA;AAAA;AAAA,aAAyB;AAAA,MACzB,uBAAC,YAAO,OAAM,UAAS,sBAAvB;AAAA;AAAA;AAAA;AAAA,aAA6B;AAAA,SAJ/B;AAAA;AAAA;AAAA;AAAA,WAKA;AAAA,OAPF;AAAA;AAAA;AAAA;AAAA,SAQA;AAEJ;AAACC,KAZeH;AAAW;AAAAI",
+      "mappings": "AAcQ;AAdR,OAAOA,oBAAkB;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AASlB,gBAASC,YAAYC,OAAuB;AACjD,SACE,uBAAC,WAAM,WAAU,eAAc;AAAA;AAAA,IAE7B,uBAAC,YAAO,WAAU,eAAc,GAAIA,MAAMC,SAAS,QAAQ,GACzD;AAAA,6BAAC,YAAO,OAAM,SAAQ,qBAAtB;AAAA;AAAA;AAAA;AAAA,aAA2B;AAAA,MAC3B,uBAAC,YAAO,OAAM,WAAU,uBAAxB;AAAA;AAAA;AAAA;AAAA,aAA+B;AAAA,MAC/B,uBAAC,YAAO,OAAM,QAAO,oBAArB;AAAA;AAAA;AAAA;AAAA,aAAyB;AAAA,MACzB,uBAAC,YAAO,OAAM,UAAS,sBAAvB;AAAA;AAAA;AAAA;AAAA,aAA6B;AAAA,SAJ/B;AAAA;AAAA;AAAA;AAAA,WAKA;AAAA,OAPF;AAAA;AAAA;AAAA;AAAA,SAQA;AAEJ;AAACC,KAZeH;AAAW;AAAAI",
       "names": [
         "React",
         "SelectInput",
@@ -10659,15 +10659,15 @@
         "$RefreshReg$"
       ],
       "sources": [
-        "C:/Users/Programmist/Desktop/rsschool-react/src/components/form/inputs/SelectInput.tsx"
+        "C:/Users/LoginamNet/Desktop/rsschool-react/src/components/form/inputs/SelectInput.tsx"
       ],
-      "file": "C:/Users/Programmist/Desktop/rsschool-react/src/components/form/inputs/SelectInput.tsx"
+      "file": "C:/Users/LoginamNet/Desktop/rsschool-react/src/components/form/inputs/SelectInput.tsx"
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "26bffaef9c3d0c2abe5e3e65906a1c3c80283c6c"
+    "hash": "024af31cdc6c8d0750f27da6a81af47d1562094b"
   },
-  "C:/Users/Programmist/Desktop/rsschool-react/src/components/form/inputs/RadioInput.tsx": {
-    "path": "C:/Users/Programmist/Desktop/rsschool-react/src/components/form/inputs/RadioInput.tsx",
+  "C:/Users/LoginamNet/Desktop/rsschool-react/src/components/form/inputs/RadioInput.tsx": {
+    "path": "C:/Users/LoginamNet/Desktop/rsschool-react/src/components/form/inputs/RadioInput.tsx",
     "statementMap": {
       "0": {
         "start": {
@@ -10736,7 +10736,7 @@
         },
         "end": {
           "line": 12,
-          "column": 129
+          "column": 128
         }
       },
       "7": {
@@ -10826,7 +10826,7 @@
         },
         "end": {
           "line": 63,
-          "column": 155
+          "column": 154
         }
       },
       "16": {
@@ -11194,7 +11194,7 @@
     },
     "inputSourceMap": {
       "version": 3,
-      "mappings": "AAYM;AAZN,OAAOA,oBAAkB;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AASlB,gBAASC,WAAWC,OAAuB;AAChD,SACE,uBAAC,SAAI,WAAU,kBACb;AAAA,2BAAC,UAAK,WAAU,cAAa,sCAA7B;AAAA;AAAA;AAAA;AAAA,WAAmD;AAAA,IACnD,uBAAC,WAAM,WAAU,cAAY;AAAA;AAAA,MAE3B,uBAAC,WACC,MAAK,SACL,OAAM,QACN,GAAIA,MAAMC,SAAS,OAAO,GAC1B,MAAK,eACL,gBAAc,QALhB;AAAA;AAAA;AAAA;AAAA,aAKgB;AAAA,SAPlB;AAAA;AAAA;AAAA;AAAA,WASA;AAAA,IACA,uBAAC,WAAM,WAAU,cAAY;AAAA;AAAA,MAE3B,uBAAC,WAAM,MAAK,SAAQ,OAAM,SAAQ,GAAID,MAAMC,SAAS,OAAO,GAAG,MAAK,iBAApE;AAAA;AAAA;AAAA;AAAA,aAAiF;AAAA,SAFnF;AAAA;AAAA;AAAA;AAAA,WAGA;AAAA,OAfF;AAAA;AAAA;AAAA;AAAA,SAgBA;AAEJ;AAACC,KApBeH;AAAU;AAAAI",
+      "mappings": "AAYM;AAZN,OAAOA,oBAAkB;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AASlB,gBAASC,WAAWC,OAAuB;AAChD,SACE,uBAAC,SAAI,WAAU,kBACb;AAAA,2BAAC,UAAK,WAAU,cAAa,sCAA7B;AAAA;AAAA;AAAA;AAAA,WAAmD;AAAA,IACnD,uBAAC,WAAM,WAAU,cAAa;AAAA;AAAA,MAE5B,uBAAC,WACC,MAAK,SACL,OAAM,QACN,GAAIA,MAAMC,SAAS,OAAO,GAC1B,MAAK,eACL,gBAAc,QALhB;AAAA;AAAA;AAAA;AAAA,aAKgB;AAAA,SAPlB;AAAA;AAAA;AAAA;AAAA,WASA;AAAA,IACA,uBAAC,WAAM,WAAU,cAAa;AAAA;AAAA,MAE5B,uBAAC,WAAM,MAAK,SAAQ,OAAM,SAAQ,GAAID,MAAMC,SAAS,OAAO,GAAG,MAAK,iBAApE;AAAA;AAAA;AAAA;AAAA,aAAiF;AAAA,SAFnF;AAAA;AAAA;AAAA;AAAA,WAGA;AAAA,OAfF;AAAA;AAAA;AAAA;AAAA,SAgBA;AAEJ;AAACC,KApBeH;AAAU;AAAAI",
       "names": [
         "React",
         "RadioInput",
@@ -11204,15 +11204,15 @@
         "$RefreshReg$"
       ],
       "sources": [
-        "C:/Users/Programmist/Desktop/rsschool-react/src/components/form/inputs/RadioInput.tsx"
+        "C:/Users/LoginamNet/Desktop/rsschool-react/src/components/form/inputs/RadioInput.tsx"
       ],
-      "file": "C:/Users/Programmist/Desktop/rsschool-react/src/components/form/inputs/RadioInput.tsx"
+      "file": "C:/Users/LoginamNet/Desktop/rsschool-react/src/components/form/inputs/RadioInput.tsx"
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "22bba03fa670990541156944513288e81d0ee5f9"
+    "hash": "b0e96b0b26949d2689de30dacefa1eecd4313730"
   },
-  "C:/Users/Programmist/Desktop/rsschool-react/src/components/form/inputs/TextareaInput.tsx": {
-    "path": "C:/Users/Programmist/Desktop/rsschool-react/src/components/form/inputs/TextareaInput.tsx",
+  "C:/Users/LoginamNet/Desktop/rsschool-react/src/components/form/inputs/TextareaInput.tsx": {
+    "path": "C:/Users/LoginamNet/Desktop/rsschool-react/src/components/form/inputs/TextareaInput.tsx",
     "statementMap": {
       "0": {
         "start": {
@@ -11281,7 +11281,7 @@
         },
         "end": {
           "line": 12,
-          "column": 132
+          "column": 131
         }
       },
       "7": {
@@ -11371,7 +11371,7 @@
         },
         "end": {
           "line": 51,
-          "column": 158
+          "column": 157
         }
       },
       "16": {
@@ -11793,15 +11793,15 @@
         "$RefreshReg$"
       ],
       "sources": [
-        "C:/Users/Programmist/Desktop/rsschool-react/src/components/form/inputs/TextareaInput.tsx"
+        "C:/Users/LoginamNet/Desktop/rsschool-react/src/components/form/inputs/TextareaInput.tsx"
       ],
-      "file": "C:/Users/Programmist/Desktop/rsschool-react/src/components/form/inputs/TextareaInput.tsx"
+      "file": "C:/Users/LoginamNet/Desktop/rsschool-react/src/components/form/inputs/TextareaInput.tsx"
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "e982fe06947e3d3ff957f8be00c3a40a3d85b832"
+    "hash": "3a31515548419ead6f29b9f249ff9f46dee7d94b"
   },
-  "C:/Users/Programmist/Desktop/rsschool-react/src/components/form/inputs/FileInput.tsx": {
-    "path": "C:/Users/Programmist/Desktop/rsschool-react/src/components/form/inputs/FileInput.tsx",
+  "C:/Users/LoginamNet/Desktop/rsschool-react/src/components/form/inputs/FileInput.tsx": {
+    "path": "C:/Users/LoginamNet/Desktop/rsschool-react/src/components/form/inputs/FileInput.tsx",
     "statementMap": {
       "0": {
         "start": {
@@ -11870,7 +11870,7 @@
         },
         "end": {
           "line": 12,
-          "column": 128
+          "column": 127
         }
       },
       "7": {
@@ -11960,7 +11960,7 @@
         },
         "end": {
           "line": 55,
-          "column": 154
+          "column": 153
         }
       },
       "16": {
@@ -12382,15 +12382,15 @@
         "$RefreshReg$"
       ],
       "sources": [
-        "C:/Users/Programmist/Desktop/rsschool-react/src/components/form/inputs/FileInput.tsx"
+        "C:/Users/LoginamNet/Desktop/rsschool-react/src/components/form/inputs/FileInput.tsx"
       ],
-      "file": "C:/Users/Programmist/Desktop/rsschool-react/src/components/form/inputs/FileInput.tsx"
+      "file": "C:/Users/LoginamNet/Desktop/rsschool-react/src/components/form/inputs/FileInput.tsx"
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "652b1c7154484289bd46cc193a315c0d28fc0369"
+    "hash": "ee689875ed918b1b5e96eb45d3eba9f061439eef"
   },
-  "C:/Users/Programmist/Desktop/rsschool-react/src/components/form/Form.tsx": {
-    "path": "C:/Users/Programmist/Desktop/rsschool-react/src/components/form/Form.tsx",
+  "C:/Users/LoginamNet/Desktop/rsschool-react/src/components/form/Form.tsx": {
+    "path": "C:/Users/LoginamNet/Desktop/rsschool-react/src/components/form/Form.tsx",
     "statementMap": {
       "0": {
         "start": {
@@ -12459,7 +12459,7 @@
         },
         "end": {
           "line": 12,
-          "column": 116
+          "column": 115
         }
       },
       "7": {
@@ -12639,7 +12639,7 @@
         },
         "end": {
           "line": 140,
-          "column": 142
+          "column": 141
         }
       },
       "25": {
@@ -13094,15 +13094,15 @@
         "$RefreshReg$"
       ],
       "sources": [
-        "C:/Users/Programmist/Desktop/rsschool-react/src/components/form/Form.tsx"
+        "C:/Users/LoginamNet/Desktop/rsschool-react/src/components/form/Form.tsx"
       ],
-      "file": "C:/Users/Programmist/Desktop/rsschool-react/src/components/form/Form.tsx"
+      "file": "C:/Users/LoginamNet/Desktop/rsschool-react/src/components/form/Form.tsx"
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "8ff7f14d31e8be485d412cf380a8e20f14551b91"
+    "hash": "2c2dc32fa35d7795bf602192da177cf3197a80a2"
   },
-  "C:/Users/Programmist/Desktop/rsschool-react/src/components/form/FormCard.tsx": {
-    "path": "C:/Users/Programmist/Desktop/rsschool-react/src/components/form/FormCard.tsx",
+  "C:/Users/LoginamNet/Desktop/rsschool-react/src/components/form/FormCard.tsx": {
+    "path": "C:/Users/LoginamNet/Desktop/rsschool-react/src/components/form/FormCard.tsx",
     "statementMap": {
       "0": {
         "start": {
@@ -13171,7 +13171,7 @@
         },
         "end": {
           "line": 12,
-          "column": 120
+          "column": 119
         }
       },
       "7": {
@@ -13261,7 +13261,7 @@
         },
         "end": {
           "line": 76,
-          "column": 146
+          "column": 145
         }
       },
       "16": {
@@ -13687,15 +13687,15 @@
         "$RefreshReg$"
       ],
       "sources": [
-        "C:/Users/Programmist/Desktop/rsschool-react/src/components/form/FormCard.tsx"
+        "C:/Users/LoginamNet/Desktop/rsschool-react/src/components/form/FormCard.tsx"
       ],
-      "file": "C:/Users/Programmist/Desktop/rsschool-react/src/components/form/FormCard.tsx"
+      "file": "C:/Users/LoginamNet/Desktop/rsschool-react/src/components/form/FormCard.tsx"
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "7d6d149581ec4f3226e51ef0d934114ba8b9c75b"
+    "hash": "d25115df285242ae553e962e8222a866d1c4cbbd"
   },
-  "C:/Users/Programmist/Desktop/rsschool-react/src/components/form/FormCards.tsx": {
-    "path": "C:/Users/Programmist/Desktop/rsschool-react/src/components/form/FormCards.tsx",
+  "C:/Users/LoginamNet/Desktop/rsschool-react/src/components/form/FormCards.tsx": {
+    "path": "C:/Users/LoginamNet/Desktop/rsschool-react/src/components/form/FormCards.tsx",
     "statementMap": {
       "0": {
         "start": {
@@ -13764,7 +13764,7 @@
         },
         "end": {
           "line": 12,
-          "column": 121
+          "column": 120
         }
       },
       "7": {
@@ -13934,7 +13934,7 @@
         },
         "end": {
           "line": 47,
-          "column": 147
+          "column": 146
         }
       },
       "24": {
@@ -14410,15 +14410,15 @@
         "$RefreshReg$"
       ],
       "sources": [
-        "C:/Users/Programmist/Desktop/rsschool-react/src/components/form/FormCards.tsx"
+        "C:/Users/LoginamNet/Desktop/rsschool-react/src/components/form/FormCards.tsx"
       ],
-      "file": "C:/Users/Programmist/Desktop/rsschool-react/src/components/form/FormCards.tsx"
+      "file": "C:/Users/LoginamNet/Desktop/rsschool-react/src/components/form/FormCards.tsx"
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "68746cf61c6fdf10c5ecda5d66e28c809c1a110a"
+    "hash": "6f1923e64b45984a538a3c12fbe43f599db85463"
   },
-  "C:/Users/Programmist/Desktop/rsschool-react/src/components/modal/FormModal.tsx": {
-    "path": "C:/Users/Programmist/Desktop/rsschool-react/src/components/modal/FormModal.tsx",
+  "C:/Users/LoginamNet/Desktop/rsschool-react/src/components/modal/FormModal.tsx": {
+    "path": "C:/Users/LoginamNet/Desktop/rsschool-react/src/components/modal/FormModal.tsx",
     "statementMap": {
       "0": {
         "start": {
@@ -14487,7 +14487,7 @@
         },
         "end": {
           "line": 12,
-          "column": 122
+          "column": 121
         }
       },
       "7": {
@@ -14657,7 +14657,7 @@
         },
         "end": {
           "line": 63,
-          "column": 148
+          "column": 147
         }
       },
       "24": {
@@ -15188,7 +15188,7 @@
     },
     "inputSourceMap": {
       "version": 3,
-      "mappings": "AAcQ;;;;;;;;;;;;;;;;AAbR,SAASA,aAAaC,mBAAmB;AACzC,SAASC,qBAAqB;AAC9B,OAAO;AAIA,gBAASC,YAAY;AAAAC;AAC1B,QAAMC,WAAWL,YAAW;AAC5B,QAAMM,cAAcL,YAAY,CAACM,UAAqBA,MAAMC,KAAKC,MAAMH,WAAW;AAElF,SACE,uBAAC,SAAI,WAAY,sBAAqBA,eAAe,4BACnD,iCAAC,SAAI,WAAY,aAAYA,eAAe,mBAC1C;AAAA,2BAAC,QAAG,WAAU,mBAAkB,yBAAhC;AAAA;AAAA;AAAA;AAAA,WAAyC;AAAA,IACzC,uBAAC,UAAK,WAAU,iBAAe,wEAA/B;AAAA;AAAA;AAAA;AAAA,WAEA;AAAA,IACA,uBAAC,YACC,WAAU,mBACV,SAAS,MAAMD,SAASH,cAAa,CAAE,GACvC,MAAK,kBAAgB,gCAHvB;AAAA;AAAA;AAAA;AAAA,WAMA;AAAA,OAXF;AAAA;AAAA;AAAA;AAAA,SAYA,KAbF;AAAA;AAAA;AAAA;AAAA,SAcA;AAEJ;AAACE,GArBeD,WAAS;AAAA,UACNH,aACGC,WAAW;AAAA;AAAAS,KAFjBP;AAAS;AAAAQ",
+      "mappings": "AAcQ;;;;;;;;;;;;;;;;AAbR,SAASA,aAAaC,mBAAmB;AACzC,SAASC,qBAAqB;AAC9B,OAAO;AAIA,gBAASC,YAAY;AAAAC;AAC1B,QAAMC,WAAWL,YAAW;AAC5B,QAAMM,cAAcL,YAAY,CAACM,UAAqBA,MAAMC,KAAKC,MAAMH,WAAW;AAElF,SACE,uBAAC,SAAI,WAAY,sBAAqBA,eAAe,4BACnD,iCAAC,SAAI,WAAY,aAAYA,eAAe,mBAC1C;AAAA,2BAAC,QAAG,WAAU,mBAAkB,yBAAhC;AAAA;AAAA;AAAA;AAAA,WAAyC;AAAA,IACzC,uBAAC,UAAK,WAAU,iBAAgB,wEAAhC;AAAA;AAAA;AAAA;AAAA,WAEA;AAAA,IACA,uBAAC,YACC,WAAU,mBACV,SAAS,MAAMD,SAASH,cAAa,CAAE,GACvC,MAAK,kBACN,gCAJD;AAAA;AAAA;AAAA;AAAA,WAMA;AAAA,OAXF;AAAA;AAAA;AAAA;AAAA,SAYA,KAbF;AAAA;AAAA;AAAA;AAAA,SAcA;AAEJ;AAACE,GArBeD,WAAS;AAAA,UACNH,aACGC,WAAW;AAAA;AAAAS,KAFjBP;AAAS;AAAAQ",
       "names": [
         "useDispatch",
         "useSelector",
@@ -15204,15 +15204,15 @@
         "$RefreshReg$"
       ],
       "sources": [
-        "C:/Users/Programmist/Desktop/rsschool-react/src/components/modal/FormModal.tsx"
+        "C:/Users/LoginamNet/Desktop/rsschool-react/src/components/modal/FormModal.tsx"
       ],
-      "file": "C:/Users/Programmist/Desktop/rsschool-react/src/components/modal/FormModal.tsx"
+      "file": "C:/Users/LoginamNet/Desktop/rsschool-react/src/components/modal/FormModal.tsx"
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "53024742762fb3f9fca2d096001c71dad13baac0"
+    "hash": "7eaaced505b1a238722b6b175cacf0017a0fb2b5"
   },
-  "C:/Users/Programmist/Desktop/rsschool-react/src/pages/Form.tsx": {
-    "path": "C:/Users/Programmist/Desktop/rsschool-react/src/pages/Form.tsx",
+  "C:/Users/LoginamNet/Desktop/rsschool-react/src/pages/Form.tsx": {
+    "path": "C:/Users/LoginamNet/Desktop/rsschool-react/src/pages/Form.tsx",
     "statementMap": {
       "0": {
         "start": {
@@ -15281,7 +15281,7 @@
         },
         "end": {
           "line": 12,
-          "column": 106
+          "column": 105
         }
       },
       "7": {
@@ -15461,7 +15461,7 @@
         },
         "end": {
           "line": 86,
-          "column": 132
+          "column": 131
         }
       },
       "25": {
@@ -15975,15 +15975,15 @@
         "$RefreshReg$"
       ],
       "sources": [
-        "C:/Users/Programmist/Desktop/rsschool-react/src/pages/Form.tsx"
+        "C:/Users/LoginamNet/Desktop/rsschool-react/src/pages/Form.tsx"
       ],
-      "file": "C:/Users/Programmist/Desktop/rsschool-react/src/pages/Form.tsx"
+      "file": "C:/Users/LoginamNet/Desktop/rsschool-react/src/pages/Form.tsx"
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "be41f44ddee657b858055a0b58690d8fb5040c0a"
+    "hash": "e3dfd65339f7d7f2279a4926ae9fabb41c40206e"
   },
-  "C:/Users/Programmist/Desktop/rsschool-react/src/pages/NotFound.tsx": {
-    "path": "C:/Users/Programmist/Desktop/rsschool-react/src/pages/NotFound.tsx",
+  "C:/Users/LoginamNet/Desktop/rsschool-react/src/pages/NotFound.tsx": {
+    "path": "C:/Users/LoginamNet/Desktop/rsschool-react/src/pages/NotFound.tsx",
     "statementMap": {
       "0": {
         "start": {
@@ -16052,7 +16052,7 @@
         },
         "end": {
           "line": 12,
-          "column": 110
+          "column": 109
         }
       },
       "7": {
@@ -16212,7 +16212,7 @@
         },
         "end": {
           "line": 56,
-          "column": 136
+          "column": 135
         }
       },
       "23": {
@@ -16649,15 +16649,15 @@
         "$RefreshReg$"
       ],
       "sources": [
-        "C:/Users/Programmist/Desktop/rsschool-react/src/pages/NotFound.tsx"
+        "C:/Users/LoginamNet/Desktop/rsschool-react/src/pages/NotFound.tsx"
       ],
-      "file": "C:/Users/Programmist/Desktop/rsschool-react/src/pages/NotFound.tsx"
+      "file": "C:/Users/LoginamNet/Desktop/rsschool-react/src/pages/NotFound.tsx"
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "5aa7f2fc4ac3394db8dc63622aeb0f0a5bb24cb4"
+    "hash": "1c137b5c1182446d224834785dc9988dd7eac144"
   },
-  "C:/Users/Programmist/Desktop/rsschool-react/src/App.tsx": {
-    "path": "C:/Users/Programmist/Desktop/rsschool-react/src/App.tsx",
+  "C:/Users/LoginamNet/Desktop/rsschool-react/src/App.tsx": {
+    "path": "C:/Users/LoginamNet/Desktop/rsschool-react/src/App.tsx",
     "statementMap": {
       "0": {
         "start": {
@@ -16726,7 +16726,7 @@
         },
         "end": {
           "line": 12,
-          "column": 99
+          "column": 98
         }
       },
       "7": {
@@ -16816,7 +16816,7 @@
         },
         "end": {
           "line": 85,
-          "column": 125
+          "column": 124
         }
       },
       "16": {
@@ -17196,15 +17196,15 @@
         "$RefreshReg$"
       ],
       "sources": [
-        "C:/Users/Programmist/Desktop/rsschool-react/src/App.tsx"
+        "C:/Users/LoginamNet/Desktop/rsschool-react/src/App.tsx"
       ],
-      "file": "C:/Users/Programmist/Desktop/rsschool-react/src/App.tsx"
+      "file": "C:/Users/LoginamNet/Desktop/rsschool-react/src/App.tsx"
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "8c8d11a11b382e1f22390cf784d748488837b13c"
+    "hash": "4a1709d6755d8831266e30ba03c1aaef96c1b274"
   },
-  "C:/Users/Programmist/Desktop/rsschool-react/src/entry-client.tsx": {
-    "path": "C:/Users/Programmist/Desktop/rsschool-react/src/entry-client.tsx",
+  "C:/Users/LoginamNet/Desktop/rsschool-react/src/entry-client.tsx": {
+    "path": "C:/Users/LoginamNet/Desktop/rsschool-react/src/entry-client.tsx",
     "statementMap": {
       "0": {
         "start": {
@@ -17238,15 +17238,15 @@
         "getElementById"
       ],
       "sources": [
-        "C:/Users/Programmist/Desktop/rsschool-react/src/entry-client.tsx"
+        "C:/Users/LoginamNet/Desktop/rsschool-react/src/entry-client.tsx"
       ],
-      "file": "C:/Users/Programmist/Desktop/rsschool-react/src/entry-client.tsx"
+      "file": "C:/Users/LoginamNet/Desktop/rsschool-react/src/entry-client.tsx"
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "180e257e19e26a7342dccfbf28809efb4d0a6e72"
+    "hash": "8977579b89bf6ce57ff1d7a1f4e8852d2ef118f9"
   },
-  "C:/Users/Programmist/Desktop/rsschool-react/src/setupTests.ts": {
-    "path": "C:/Users/Programmist/Desktop/rsschool-react/src/setupTests.ts",
+  "C:/Users/LoginamNet/Desktop/rsschool-react/src/setupTests.ts": {
+    "path": "C:/Users/LoginamNet/Desktop/rsschool-react/src/setupTests.ts",
     "statementMap": {},
     "fnMap": {},
     "branchMap": {},
@@ -17254,8 +17254,8 @@
     "f": {},
     "b": {}
   },
-  "C:/Users/Programmist/Desktop/rsschool-react/src/App.test.tsx": {
-    "path": "C:/Users/Programmist/Desktop/rsschool-react/src/App.test.tsx",
+  "C:/Users/LoginamNet/Desktop/rsschool-react/src/App.test.tsx": {
+    "path": "C:/Users/LoginamNet/Desktop/rsschool-react/src/App.test.tsx",
     "statementMap": {},
     "fnMap": {},
     "branchMap": {},
@@ -17263,8 +17263,8 @@
     "f": {},
     "b": {}
   },
-  "C:/Users/Programmist/Desktop/rsschool-react/src/entry-server.tsx": {
-    "path": "C:/Users/Programmist/Desktop/rsschool-react/src/entry-server.tsx",
+  "C:/Users/LoginamNet/Desktop/rsschool-react/src/entry-server.tsx": {
+    "path": "C:/Users/LoginamNet/Desktop/rsschool-react/src/entry-server.tsx",
     "statementMap": {},
     "fnMap": {},
     "branchMap": {},
@@ -17272,8 +17272,8 @@
     "f": {},
     "b": {}
   },
-  "C:/Users/Programmist/Desktop/rsschool-react/src/index.tsx": {
-    "path": "C:/Users/Programmist/Desktop/rsschool-react/src/index.tsx",
+  "C:/Users/LoginamNet/Desktop/rsschool-react/src/index.tsx": {
+    "path": "C:/Users/LoginamNet/Desktop/rsschool-react/src/index.tsx",
     "statementMap": {},
     "fnMap": {},
     "branchMap": {},
@@ -17281,8 +17281,8 @@
     "f": {},
     "b": {}
   },
-  "C:/Users/Programmist/Desktop/rsschool-react/src/common/data.tsx": {
-    "path": "C:/Users/Programmist/Desktop/rsschool-react/src/common/data.tsx",
+  "C:/Users/LoginamNet/Desktop/rsschool-react/src/common/data.tsx": {
+    "path": "C:/Users/LoginamNet/Desktop/rsschool-react/src/common/data.tsx",
     "statementMap": {},
     "fnMap": {},
     "branchMap": {},
@@ -17290,8 +17290,8 @@
     "f": {},
     "b": {}
   },
-  "C:/Users/Programmist/Desktop/rsschool-react/src/common/handlers.tsx": {
-    "path": "C:/Users/Programmist/Desktop/rsschool-react/src/common/handlers.tsx",
+  "C:/Users/LoginamNet/Desktop/rsschool-react/src/common/handlers.tsx": {
+    "path": "C:/Users/LoginamNet/Desktop/rsschool-react/src/common/handlers.tsx",
     "statementMap": {},
     "fnMap": {},
     "branchMap": {},
@@ -17299,8 +17299,8 @@
     "f": {},
     "b": {}
   },
-  "C:/Users/Programmist/Desktop/rsschool-react/src/common/render.tsx": {
-    "path": "C:/Users/Programmist/Desktop/rsschool-react/src/common/render.tsx",
+  "C:/Users/LoginamNet/Desktop/rsschool-react/src/common/render.tsx": {
+    "path": "C:/Users/LoginamNet/Desktop/rsschool-react/src/common/render.tsx",
     "statementMap": {},
     "fnMap": {},
     "branchMap": {},
@@ -17308,8 +17308,8 @@
     "f": {},
     "b": {}
   },
-  "C:/Users/Programmist/Desktop/rsschool-react/src/common/server.tsx": {
-    "path": "C:/Users/Programmist/Desktop/rsschool-react/src/common/server.tsx",
+  "C:/Users/LoginamNet/Desktop/rsschool-react/src/common/server.tsx": {
+    "path": "C:/Users/LoginamNet/Desktop/rsschool-react/src/common/server.tsx",
     "statementMap": {},
     "fnMap": {},
     "branchMap": {},
@@ -17317,8 +17317,8 @@
     "f": {},
     "b": {}
   },
-  "C:/Users/Programmist/Desktop/rsschool-react/src/pages/Pages.test.tsx": {
-    "path": "C:/Users/Programmist/Desktop/rsschool-react/src/pages/Pages.test.tsx",
+  "C:/Users/LoginamNet/Desktop/rsschool-react/src/pages/Pages.test.tsx": {
+    "path": "C:/Users/LoginamNet/Desktop/rsschool-react/src/pages/Pages.test.tsx",
     "statementMap": {},
     "fnMap": {},
     "branchMap": {},
@@ -17326,8 +17326,8 @@
     "f": {},
     "b": {}
   },
-  "C:/Users/Programmist/Desktop/rsschool-react/src/components/cards/Cards.test.tsx": {
-    "path": "C:/Users/Programmist/Desktop/rsschool-react/src/components/cards/Cards.test.tsx",
+  "C:/Users/LoginamNet/Desktop/rsschool-react/src/components/cards/Cards.test.tsx": {
+    "path": "C:/Users/LoginamNet/Desktop/rsschool-react/src/components/cards/Cards.test.tsx",
     "statementMap": {},
     "fnMap": {},
     "branchMap": {},
@@ -17335,8 +17335,8 @@
     "f": {},
     "b": {}
   },
-  "C:/Users/Programmist/Desktop/rsschool-react/src/components/form/Form.test.tsx": {
-    "path": "C:/Users/Programmist/Desktop/rsschool-react/src/components/form/Form.test.tsx",
+  "C:/Users/LoginamNet/Desktop/rsschool-react/src/components/form/Form.test.tsx": {
+    "path": "C:/Users/LoginamNet/Desktop/rsschool-react/src/components/form/Form.test.tsx",
     "statementMap": {},
     "fnMap": {},
     "branchMap": {},
@@ -17344,8 +17344,8 @@
     "f": {},
     "b": {}
   },
-  "C:/Users/Programmist/Desktop/rsschool-react/src/components/loading/Loading.test.tsx": {
-    "path": "C:/Users/Programmist/Desktop/rsschool-react/src/components/loading/Loading.test.tsx",
+  "C:/Users/LoginamNet/Desktop/rsschool-react/src/components/loading/Loading.test.tsx": {
+    "path": "C:/Users/LoginamNet/Desktop/rsschool-react/src/components/loading/Loading.test.tsx",
     "statementMap": {},
     "fnMap": {},
     "branchMap": {},
@@ -17353,8 +17353,8 @@
     "f": {},
     "b": {}
   },
-  "C:/Users/Programmist/Desktop/rsschool-react/src/components/modal/FormModal.test.tsx": {
-    "path": "C:/Users/Programmist/Desktop/rsschool-react/src/components/modal/FormModal.test.tsx",
+  "C:/Users/LoginamNet/Desktop/rsschool-react/src/components/modal/FormModal.test.tsx": {
+    "path": "C:/Users/LoginamNet/Desktop/rsschool-react/src/components/modal/FormModal.test.tsx",
     "statementMap": {},
     "fnMap": {},
     "branchMap": {},
@@ -17362,8 +17362,8 @@
     "f": {},
     "b": {}
   },
-  "C:/Users/Programmist/Desktop/rsschool-react/src/components/modal/MainModal.test.tsx": {
-    "path": "C:/Users/Programmist/Desktop/rsschool-react/src/components/modal/MainModal.test.tsx",
+  "C:/Users/LoginamNet/Desktop/rsschool-react/src/components/modal/MainModal.test.tsx": {
+    "path": "C:/Users/LoginamNet/Desktop/rsschool-react/src/components/modal/MainModal.test.tsx",
     "statementMap": {},
     "fnMap": {},
     "branchMap": {},
@@ -17371,8 +17371,8 @@
     "f": {},
     "b": {}
   },
-  "C:/Users/Programmist/Desktop/rsschool-react/src/components/search/Search.test.tsx": {
-    "path": "C:/Users/Programmist/Desktop/rsschool-react/src/components/search/Search.test.tsx",
+  "C:/Users/LoginamNet/Desktop/rsschool-react/src/components/search/Search.test.tsx": {
+    "path": "C:/Users/LoginamNet/Desktop/rsschool-react/src/components/search/Search.test.tsx",
     "statementMap": {},
     "fnMap": {},
     "branchMap": {},
