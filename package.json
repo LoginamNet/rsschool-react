@@ -34,7 +34,7 @@
     "coverage": "vitest run --coverage",
     "cy:open": "cypress open",
     "cy:run": "cypress run",
-    "cy:report": "npx nyc report --reporter=text-summary",
+    "cy:report": "npx nyc report && npx nyc report --reporter=text-summary",
     "e2e": "start-server-and-test dev http://localhost:5173 cy:run",
     "e2e:interface": "start-server-and-test dev http://localhost:5173 cy:open",
     "e2e:coverage": "npm run e2e && npm run cy:report",
