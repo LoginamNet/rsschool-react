@@ -44,7 +44,8 @@ describe('App test', () => {
     cy.get('.cardMessage').eq(2).click();
     cy.get('.mainModalContainer').should('have.class', 'mainModalContainerOpen');
 
-    cy.get('.mainModalContainer').click();
+    cy.get('.mainModalContainer').click('topRight');
+    cy.get('.mainModalContainer').should('not.have.class', 'mainModalContainerOpen');
   });
 
   it('Just a test to remove page load on coverage saving', () => {
