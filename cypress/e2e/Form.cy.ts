@@ -1,7 +1,10 @@
 describe('Form test', () => {
+  afterEach(() => {
+    cy.window().trigger('unload');
+  });
+
   it('Should render Form page press submit and get validation errors', () => {
     cy.visit('/form');
-    cy.wait(500);
     cy.get('.headerTitle').contains('FORM');
 
     cy.get('.formSubmit').click();
@@ -13,7 +16,6 @@ describe('Form test', () => {
 
   it('Should show error when lowercase name is printed', () => {
     cy.visit('/form');
-    cy.wait(500);
     cy.get('.headerTitle').contains('FORM');
 
     cy.get('.nameInput').type('name');
@@ -24,7 +26,6 @@ describe('Form test', () => {
 
   it('Should enter all required data submit and add new cart', () => {
     cy.visit('/form');
-    cy.wait(500);
     cy.get('.headerTitle').contains('FORM');
 
     cy.get('.nameInput').type('Name');
@@ -40,7 +41,6 @@ describe('Form test', () => {
 
   it('Should enter all required data submit with ckecked checkbox and add new cart', () => {
     cy.visit('/form');
-    cy.wait(500);
     cy.get('.headerTitle').contains('FORM');
 
     cy.get('.nameInput').type('Name2');
@@ -56,7 +56,6 @@ describe('Form test', () => {
 
   it('Should open and close form popup on correct submition', () => {
     cy.visit('/form');
-    cy.wait(500);
     cy.get('.headerTitle').contains('FORM');
 
     cy.get('.nameInput').type('Name');
@@ -71,9 +70,5 @@ describe('Form test', () => {
     cy.get('.formModalButton').click();
 
     cy.get('.formModalContainer').should('not.have.class', 'formModalContainerOpen');
-  });
-
-  it('Just a test to remove page load on coverage saving', () => {
-    expect(true).to.equal(true);
   });
 });

@@ -1,7 +1,10 @@
 describe('App test', () => {
+  afterEach(() => {
+    cy.window().trigger('unload');
+  });
+
   it('Should render default cards ', () => {
     cy.visit('/');
-    cy.wait(500);
     cy.get('.headerTitle').contains('HOME');
 
     cy.get('.CardContainer').should('have.length.of.at.most', 15);
@@ -10,7 +13,6 @@ describe('App test', () => {
 
   it('Card can be clicked and modal should open', () => {
     cy.visit('/');
-    cy.wait(500);
     cy.get('.headerTitle').contains('HOME');
 
     cy.get('.CardContainer').should('have.length.of.at.most', 15);
@@ -22,7 +24,6 @@ describe('App test', () => {
 
   it('Main modal can be closed by button', () => {
     cy.visit('/');
-    cy.wait(500);
     cy.get('.headerTitle').contains('HOME');
 
     cy.get('.CardContainer').should('have.length.of.at.most', 15);
@@ -36,7 +37,6 @@ describe('App test', () => {
 
   it('Main modal can be closed by background', () => {
     cy.visit('/');
-    cy.wait(500);
     cy.get('.headerTitle').contains('HOME');
 
     cy.get('.CardContainer').should('have.length.of.at.most', 15);
@@ -46,9 +46,5 @@ describe('App test', () => {
 
     cy.get('.mainModalContainer').click('topRight');
     cy.get('.mainModalContainer').should('not.have.class', 'mainModalContainerOpen');
-  });
-
-  it('Just a test to remove page load on coverage saving', () => {
-    expect(true).to.equal(true);
   });
 });

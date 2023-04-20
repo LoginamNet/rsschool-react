@@ -1,7 +1,10 @@
 describe('Search test', () => {
+  afterEach(() => {
+    cy.window().trigger('unload');
+  });
+
   it('Should update search field on input', () => {
     cy.visit('/');
-    cy.wait(500);
 
     cy.get('.searchInput').type('Cat');
     cy.get('.searchInput').should('have.value', 'Cat');
@@ -9,7 +12,6 @@ describe('Search test', () => {
 
   it('Should update search field and find on enter press', () => {
     cy.visit('/');
-    cy.wait(500);
 
     cy.get('.searchInput').type('Cat');
     cy.get('.searchInput').type('{enter}');
@@ -19,7 +21,6 @@ describe('Search test', () => {
 
   it('Should update search field and find on find button press', () => {
     cy.visit('/');
-    cy.wait(500);
 
     cy.get('.searchInput').type('Dog');
     cy.get('.searchButton').click();
@@ -29,7 +30,6 @@ describe('Search test', () => {
 
   it('Should show error on empty search request', () => {
     cy.visit('/');
-    cy.wait(500);
 
     cy.get('.searchInput').type('Dog');
     cy.get('.searchButton').click();
