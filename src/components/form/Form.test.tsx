@@ -29,7 +29,7 @@ const testCards = [
   },
 ];
 
-window.URL.createObjectURL = jest.fn();
+window.URL.createObjectURL = vi.fn();
 
 afterEach(cleanup);
 
